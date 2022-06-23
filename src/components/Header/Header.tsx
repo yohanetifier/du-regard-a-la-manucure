@@ -12,24 +12,33 @@ const navigation: Navigation[] = [
         to: '/home'
     },
     {
-        label: 'services',
+        label: 'Services',
         to: '/services'
     },
     {
         label: 'Contact',
         to: '/contact'
     },
+    {
+        label: 'Reservez',
+        to: '/rendez-vous'
+    },
 
 ]
 
 const Header = () => {
     return (
-        <ul className={styles.header}>
-            {navigation.map(({ label, to}, i) => (
-                <Link to={to} className={styles.link} key={i}>{label}</Link>
-            ))}
-            <button>Book now</button>
-        </ul>
+        <div className={styles.header}>
+            <div className={styles.logo}>
+                {/* <img src={logo} alt="" className={styles.img}/> */}
+                <h1 className={styles.title}>Du regard à la manucure</h1>
+            </div>
+            <ul className={styles.menu}>
+                {navigation.map(({ label, to }, i) => (
+                    <Link to={to} className={styles.link} key={i}>{label}</Link>
+                ))}
+            </ul>
+        </div>
     )
 }
 

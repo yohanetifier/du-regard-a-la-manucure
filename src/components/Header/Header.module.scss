@@ -1,9 +1,50 @@
 .header {
-    border: 2px solid red;
-    display: flex; 
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;    
+    // border: 2px solid red; 
+    height: 100px; 
 }
 
-.link{
-    border: 2px solid red; 
+.menu{
+    margin: 0;    
+    width: 50%;
+    display: flex;     
+    justify-content: space-between;
+    align-items: center; 
+    // border: 2px solid green; 
+    & > a:last-child {
+        display: flex; 
+        justify-content:center;
+        align-items: center; 
+        text-align: center; 
+        border: 2px solid pink; 
+        height: 30px; 
+        border-radius: 5px;
+        transition: all 500ms 2ms; 
+        &:hover {
+        background-color: pink;
+        color: white; 
+    }
 }
+}
+
+.link {
+    text-align: center; 
+    // border: 2px solid red; 
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    width: 30%; 
+    height: 100%; 
+}
+
+.logo {
+    // border: 2px solid red; 
+    display: flex; 
+    align-items: center; 
+    width: 30%; 
+    height: 100%; 
+}
+
 
