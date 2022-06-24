@@ -28,7 +28,7 @@ const navigation: Navigation[] = [
 
 const Header = () => {
     return (
-        <div className="header">
+        <div className={styles.header}>
             <div className={styles.logo}>
                 {/* <img src={logo} alt="" className={styles.img}/> */}
                 <h1 className={styles.title}>Du regard à la manucure</h1>

@@ -33,7 +33,41 @@ describe('Header', () => {
         expect(firstChild.childAt(0).type()).toBe('h1')
     })
     it('should display the name of the entreprise', () => {
-        
+        expect(wrapper.childAt(0).text()).toBe('Du regard à la manucure')
     })
+    it('should have a ul as second child', () => {
+        expect(wrapper.childAt(1).type()).toBe('ul')
+    })
+    it('the second child should have the class of menu', () => {
+        expect(wrapper.childAt(1).prop('className')).toBe('menu')
+    })
+    it('should have 4 road as child', () => {
+        expect(wrapper.childAt(1).children()).toHaveLength(4)
+    })
+    it('should have a Home Road', () => {
+        const firstRoad = wrapper.childAt(1).childAt(0)
+        expect(firstRoad.prop("className")).toBe('link')
+        expect(firstRoad.prop("to")).toBe('/home')
+        expect(firstRoad.text()).toBe('Home')
+    })
+    it('should have a Services Road', () => {
+        const firstRoad = wrapper.childAt(1).childAt(1)
+        expect(firstRoad.prop("className")).toBe('link')
+        expect(firstRoad.prop("to")).toBe('/services')
+        expect(firstRoad.text()).toBe('Services')
+    })
+    it('should have a Contact Road', () => {
+        const firstRoad = wrapper.childAt(1).childAt(2)
+        expect(firstRoad.prop("className")).toBe('link')
+        expect(firstRoad.prop("to")).toBe('/contact')
+        expect(firstRoad.text()).toBe('Contact')
+    })
+    it('should have a Reservation Road', () => {
+        const firstRoad = wrapper.childAt(1).childAt(3)
+        expect(firstRoad.prop("className")).toBe('link')
+        expect(firstRoad.prop("to")).toBe('/rendez-vous')
+        expect(firstRoad.text()).toBe('Reservez')
+    })
+    
 
 })

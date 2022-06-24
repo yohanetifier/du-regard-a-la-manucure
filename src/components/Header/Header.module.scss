@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;  
     align-items: center;    
-    // border: 2px solid red; 
     height: 100px; 
 }
 
@@ -11,8 +10,7 @@
     width: 50%;
     display: flex;     
     justify-content: space-between;
-    align-items: center; 
-    // border: 2px solid green; 
+    align-items: center;     
     & > a:last-child {
         display: flex; 
         justify-content:center;
