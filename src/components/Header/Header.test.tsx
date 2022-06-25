@@ -51,23 +51,22 @@ describe('Header', () => {
         expect(firstRoad.text()).toBe('Home')
     })
     it('should have a Services Road', () => {
-        const firstRoad = wrapper.childAt(1).childAt(1)
-        expect(firstRoad.prop("className")).toBe('link')
-        expect(firstRoad.prop("to")).toBe('/services')
-        expect(firstRoad.text()).toBe('Services')
+        const secondRoad = wrapper.childAt(1).childAt(1)
+        expect(secondRoad.prop("className")).toBe('link')
+        expect(secondRoad.prop("to")).toBe('/services')
+        expect(secondRoad.text()).toBe('Services')
     })
     it('should have a Contact Road', () => {
-        const firstRoad = wrapper.childAt(1).childAt(2)
-        expect(firstRoad.prop("className")).toBe('link')
-        expect(firstRoad.prop("to")).toBe('/contact')
-        expect(firstRoad.text()).toBe('Contact')
+        const thirdRoad = wrapper.childAt(1).childAt(2)
+        expect(thirdRoad.prop("className")).toBe('link')
+        expect(thirdRoad.prop("to")).toBe('/contact')
+        expect(thirdRoad.text()).toBe('Contact')
     })
     it('should have a Reservation Road', () => {
-        const firstRoad = wrapper.childAt(1).childAt(3)
-        expect(firstRoad.prop("className")).toBe('link')
-        expect(firstRoad.prop("to")).toBe('/rendez-vous')
-        expect(firstRoad.text()).toBe('Reservez')
+        const fourthRoad = wrapper.childAt(1).childAt(3)
+        expect(fourthRoad.prop("className")).toBe('link')
+        expect(fourthRoad.prop("to")).toBe('/rendez-vous')
+        expect(fourthRoad.text()).toBe('Reservez')
     })
-    
-
+   
 })

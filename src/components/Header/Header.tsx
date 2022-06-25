@@ -1,7 +1,7 @@
 import styles from './Header.module.scss'
 import { Link } from 'react-router-dom'
 
-interface Navigation {
+export interface Navigation {
     label: string
     to: string
 }
@@ -9,7 +9,7 @@ interface Navigation {
 const navigation: Navigation[] = [
     {
         label: 'Home',
-        to: '/home'
+        to: '/'
     },
     {
         label: 'Services',
