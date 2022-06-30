@@ -47,7 +47,7 @@ describe('Header', () => {
     it('should have a Home Road', () => {
         const firstRoad = wrapper.childAt(1).childAt(0)
         expect(firstRoad.prop("className")).toBe('link')
-        expect(firstRoad.prop("to")).toBe('/home')
+        expect(firstRoad.prop("to")).toBe('/')
         expect(firstRoad.text()).toBe('Home')
     })
     it('should have a Services Road', () => {
@@ -68,5 +68,5 @@ describe('Header', () => {
         expect(fourthRoad.prop("to")).toBe('/rendez-vous')
         expect(fourthRoad.text()).toBe('Reservez')
     })
-   
+
 })

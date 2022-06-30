@@ -1,8 +1,12 @@
 .header {
     display: flex;
-    justify-content: space-around;  
+    // justify-content: space-around;  
     align-items: center;    
     height: 100px; 
+    width: 100vw; 
+    position: fixed; 
+    // border: 2px solid red; 
+    // position: relative; 
 }
 
 .menu{
@@ -27,7 +31,7 @@
 }
 }
 
-.link {
+.link { 
     text-align: center; 
     // border: 2px solid red; 
     text-decoration: none;
@@ -37,12 +41,26 @@
     height: 100%; 
 }
 
+.img{
+    margin-left: 100px; 
+    // border: 2px solid red; 
+    height:100%; 
+}
+
 .logo {
     // border: 2px solid red; 
     display: flex; 
     align-items: center; 
     width: 30%; 
     height: 100%; 
+}
+
+.menuhidden {
+    border: 2px solid red; 
+    width: 100vw; 
+    height: 30vh; 
+    position: absolute; 
+    background-color: transparent; 
 }
 
 

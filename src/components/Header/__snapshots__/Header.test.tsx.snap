@@ -19,7 +19,7 @@ exports[`Header should render correctly 1`] = `
     <Link
       className="link"
       key="0"
-      to="/home"
+      to="/"
     >
       Home
     </Link>
