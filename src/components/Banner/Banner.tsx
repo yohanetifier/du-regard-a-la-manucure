@@ -11,10 +11,10 @@ function Banner() {
             {/* <div className={styles.wrapperimgabove}>
                 <img className={styles.imgabove} src={imgAbove} alt="" />
             </div> */}
-            <div className={styles.wrapperimgbelow}>
+            {/* <div className={styles.wrapperimgbelow}> */}
                 {/* <img className={styles.imgbelowleft} src={imgBelowLeft} alt="" /> */}
                 <img className={styles.imgbelowright} src={imgBelowRight} alt="" />
-            </div>
+            {/* </div> */}
         </div>
     )
 }

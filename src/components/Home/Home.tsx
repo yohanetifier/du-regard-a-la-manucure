@@ -1,10 +1,17 @@
 import Banner from '../Banner/Banner';
+import styles from './Home.module.scss';
+import FirstSection from '../FirstSection/FirstSection';
+import Concept from '../Concept/Concept';
 
-
-export default function Home() {
+function Home() {
+    
     return (
-        <div>
+        <div className={styles.wrapper}>
             <Banner />
+            <FirstSection />
+            <Concept />
         </div>
     )
 }
+
+export default Home; 

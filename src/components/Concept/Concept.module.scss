@@ -1,0 +1,17 @@
+.mainwrapper {
+    // border: 2px solid red;
+    height: 100vh;  
+    display: flex; 
+}
+
+.imagewrapper {
+    display: flex;
+    width: 50%; 
+    // border: 2px solid purple;   
+    position: relative; 
+}
+
+.descriptionwrapper{
+    border: 5px solid yellow; 
+    width: 50%; 
+}
