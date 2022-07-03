@@ -11,9 +11,9 @@ function SecondSection() {
                 <img src={img1} alt="" className={styles.imgleft} />
                 <div className={styles.sentence}>
                     <p> La beauté est dans les yeux de celui qui regarde. Oscar Wilde</p>
-                    <p>
+                    {/* <p>
                         La beauté du regard
-                    </p>
+                    </p> */}
                 </div>
 
             </div>

@@ -11,6 +11,9 @@ function Service() {
             <div className={styles.imgwrapper}>
                 <div className={styles.img1wrapper}>
                     <img src={img1} alt="" className={styles.img1} />
+                    <p className={styles.sentence}>
+                        La beauté du regard
+                    </p>
                 </div>
                 <div className={styles.img2wrapper}>
                     <img src={img2} alt="" className={styles.img2} />
@@ -19,10 +22,6 @@ function Service() {
                     <img src={img3} alt="" className={styles.img3} />
                 </div>
             </div>
-            <div>
-                <h2></h2>
-            </div>
-
         </div>
     )
 }

@@ -33,17 +33,17 @@
         top: 40px; 
         font-size: 2.5em; 
     }
-    & > p:last-child {
-        position: absolute; 
-        right: -400px;
-        z-index: 2; 
-        font-size: 2.5em; 
-        bottom: -650px; 
-        width: 40vw; 
-        color: red; 
-        // transform: rotate(-10deg); 
-        font-family: "DancingScript";
-    }
+    // & > p:last-child {
+    //     position: absolute; 
+    //     right: -400px;
+    //     z-index: 2; 
+    //     font-size: 2.5em; 
+    //     bottom: -650px; 
+    //     width: 40vw; 
+    //     color: red; 
+    //     // transform: rotate(-10deg); 
+    //     font-family: "DancingScript";
+    // }
 }
 
 .imagerightwrapper {
