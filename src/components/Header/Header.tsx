@@ -30,16 +30,12 @@ const navigation: Navigation[] = [
 const Header = () => {
     return (
         <div className={styles.header}>
-            {/* <div className={styles.menuhidden}> */}
-
-            {/* </div> */}
             <div className={styles.logo}>
-                <img src={logo} alt="" className={styles.img}/>
-                {/* <h1 className={styles.title}>Du regard à la manucure</h1> */}
+                <img src={logo} alt="" className={styles.img} />
             </div>
             <ul className={styles.menu}>
                 {navigation.map(({ label, to }, i) => (
-                    <Link to={to} className={styles.link} key={i}>{label}</Link>    
+                    <Link to={to} className={styles.link} key={i}>{label}</Link>
                 ))}
             </ul>
         </div>

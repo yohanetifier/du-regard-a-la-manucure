@@ -1,0 +1,58 @@
+@font-face {
+    font-family:" Roboto";
+    src: url("../../assets/fonts/Roboto/Roboto-Regular.ttf")
+}
+
+
+.mainwrapper {
+    height: 100vh; 
+    display: flex; 
+}
+.imageleftwrapper {
+    width: 50%; 
+    display: flex; 
+}
+
+.imgleft {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    position: relative;
+    right: 100px; 
+}
+
+.sentence {
+    position: relative; 
+    right: 50px; 
+    font-family: " Roboto";
+    color: black; 
+    width: 500px; 
+    position: relative; 
+    & > p:first-child {
+        position: absolute; 
+        top: 40px; 
+        font-size: 2.5em; 
+    }
+    & > p:last-child {
+        position: absolute; 
+        right: -400px;
+        z-index: 2; 
+        font-size: 2.5em; 
+        bottom: -650px; 
+        width: 40vw; 
+        color: red; 
+        // transform: rotate(-10deg); 
+        font-family: "DancingScript";
+    }
+}
+
+.imagerightwrapper {
+    width: 50%; 
+    position: relative;
+}
+
+.imgright {
+    width: 100%; 
+    height: 100%; 
+}
+

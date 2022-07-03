@@ -1,12 +1,11 @@
 .header {
     display: flex;
-    // justify-content: space-around;  
     align-items: center;    
     height: 100px; 
     width: 100vw; 
     position: fixed; 
-    // border: 2px solid red; 
-    // position: relative; 
+    z-index: 10; 
+    background-color: transparent; 
 }
 
 .menu{
@@ -35,7 +34,7 @@
     text-align: center; 
     // border: 2px solid red; 
     text-decoration: none;
-    color: black; 
+    color: white; 
     font-weight: bold;
     width: 30%; 
     height: 100%; 

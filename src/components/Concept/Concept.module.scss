@@ -2,16 +2,52 @@
     // border: 2px solid red;
     height: 100vh;  
     display: flex; 
+    position: relative; 
+    // background-image: url("../../assets/images/4031900.jpg"); 
+
 }
 
 .imagewrapper {
-    display: flex;
+    // border: 2px solid green; 
     width: 50%; 
-    // border: 2px solid purple;   
-    position: relative; 
+    height: 100%; 
+    // position: absolute;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    z-index: 1; 
+    // bottom: 5%; 
+
 }
 
 .descriptionwrapper{
-    border: 5px solid yellow; 
+    // border: 5px solid yellow; 
     width: 50%; 
+    height: 100%; 
+}
+
+.layoutwrapper {
+    // border: 2px solid red; 
+    background-color: pink; 
+    height: 107vh; 
+    position: relative; 
+    z-index: 0; 
+    bottom: 30px; 
+    right: 200px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.title {
+    font-family: "DancingScript";
+    font-size: 50px; 
+    position: absolute; 
+    top: 10px; 
+    left: 100px; 
+}
+
+.description {
+    position: absolute; 
+    left: 100px; 
 }

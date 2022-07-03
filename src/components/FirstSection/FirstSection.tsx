@@ -18,9 +18,6 @@ const sentence: Phrase[] = [
     {
         phrase: "La vie n'est pas toujours parfaite vos ongles, SI!"
     },
-    {
-        phrase: "Your nails say everything about you"
-    },
 ]
 
 function FirstSection() {
