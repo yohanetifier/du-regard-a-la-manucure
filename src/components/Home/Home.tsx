@@ -4,6 +4,7 @@ import FirstSection from '../FirstSection/FirstSection';
 import SecondSection from '../SecondSection/SecondSection';
 import Concept from '../Concept/Concept';
 import Services from '../Services/Services';
+import Work from '../Work/Work';
 
 function Home() {
 
@@ -14,6 +15,7 @@ function Home() {
             {/* <FirstSection /> */}
             <SecondSection />
             <Services />
+            <Work/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .mainwrapper {
     // border: 2px solid red; 
-    height: 100vh; 
+    height: 105vh; 
     background-color: pink; 
     position: relative; 
     & > h2{
@@ -23,12 +23,18 @@
 }
 
 .img1wrapper {
+    background-image: url("../../assets/images/hayley-kim-design-sRSRuxkOuzI-unsplash.jpg"); 
+    background-position: center; 
+    background-size: 100% 100%;
     width: 25%;
     height: 50%; 
     // border: 2px solid orange; 
     position: relative; 
     top: 50%; 
     left: 20%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
 }
 
 .sentence {
@@ -42,25 +48,61 @@
     color: red;  
 }
 .img2wrapper {
+    background-image: url("../../assets/images/gabe-pierce-_wK8VnF5yao-unsplash.jpg"); 
+    background-position: center; 
+    background-size: 100% 100%;
     width: 30%;
     height: 50%; 
     // border: 2px solid yellow; 
     position: relative; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
     z-index: 1; 
     top: 10%; 
+    filter: grayscale(100%); 
+    transition: filter 500ms; 
+    &:hover {
+        filter: grayscale(0);
+        transition: filter 500ms; 
+    }
+    &:hover > div > p {
+        transform: translateY(0%);
+        transition: transform 500ms;
+        
+    }
 }
 
 .img3wrapper {
+    background-image: url("../../assets/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg"); 
+    background-position: center; 
+    background-size: 100% 100%;
     width: 45%;
     height: 70%; 
     // border: 2px solid green ; 
     position: relative; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
     top: 20%; 
     right: 100px;
     z-index: 0; 
+    
 }
 
 .img1, .img2, .img3 {
     width: 100%;
     height: 100%; 
+}
+
+.title  {
+    font-size: 20px;
+    color: white; 
+    // opacity: 0; 
+    transform: translateY(200%); 
+}
+
+.test {
+    overflow: hidden; 
+    // border: 2px solid red; 
 }
