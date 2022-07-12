@@ -13,7 +13,6 @@ function Home() {
         <div className={styles.wrapper}>
             <Banner />
             <Concept />
-            {/* <FirstSection /> */}
             <SecondSection />
             <Services />
             <Work />

@@ -3,7 +3,9 @@
     height: 105vh; 
     background-color: pink; 
     position: relative; 
-    & > h2{
+}
+
+.titlesection {
         position: absolute; 
         z-index: 3;     
         // border: 2px solid red; 
@@ -12,7 +14,6 @@
         color: white; 
         font-size: 50px;
         font-family: "DancingScript"
-    }
 }
 
 .imgwrapper {
@@ -30,7 +31,7 @@
     height: 50%; 
     // border: 2px solid orange; 
     position: relative; 
-    top: 58%; 
+    top: 50%; 
     left: 20%; 
     display: flex; 
     justify-content: center;

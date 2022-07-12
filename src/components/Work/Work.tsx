@@ -3,6 +3,7 @@ import img1 from '../../assets/images/henry-co-OpjlRo-31SI-unsplash.jpg';
 import img2 from '../../assets/images/oliver-johnson-yH0dth2yEQE-unsplash.jpg';
 import img3 from '../../assets/images/kartik-gada--4iMX-4MIZ8-unsplash.jpg';
 import img4 from '../../assets/images/majid-akbari--CE-5hQSoOQ-unsplash.jpg';
+import Title from "../Title/Title";
 
 
 function Work() {
@@ -27,7 +28,7 @@ function Work() {
                     <div className={styles.imgcontainer}>
                         <img src={img1} alt="image5" className={styles.img} />
                     </div>
-                </div>
+                </div>  
                 <div className={styles.bottomwrapper}>
                     <div className={styles.imgcontainer}>
                         <img src={img1} alt="image6" className={styles.img} />
@@ -39,7 +40,7 @@ function Work() {
             </div>
             <div className={styles.rightwrapper}>
                 <div className={styles.rightwrappertitle}>
-                    <h2 className={styles.title}>Lorem Ipsum</h2>
+                    <Title className={styles.title}>Lorem Ipsum</Title>
                     <div className={styles.wrapperdescription}>
                         <p className={styles.description}>Lorem ipsum dolor sit amet. Et rerum aperiam nam provident vitae eos fugiat perspiciatis et dolorem veritatis 33 sint tempora aut quod quibusdam qui quam dolorum.
                             Sed iusto quia hic minus explicabo ut tempore voluptate et labore mollitia At voluptatibus galisum non dignissimos eaque qui Quis ullam.
