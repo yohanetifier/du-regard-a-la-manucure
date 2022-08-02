@@ -1,0 +1,11 @@
+@use './variables.scss' as var; 
+
+@mixin titlezonecontact {
+    font-size: 40px; 
+    font-family: var.$font-title; 
+}
+
+@mixin inputstyle {
+    outline: none; 
+    border: 1px solid lightgrey; 
+}

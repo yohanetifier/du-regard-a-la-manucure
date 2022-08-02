@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from '../Header/Header'
 import './App.css';
 import Home from '../Home/Home'
+import Contact from '../Contact/Contact';
 
 
 
@@ -12,9 +13,9 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
         <Route path="/services" />
-        <Route path="/contact" />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
