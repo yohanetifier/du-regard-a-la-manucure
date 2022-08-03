@@ -7,14 +7,13 @@ import Description from '../Description/Description';
 export interface Img {
     src: string
     alt: string
-    className: string
+    classNamewrapper: string
 }
 
 const image = [
     {
         src: img1,
         alt: img1,
-        className: 'first-image'
     },
 ]
 
@@ -22,8 +21,8 @@ function Concept() {
     return (
         <div className={styles.mainwrapper}>
             <div className={styles.imagewrapper}>
-                {image.map(({ src, alt, className }) => (
-                    <Image src={src} alt={alt} className={className} />
+                {image.map(({ src, alt }) => (
+                    <Image src={src} alt={alt} classNamewrapper={styles.firstimage} />
                 ))}
             </div>
             <div className={styles.descriptionwrapper}>
