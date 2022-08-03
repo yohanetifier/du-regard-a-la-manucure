@@ -1,3 +1,4 @@
+
 interface Props {
     classnamemainwrapper: string
     classnametitlewrapper: string
