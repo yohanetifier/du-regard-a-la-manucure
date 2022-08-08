@@ -10,7 +10,7 @@ function Contact() {
             <div className={styles.contactform}>
                 <form className={styles.form}>
                     <div className={styles.titlewrapper}>
-                        <h2 className={styles.titleone}>Plus qu'à un doight...</h2>
+                        <h2 className={styles.titleone}>Plus qu'à un doigt...</h2>
                         <h2 className={styles.titletwo}>de la beauté...</h2>
                     </div>
                     <input type="hidden" name="contact_number" className={styles.inputstylesglobal} />
