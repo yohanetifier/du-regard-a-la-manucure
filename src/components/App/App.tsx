@@ -5,7 +5,7 @@ import './App.css';
 import Home from '../Home/Home'
 import Contact from '../Contact/Contact';
 import Service from '../Service/Service';
-import test from '../../assets/images/billie-k2vn6he4lDQ-unsplash.jpg';
+import test from '../../assets/images/amy-shamblen-xwM61TPMlYk-unsplash.jpg';
 
 function App() {
 

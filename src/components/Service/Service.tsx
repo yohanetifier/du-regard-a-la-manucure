@@ -3,6 +3,8 @@ import Image from '../Image/Image';
 import styles from './Service.module.scss';
 import ServiceBar from '../ServiceBar/ServiceBar';
 import imgTopNails from '../../assets/images/designecologist-r-Ej0NQmFlQ-unsplash.jpg';
+import defaultImgBottom from '../../assets/images/sour-moha-k47viB7Dt8I-unsplash.jpg';
+import defaultImgTop from '../../assets/images/billie-5OXE3KjDEfI-unsplash.jpg';
 import imgBottomNails from '../../assets/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg';
 import imgTopEyebrows from '../../assets/images/hayley-kim-design-sRSRuxkOuzI-unsplash.jpg';
 import imgBottomEyebrows from '../../assets/images/gabe-pierce-_wK8VnF5yao-unsplash.jpg';
@@ -31,11 +33,11 @@ export default function Service({ img }: Props) {
           {!changeService ?   (
             <div className={styles.wrappercenter}>
                 <div className={styles.wrapperimgbottom}>
-                    <img src={imgTopNails} alt="" className={styles.img}/>
+                    <img src={defaultImgBottom} alt="" className={styles.img}/>
                 </div>
-                <h2 className={styles.layoutitle}>De la beauté du regard</h2>
+                <h1 className={styles.layoutitle}>De la beauté du regard</h1>
                 <div className={styles.wrapperimgtop}>
-                    <img src={imgTopNails} alt="" className={styles.img}/   >
+                    <img src={defaultImgTop} alt="" className={styles.img}/>
                 </div>
             </div>
           ) : (
