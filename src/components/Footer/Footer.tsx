@@ -3,6 +3,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {Link} from 'react-router-dom'; 
+
+interface Link {
+    label: string
+    to: string
+    className: string
+}
+
+const FooterLink: Link[] = [
+    {
+        label: "Contact", 
+        to: "/contact",
+        className: styles.contact
+    },
+    {
+        label: "Conditions de vente", 
+        to: "/conditions-de-vente",
+        className: styles.conditionsdevente
+    },
+    {
+        label: "Mentions legales", 
+        to: "/mentions-legales", 
+        className: styles.mentionslegales
+    },
+]
 
 function Footer() {
     return (
@@ -12,10 +37,10 @@ function Footer() {
                     <img src="" alt="" className={styles.img} />
                 </div>
                 <div className={styles.menu}>
-                    <div>
-                        <p className={styles.contact}>Contact</p>
-                        <p className={styles.conditionsdevente}>Conditions de vente</p>
-                        <p className={styles.mentionslegales}>Mentions legales</p>
+                    <div className={styles.wrapperlink}>
+                        {FooterLink.map(({label, to, className}) => (
+                            <Link to={to} className={className} >{label}</Link>
+                        ))}
                     </div>
                     <div>
                         <p className={styles.follow}>Suivez nous</p>

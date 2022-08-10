@@ -29,6 +29,12 @@
     justify-content: space-around;
 }
 
+.wrapperlink {
+    display: flex; 
+    flex-direction: column;
+    // justify-content: space-evenly; 
+}
+
 .bottomwrapper {
     border-top: 1px solid grey; 
 }
@@ -41,4 +47,11 @@
 .conditionsdevente ,.mentionslegales ,.contact, .follow {
     font-size: 20px;
     font-weight: bold; 
+}
+
+.conditionsdevente ,.mentionslegales ,.contact {
+    text-decoration: none;
+    color: black; 
+    margin-bottom: 10px;  
+    outline: none; 
 }
