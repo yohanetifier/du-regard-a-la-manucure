@@ -1,8 +1,9 @@
 import styles from './SecondSection.module.scss';
 // import Image from '../Image/Image';
 // import { Img } from '../Concept/Concept'
-import img1 from '../../assets/images/ana-francisconi-x-CXDIuhS3c-unsplash.jpg'
+// import img1 from '../../assets/images/ana-francisconi-x-CXDIuhS3c-unsplash.jpg'
 import img2 from '../../assets/images/hadis-safari-A7rkoSFjrG0-unsplash.jpg'
+import img1 from '../../assets/images/sara-dabaghian-wZx6BeqZNUk-unsplash.jpg'
 
 function SecondSection() {
     return (

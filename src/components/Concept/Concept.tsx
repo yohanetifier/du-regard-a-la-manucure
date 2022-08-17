@@ -1,5 +1,6 @@
 import Image from '../Image/Image';
-import img1 from '../../assets/images/engin-akyurt-EeVOgK2x0E4-unsplash.jpg';
+// import img1 from '../../assets/images/engin-akyurt-EeVOgK2x0E4-unsplash.jpg';
+import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import styles from './Concept.module.scss';
 import Title from '../Title/Title'
 import Description from '../Description/Description';
