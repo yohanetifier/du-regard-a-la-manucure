@@ -10,7 +10,7 @@
 // }
 
 .mainwrapper {
-    border: 2px solid red;
+    // border: 2px solid red;
     display: grid; 
     grid-template-columns: repeat(12, 1fr);  
     grid-template-rows: repeat(8, 12.5%); 
@@ -28,32 +28,27 @@
 //     justify-content: center;
 //     z-index: 1; 
 //     // bottom: 5%; 
-
 // }
 
 .imagewrapper {
-    border: 2px solid green; 
+    // border: 2px solid green; 
     grid-column: 3 / 7;  
     grid-row: 2 / 8; 
     z-index: 1; 
     @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
-        border: 2px solid yellow; 
-        grid-column: 2 / 7; 
+        grid-column: 2 / 7;     
     }
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
-        border: 2px solid purple; 
         grid-column: 1 / 6; 
     }
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        border: 2px solid green; 
         grid-row: 1 / 5; 
         grid-column: 1 / 8; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
-        // opacity: 0; 
-        grid-row: 1 / 9; 
-        grid-column: 1 / 13; 
-    }
+    // @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    //     grid-row: 1 / 9; 
+    //     grid-column: 1 / 13; 
+    // }
 }
 
 // New design 
@@ -76,13 +71,13 @@
     }
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
         grid-column: 1 / 13; 
-        grid-row: 4 / 9 ;  
+        grid-row: 3 / 9;  
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
-     grid-row: 1 / 9; 
-     border: 2px solid blue;
-     color: white; 
-    }
+    // @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    //  grid-row: 1 / 9; 
+    //  border: 2px solid blue;
+    //  color: white; 
+    // }
 }   
 
 // .layoutwrapper {
@@ -117,18 +112,18 @@
 .title {
     font-family: "DancingScript";
     font-size: var.$font-size-title; 
-//     position: absolute; 
-//     top: 10px; 
-//     left: 100px; 
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        color: white; 
+    }
 }
 
-.description {
+// .description {
     
-//     position: absolute; 
-//     left: 100px; 
-//     // border: 2px solid red;
-//     // width: 50%; 
-}
+// //     position: absolute; 
+// //     left: 100px; 
+// //     // border: 2px solid red;
+// //     // width: 50%; 
+// }
 
 .firstimage {
     // border: 1px solid black; 

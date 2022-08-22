@@ -10,14 +10,14 @@ function SecondSection() {
         <div className={styles.mainwrapper}>
             <div className={styles.imageleftwrapper}>
                 <img src={img1} alt="" className={styles.imgleft} />
-                <div className={styles.sentence}>
+                {/* <div className={styles.sentence}>
                     <p> La beauté est dans les yeux de celui qui regarde. Oscar Wilde</p>
-                    {/* <p>
-                        La beauté du regard
-                    </p> */}
-                </div>
+                </div> */}
 
             </div>
+            <div className={styles.sentence}>
+                    <p> La beauté est  dans les yeux  de celui  qui regarde.  Oscar Wilde</p>
+                </div>
             <div className={styles.imagerightwrapper}>
                 <img src={img2} alt="" className={styles.imgright} />
             </div>

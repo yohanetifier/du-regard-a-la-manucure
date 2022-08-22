@@ -7,6 +7,8 @@
 .img {
     height: 100%; 
     width: 100%;
+    position: relative; 
+    z-index: 3; 
 }
 
 .mainwrapper {
@@ -14,48 +16,108 @@
     justify-content: center;
     position: relative;
     bottom: 40px; 
+    background-color: var.$color-primary; 
 }
 
 .titlewrapper {
     display: flex; 
     justify-content: space-around;
      width: 30%;
-     background-color: white; 
+     background-color: var.$color-primary; 
+     z-index: 4; 
+     @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+        width: 40%; 
+     }
+     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        width: 50%; 
+     }
+     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        width: 70%; 
+     }
+     @media screen and (max-width: map-get(var.$breakpoints, "phone-up")){
+        width: 90%; 
+     }
+
+}
+
+.actiftitle {
+    background-color: white; 
 }
 
 .wrappercenter{
-    // border: 2px solid green;
     height: 90vh; 
     position: relative;
     bottom: 40px; 
     display: grid; 
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, 25%);
+    background-color: var.$color-primary; 
 }
 
 .imgbottomright {
     grid-column: 10 / 13;
     grid-row: 3 / 5 ;
+    @media screen and (max-width: map-get(var.$breakpoints, "widescreen-up")){
+        grid-column: 8 / 13; 
+
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
+        grid-column: 9 / 13; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+        grid-column: 10 / 13; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        opacity: 1; 
+        grid-column: 7 / 13;
+        grid-row: 1 / 3;  
+    }
+    
 }
 
 .imgtopright {
     grid-column: 7 / 12;
     grid-row: 1 / 3;
     object-fit: cover; 
+    @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
+        // border: 2px solid red; 
+        grid-row: 1 / 3; 
+        grid-column: 8 / 13; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+        grid-row: 1 / 3; 
+        grid-column: 9 / 13; 
+        // border: 2px solid blue; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        grid-row: 3 / 6; 
+        grid-column: 1 / 7;
+    }
 }
 
 .price {
-    // border: 2px solid blue; 
     grid-row: 1 / 5; 
     grid-column: 2 / 6;
     position: relative;
-    // overflow: hidden;
     display: flex; 
-    align-items: center;
+    color: white; 
+    @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
+        grid-column: 2 / 7;      
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+        grid-column: 2 / 8;      
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        grid-column: 2 / 9;      
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        grid-column: 1 / 8;
+        grid-row: 1 / 3;
+        background-color: var.$color-primary; 
+    }
 }
 
 .ongles, .sourcils, .cils {
-    border: 2px solid pink; 
     position: absolute; 
     opacity: 0; 
     height: 0%;
@@ -63,7 +125,7 @@
 
 .ongles {
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
 .sourcils {
@@ -78,13 +140,18 @@
 
 .actif {
     opacity: 1; 
-    // height: 100%;
 }
 
 .beautywrapper {
     display: flex;
     justify-content: space-between; 
-    margin-right: 20px; 
+    list-style-type: none; 
+    margin-left: -40px;  
+    // font-size: 13.5px; 
+    font-size: 13.5px; 
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-up")){
+        font-size: 11px; 
+    }
 }
 
 .bold {
@@ -92,29 +159,66 @@
 }
 
 .wrapperimgbottom {
-    // border: 2px solid red; 
     grid-column: 3 / 6;
     grid-row: 2 / 5;
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        grid-column: 3 / 7; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        grid-column: 1 / 7; 
+        grid-row: 3 / 5;  
+    }
 }
 
 .wrapperimgtop {
-    // border: 2px solid green; 
     grid-column: 8 / 11;
     grid-row: 1 / 4;
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        grid-column: 8 / 12; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        // border: 2px solid red; 
+        grid-column: 7 / 13;
+        grid-row: 1 / 3;  
+    }
 }
 
 .layoutitle {
-    // border: 2px solid yellow; 
     grid-row: 2;
     grid-column: 3 / 11;
-    z-index: 2; 
-    color: pink;
-    // border: 2px solid red;
-    font-size: 60px; 
+    z-index: 4  ; 
+    color: white;
+    font-size: var.$font-size-title; 
     font-family: var.$font-title; 
     text-align: center; 
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        grid-column: 3 / 12;
+    }
 }
 
+.foot {
+    opacity: 0; 
+    color: white; 
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        background-color: var.$color-primary; 
+        grid-column: 6 / 13; 
+        grid-row: 3 / 6; 
+        opacity: 1; 
+        z-index: 2; 
+    }
+}
 
+.test {
+    opacity: 0; 
+    @media screen and (min-width: "510px"){
+        opacity: 1;
+    }
+}
+
+.subtitle {
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-up")){
+        font-size: 16px;  
+    }
+}
 
 

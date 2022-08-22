@@ -12,9 +12,9 @@ function Service() {
             <div className={styles.imgwrapper}>
                 <div className={styles.img1wrapper}>
                     <p className={styles.title}>Cils</p>
-                    <p className={styles.sentence}>
+                    {/* <p className={styles.sentence}>
                         La beauté du regard
-                    </p>
+                    </p> */}
                 </div>
                 <div className={styles.img2wrapper}>
                     <div className={styles.test}>

@@ -3,6 +3,7 @@ import img1 from '../../assets/images/henry-co-OpjlRo-31SI-unsplash.jpg';
 import img2 from '../../assets/images/oliver-johnson-yH0dth2yEQE-unsplash.jpg';
 import img3 from '../../assets/images/kartik-gada--4iMX-4MIZ8-unsplash.jpg';
 import img4 from '../../assets/images/majid-akbari--CE-5hQSoOQ-unsplash.jpg';
+import img5 from "../../assets/images/majid-akbari--CE-5hQSoOQ-unsplash.jpg"
 import Title from "../Title/Title";
 
 
@@ -38,7 +39,7 @@ function Work() {
                     </div>
                 </div>
             </div>
-            <div className={styles.rightwrapper}>
+            {/* <div className={styles.rightwrapper}>
                 <div className={styles.rightwrappertitle}>
                     <Title className={styles.title}>Lorem Ipsum</Title>
                     <div className={styles.wrapperdescription}>
@@ -47,6 +48,9 @@ function Work() {
                         </p>
                     </div>
                 </div>
+            </div> */}
+            <div className={styles.test}>
+                <img src={img5}/>
             </div>
         </div>
     )

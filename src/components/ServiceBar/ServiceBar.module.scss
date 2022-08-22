@@ -1,3 +1,24 @@
+@use "../../styles/utils/variables.scss" as var; 
+
+$black: black; 
+
 .title {
     cursor: pointer; 
 }
+
+.default {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.actif {
+    background-color: white; 
+    color: black; 
+}
+
+.inactif {
+    background-color: pink; 
+    color: white; 
+}
+
