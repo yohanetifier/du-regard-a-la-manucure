@@ -1,50 +1,6 @@
-.mainwrapper {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    background-color: pink;
-    margin-top: 50px;
-}
+@use '../../styles/utils/variables.scss' as var; 
 
-.firstwrapper {
-    display: flex; 
-    // justify-content: space-between; 
-    height: 70%;
-
-}
-
-.imgwrapper {
-    width: 30%;
-    height: 100%;
-}
-
-.img {
-    // width: 30%; 
-    height: 100%; 
-}
-
-.menu {
-    width: 70%; 
-    display: flex; 
-    justify-content: space-around;
-}
-
-.wrapperlink {
-    display: flex; 
-    flex-direction: column;
-    // justify-content: space-evenly; 
-}
-
-.bottomwrapper {
-    border-top: 1px solid grey; 
-}
-
-.icon {
-    display: flex;
-    justify-content: space-between; 
-}
-
-.conditionsdevente ,.mentionslegales ,.contact, .follow {
+.conditionsdevente ,.mentionslegales ,.contact, /* .follow */ {
     font-size: 20px;
     font-weight: bold; 
 }
@@ -52,6 +8,82 @@
 .conditionsdevente ,.mentionslegales ,.contact {
     text-decoration: none;
     color: black; 
-    margin-bottom: 10px;  
+    // margin-bottom: 10px;  
     outline: none; 
 }
+
+.mainwrapper {
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-rows: repeat(5, 20%); 
+    // border: 2px solid red; 
+    margin-top: 50px;
+    background-color: pink;
+    height: 30vh; 
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        height: 40vh; 
+    }
+}
+
+
+.firstwrapper {
+//    border: 2px solid orange; 
+   grid-row: 1 / 4;
+   grid-column: 1 / 13; 
+   display: grid; 
+}
+
+.imgwrapper {
+    grid-column: 1 / 6; 
+    grid-row: 1 / 4; 
+    // border: 2px solid purple;
+}
+
+.menu {
+    grid-column: 6 / 13; 
+    grid-row: 1 / 4; 
+    display: grid; 
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        grid-column: 12 / 13; 
+    } 
+}
+
+.wrapperlink{
+    grid-column:  1 / 6;  
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+// .followwrapper {
+//     grid-column: 7 / 8;
+//     display: flex; 
+//     flex-direction: column; 
+//     margin-right: 10px; 
+//     @media screen and (max-width: "500px" ){
+//         grid-row: 2 / 4; 
+//         grid-column: 1 / 6;
+//         // margin-top: -20px; 
+        
+//     }
+// }
+
+.bottomwrapper {
+    // border: 2px solid orange; 
+    grid-column: 1 / 13; 
+    grid-row: 4 / 6; 
+    border-top: 1px solid grey; 
+    margin-top: 10px; 
+    & > p {
+        margin-left: 10px; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        grid-row: 5 / 6; 
+    }
+    
+}
+
+// .icon {
+//     display: flex;
+//     justify-content: space-between; 
+// }

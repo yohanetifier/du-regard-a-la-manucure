@@ -4,6 +4,7 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {Link} from 'react-router-dom'; 
+import Follow from '../Follow/Follow'
 
 interface Link {
     label: string
@@ -42,14 +43,7 @@ function Footer() {
                             <Link to={to} className={className} >{label}</Link>
                         ))}
                     </div>
-                    <div>
-                        <p className={styles.follow}>Suivez nous</p>
-                        <div className={styles.icon}>
-                            <FontAwesomeIcon icon={faFacebook} />   
-                            <FontAwesomeIcon icon={faTwitter} />
-                            <FontAwesomeIcon icon={faInstagram} />
-                        </div>
-                    </div>
+                    <Follow />
                 </div>
             </div>
             <div className={styles.bottomwrapper}>

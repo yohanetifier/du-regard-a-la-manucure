@@ -1,34 +1,36 @@
 .header {
     display: flex;
-    align-items: center;    
+    align-items: center;   
+    justify-content: space-between;  
     height: 100px; 
     width: 100vw; 
     position: fixed; 
     z-index: 10; 
     background-color: transparent; 
+    // border: 2px solid black; 
 }
 
-.menu{
-    margin: 0;    
-    width: 50%;
-    display: flex;     
-    justify-content: space-between;
-    align-items: center;     
-    & > a:last-child {
-        display: flex; 
-        justify-content:center;
-        align-items: center; 
-        text-align: center; 
-        border: 2px solid pink; 
-        height: 30px; 
-        border-radius: 5px;
-        transition: all 500ms 2ms; 
-        &:hover {
-        background-color: pink;
-        color: white; 
-    }
-}
-}
+// .menu{
+//     margin: 0;    
+//     width: 50%;
+//     display: flex;     
+//     justify-content: space-between;
+//     align-items: center;     
+//     & > a:last-child {
+//         display: flex; 
+//         justify-content:center;
+//         align-items: center; 
+//         text-align: center; 
+//         border: 2px solid pink; 
+//         height: 30px; 
+//         border-radius: 5px;
+//         transition: all 500ms 2ms; 
+//         &:hover {
+//         background-color: pink;
+//         color: white; 
+//     }
+// }
+// }
 
 .link { 
     text-align: center; 
@@ -52,14 +54,71 @@
     align-items: center; 
     width: 30%; 
     height: 100%; 
+    // border: 2px solid green; 
 }
 
-.menuhidden {
-    border: 2px solid red; 
-    width: 100vw; 
-    height: 30vh; 
+// .menuhidden {
+//     border: 2px solid red; 
+//     width: 100vw; 
+//     height: 30vh; 
+//     position: absolute; 
+//     background-color: transparent; 
+// }
+
+.menu {
+    // border: 2px solid red; 
+    width: 50%; 
+    height: 100%; 
+    position: relative; 
+    margin-right: 20px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.menulayout {
+    // border: 2px solid red; 
     position: absolute; 
-    background-color: transparent; 
+    width: 30px; 
+    height: 30%; 
+    right: 0; 
+    cursor: pointer; 
+    z-index: 10; 
+    margin-right: 10px; 
+
 }
 
+.firstline,.secondline, .thirdline  {
+    background-color: white; 
+    // border: 2px solid blue; 
+    position: absolute; 
+    top: 10%; 
+    width: 100%;
+    height: 4px; 
+    // height: 100px;  
+}
 
+.secondline {
+    top: 35%; 
+}
+
+.thirdline {
+    top: 60%; 
+}
+
+.testmenu {
+    // border: 2px solid black; 
+    // background-color: white; 
+    position: absolute; 
+    transform: translateX(100%); 
+    top: 0; 
+    left: 0; 
+    height: 100vh;  
+    width: 100vw; 
+}
+
+.actifmenu {
+    transform: translateX(-0%); 
+    transition: transform 400ms; 
+    border: 2px solid purple; 
+    overflow: hidden; 
+}

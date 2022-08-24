@@ -14,11 +14,11 @@ function Contact() {
                         <h2 className={styles.titletwo}>de la beauté...</h2>
                     </div>
                     <input type="hidden" name="contact_number" className={styles.inputstylesglobal} />
-                    <label className={styles.labelname}>Nom</label>
+                    <label className={styles.labelglobalstyles}>Nom</label>
                     <input type="text" name="user_name" className={`${styles.inputname} ${styles.inputstylesglobal}`} />
-                    <label>Email</label>
+                    <label className={styles.labelglobalstyles}>Email</label>
                     <input type="email" name="user_email" className={`${styles.inputemail} ${styles.inputstylesglobal}`} />
-                    <label>Message</label>
+                    <label className={styles.labelglobalstyles}>Message</label>
                     <textarea name="message" className={styles.message} ></textarea>
                     <input type="submit" value="Contactez-moi" className={styles.button} />
                 </form>
