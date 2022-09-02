@@ -1,0 +1,7 @@
+@use "../../styles/utils/variables.scss" as var; 
+
+.defaultstyles {
+    font-family: var.$font-title; 
+    font-size: var.$font-size-title;
+}
+

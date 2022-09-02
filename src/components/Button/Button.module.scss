@@ -1,0 +1,15 @@
+.defaultstyles {
+    border: 2px solid white; 
+    text-decoration: none; 
+    color: black; 
+    width: 150px; 
+    height: 30px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: background-color 300ms; 
+    margin-top: 20px; 
+    &:hover {
+        background-color: white;  
+    }
+}

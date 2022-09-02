@@ -1,3 +1,5 @@
+@use "../../styles/utils/variables.scss" as var; 
+
 .mainwrapper {
     border: 2px solid red;
     height: 100vh; 
@@ -7,15 +9,35 @@
 
 .wrapperimg {
     border: 2px solid purple; 
-    width:30%; 
+    width: 30%;
     height: 80%; 
-    display: flex;  
-    align-items: center; 
+    margin: auto 0; 
 }
 
 .wrapperdescription {
     border: 2px solid blue; 
     width: 50%; 
     display: flex;
-    align-items: center; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-end; 
+    border: 2px solid black; 
+    background-color: var.$color-primary;
+    
 }
+
+.subwrapperdescrition {
+    width: 90%;
+}
+
+.buttonwrapper {
+    display: flex; 
+    justify-content: space-between;
+    width: 80%;
+}
+
+.linkwrapper {
+
+}
+
+
