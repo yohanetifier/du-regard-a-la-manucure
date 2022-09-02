@@ -7,6 +7,7 @@ import Contact from '../Contact/Contact';
 import Service from '../Service/Service';
 import test from '../../assets/images/amy-shamblen-xwM61TPMlYk-unsplash.jpg';
 import Conditionsdevente from '../Conditionsdevente/Conditionsdevente'; 
+import About from '../About/About'; 
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Service img={test} />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/conditions-de-vente" element={<Conditionsdevente />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );

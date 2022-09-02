@@ -58,7 +58,7 @@ export const beautyOfHands: Props[] = [
     },
     {
         service: "Camaieu de couleurs",
-        price: '5',
+        price: '5€',
     },
     {
         service: "Incrustation ",

@@ -4,6 +4,7 @@ import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import styles from './Concept.module.scss';
 import Title from '../Title/Title'
 import Description from '../Description/Description';
+import { Link } from 'react-router-dom'; 
 
 export interface Img {
     src: string
@@ -11,32 +12,20 @@ export interface Img {
     classNamewrapper: string
 }
 
-const image = [
-    {
-        src: img1,
-        alt: img1,
-    },
-]
-
 function Concept() {
     return (
         <div className={styles.mainwrapper}>
             <div className={styles.imagewrapper}>
-                {image.map(({ src, alt }) => (
-                    <Image src={src} alt={alt} classNamewrapper={styles.firstimage} />
-                ))}
+                    <Image src={img1} alt={img1} classNamewrapper={styles.firstimage} />
             </div>
             <div className={styles.descriptionwrapper}>
                 <div className={styles.layoutwrapper}>
-                    <Title className={styles.title}> Militibus muro et circumstetere inedia.</Title>
-                    <Description className={styles.description}>
-                        Nemo quaeso miretur, si post exsudatos labores itinerum longos congestosque adfatim commeatus fiducia
-                        vestri ductante barbaricos pagos adventans velut mutato repente consilio ad placidiora deverti.
-                        Quod cum ita sit, paucae domus studiorum seriis cultibus antea celebratae nunc ludibriis ignaviae torpentis exundant, vocali sonu, perflabili tinnitu fidium resultantes.
-                        denique pro philosopho cantor et in locum oratoris doctor artium ludicrarum accitur et bybliothecis sepulcrorum ritu in perpetuum clausis organa fabricantur hydraulica, et
-                        lyrae ad speciem carpentorum ingentes tibiaeque et histrionici gestus instrumenta non levia.
-                        Nunc vero inanes flatus quorundam vile esse quicquid extra urbis pomerium nascitur aestimant praeter orbos et caelibes, nec credi potest qua obsequiorum diversitate
-                        coluntur homines sine liberis Romae.</Description>
+                    <h2 className={styles.title}> Notre Concept</h2>
+                    <p className={styles.description}>
+                      Que diriez-vous de sublimer vos ongles et votre regard sans sortir de chez vous? C'est possible avec Du Regard à La Manucure, 
+                      professionnelle de l'esthétique, prothésiste ongulaire. L'institut Du Regard à la Manucure est basé à Aincourt, dans le Val d'Oise et se 
+                      déplace dans toute l'Ile de France pour vous mettre en beauté.</p>
+                      <Link to={"/about"} className={styles.link}>En savoir plus</Link>
                 </div>
             </div>
         </div>

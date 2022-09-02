@@ -42,13 +42,31 @@ const Header = () => {
             </ul> */}
             <div className={styles.menu}>
                 <div className={styles.menulayout} onClick={() => !menu ? setMenu(true) : setMenu(false)}>
-                    <span className={styles.firstline}></span>
-                    <span className={styles.secondline}></span>
-                    <span className={styles.thirdline}></span>
+                    <span className={!menu ? styles.firstline : `${styles.firstline} ${styles.movefirstline}`}></span>
+                    <span className={!menu ? styles.secondline :  `${styles.secondline} ${styles.movesecondline}`}></span>
+                    <span className={!menu ? styles.thirdline :  `${styles.thirdline} ${styles.movethirdline}`}></span>
                 </div>
             </div>
-            <div className={ menu  ? `${styles.testmenu} ${styles.actifmenu}` : `${styles.testmenu}`}>
-                <p>Hello World</p>
+            <div className={ menu  ? `${styles.inactifmenu} ${styles.actifmenu}` : `${styles.inactifmenu}`}>
+                {/* <div className={styles.wrapperlink}> */}
+                    <ul className={styles.wrapperlist}>
+                        <li className={styles.list}><Link to={'/'} className={styles.link} onClick={() => setMenu(false)}>ACCUEIL</Link></li>
+                        <li className={styles.list}><Link to={'/about'} className={styles.link} onClick={() => setMenu(false)}>A PROPOS</Link></li>
+                        <li className={styles.list}><Link to={'/prestations'} className={styles.link} onClick={() => setMenu(false)}>NOS PRESTATIONS</Link></li>
+                        <li className={styles.list}><Link to={'/services'} className={styles.link} onClick={() => setMenu(false)}>NOS SERVICES</Link> {/* <span>+</span> */}</li>
+                        <li className={styles.list}><Link to={'/succès'} className={styles.link} onClick={() => setMenu(false)}>NOS SUCCES</Link></li>
+                        <li className={styles.list}><Link to={'/rendez-vous'} className={styles.link} onClick={() => setMenu(false)}>RESERVATIONS</Link></li>
+                        <li className={styles.list}><Link to={'/contact'} className={styles.link} onClick={() => setMenu(false)}>CONTACT</Link></li>
+                        <li className={styles.list}><Link to={'/conditions-de-vente'} className={styles.link} onClick={() => setMenu(false)}>CONDITIONS DE VENTE</Link></li>
+                        <li className={styles.list}><Link to={'/mentions-legales'} className={styles.link} onClick={() => setMenu(false)}>MENTIONS LEGALES</Link></li>
+                    </ul>
+                {/* </div> */}
+                {/* <div>
+                    <p>Section sub category</p>
+                </div> */}
+                <div className={styles.sectionimage}>
+                    {/* <p>Section image</p> */}
+                </div>
             </div>
         </div>
     )

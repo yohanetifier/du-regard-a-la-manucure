@@ -1,0 +1,21 @@
+.mainwrapper {
+    border: 2px solid red;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.wrapperimg {
+    border: 2px solid purple; 
+    width:30%; 
+    height: 80%; 
+    display: flex;  
+    align-items: center; 
+}
+
+.wrapperdescription {
+    border: 2px solid blue; 
+    width: 50%; 
+    display: flex;
+    align-items: center; 
+}
