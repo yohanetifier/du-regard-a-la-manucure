@@ -1,68 +1,38 @@
 import styles from './Concept2.module.scss';
-import Button from '../Button/Button';
+import Image from "../Image/Image";
+import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
+import Title from "../Title/Title";
 
-interface Props {
-    src?: string
-    classnamemainwrapper: string
-    classnamewrapperimg: string
-    classnamewrapperdescription: string
-    title: string
-    description: string
-    classnametitle?: string
-    classnamesubwrapperdescription?: string
-    to: string
-    label: string
-    classnamelinkwrapper: string
-    classnamelink: string
-    buttonwrapper: string
-    secondto: string
-    secondlabel: string
-}
 
-function Concept2({
-    src,
-    classnamemainwrapper,
-    classnamewrapperimg,
-    classnamewrapperdescription,
-    title,
-    description,
-    classnametitle,
-    classnamesubwrapperdescription,
-    to,
-    label,
-    classnamelinkwrapper,
-    classnamelink,
-    buttonwrapper,
-    secondto,
-    secondlabel
-}: Props) {
+export default function Concept2() {
     return (
-        <div className={classnamemainwrapper}>
-            <div className={classnamewrapperimg}>
-                <img src={src} />
+        <div className={styles.mainwrapper}>
+            <div className={styles.imgwrapper}>
+                <Image
+                    src={img1}
+                    alt={img1}
+                    classNamewrapper={styles.imgfirstwrapper}
+                />
+                <Image
+                    src={img1}
+                    alt={img1}
+                    classNamewrapper={styles.imgsecondwrapper}
+                />
+                <Image
+                    src={img1}
+                    alt={img1}
+                    classNamewrapper={styles.imgthirdwrapper}
+                />
             </div>
-            <div className={`${classnamewrapperdescription} `}>
-                <div className={classnamesubwrapperdescription}>
-                    <h2 className={`${classnametitle} ${styles.defaultstyles}`}>{title}</h2>
-                    <p>{description}</p>
-                    <div className={buttonwrapper}>
-                        <Button
-                            to={to}
-                            label={label}
-                            classnamelink={classnamelink}
-                            classnamemainwrapper={classnamelinkwrapper}
-                        />
-                        <Button
-                            to={secondto}
-                            label={secondlabel}
-                            classnamelink={classnamelink}
-                            classnamemainwrapper={classnamelinkwrapper}
-                        />
-                    </div>
-                </div>
+            <div className={styles.descriptionwrapper}>
+                <Title
+                    children="test"
+                />
+                <p>Parce que vos mains et vos pieds ont besoin d'être chouchouté comme ils le méritent. Du regard à la Manucure propose aussi des soins complets à domicile.
+                    Elle réalise, entre autres, la pose de gel X, une technique de pose de faux ongles, pour arborer des mains féminines et soignées pendant plusieurs semaines.
+
+                </p>
             </div>
         </div>
     )
 }
-
-export default Concept2;

@@ -1,11 +1,13 @@
+import styles from './Title.module.scss';
+
 interface Props {
-    children : string
-    className: string
+    children: string
+    className?: string
 }
 
-function Title ({children, className}: Props) {
+function Title({ children, className }: Props) {
     return (
-        <h2 className={className}>
+        <h2 className={`${className} ${styles.defaultstyles}`}>
             {children}
         </h2>
     )

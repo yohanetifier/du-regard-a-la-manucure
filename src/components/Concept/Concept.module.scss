@@ -87,3 +87,16 @@
         background-color: white;  
     }
 }
+
+.buttonwrapper {
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        margin: 0 auto; 
+        width: 70%; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        width: 100%; 
+    }
+}
