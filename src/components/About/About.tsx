@@ -1,9 +1,25 @@
 import styles from './About.module.scss';
 import Concept from '../Concept/Concept';
 import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
+import img2 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import Concept2 from "../Concept2/Concept2";
+import Concept3 from "./Concept3/Concept3";
 
 function About() {
+
+  const img = [
+    {
+      src: img1,
+      alt: img1,
+      classname: styles.firstimg,
+    },
+    {
+      src: img2,
+      alt: img2,
+      classname: styles.secondimg,
+    }
+  ]
+
   return (
     <>
       <Concept
@@ -21,6 +37,9 @@ function About() {
         secondLabel="Nos services"
       />
       <Concept2
+      />
+      <Concept3
+        assets={img}
       />
     </>
   )

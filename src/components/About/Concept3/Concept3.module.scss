@@ -1,0 +1,11 @@
+.mainwrapper {
+    display: grid; 
+    border: 2px solid red; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 20%); 
+    height: 100vh;
+}
+
+.firstimg {
+    border: 2px solid orange; 
+}

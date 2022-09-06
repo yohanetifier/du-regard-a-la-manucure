@@ -1,0 +1,25 @@
+.imgwrapper {
+    // border: 2px solid red; 
+    width: 50%;
+    height: 100vh;
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 20%);
+}
+
+.imgfirstwrapper {
+    z-index: 1; 
+    grid-column: 1 / 5;
+    grid-row:  3 / 5; 
+    width: 100%;
+}
+
+.imgsecondwrapper {
+    grid-column: 4 / 9;
+    grid-row:  2 / 6; 
+}
+
+.imgthirdwrapper {
+    grid-column: 8 / 13;
+    grid-row:  1 / 4; 
+}

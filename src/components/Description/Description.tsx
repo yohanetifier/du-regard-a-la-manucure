@@ -1,11 +1,11 @@
 interface Props {
-    children: string 
-    className: string 
+    children: string
+    className?: string
 }
 
-function Description ({children, className}: Props) {
+function Description({ children, className }: Props) {
     return (
-        <p className= {className}>
+        <p className={className}>
             {children}
         </p>
     )
