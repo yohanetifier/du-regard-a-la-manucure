@@ -1,15 +1,11 @@
 import Image from '../Image/Image';
-import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import styles from './Concept.module.scss';
-import Title from '../Title/Title'
-import Description from '../Description/Description';
-import { Link } from 'react-router-dom';
 import Button from "../Button/Button";
 
 export interface Img {
     src: string
     alt: string
-    classNamewrapper: string
+    classNamewrapper?: string
 }
 
 interface Props {

@@ -7,19 +7,19 @@
     grid-template-rows: repeat(5, 20%);
 }
 
-.imgfirstwrapper {
+.firstimg {
     z-index: 1; 
     grid-column: 1 / 5;
     grid-row:  3 / 5; 
     width: 100%;
 }
 
-.imgsecondwrapper {
+.secondimg {
     grid-column: 4 / 9;
     grid-row:  2 / 6; 
 }
 
-.imgthirdwrapper {
+.thirdimg {
     grid-column: 8 / 13;
     grid-row:  1 / 4; 
 }
