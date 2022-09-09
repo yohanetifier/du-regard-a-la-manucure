@@ -1,12 +1,13 @@
-import styles from './About.module.scss';
+// import styles from './About.module.scss';
 import Concept from '../Concept/Concept';
 import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import img2 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import img3 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import Concept2 from "./Concept2/Concept2";
 import Concept3 from "./Concept3/Concept3";
+import Certificate from './Certficate/Certificate';
 
-function About() {
+export default function About() {
 
   const imgConcept2 = [
     {
@@ -44,6 +45,34 @@ function About() {
     },
   ]
 
+  const certificate = [
+    {
+      src: img3,
+      alt: img3,
+      className: "firstimg",
+    },
+    {
+      src: img3,
+      alt: img3,
+      className: "secondimg",
+    },
+    {
+      src: img3,
+      alt: img3,
+      className: "thirdimg",
+    },
+    {
+      src: img3,
+      alt: img3,
+      className: "fourthimg",
+    },
+    {
+      src: img3,
+      alt: img3,
+      className: "fifthimg",
+    },
+  ]
+
   return (
     <>
       <Concept
@@ -73,8 +102,10 @@ function About() {
         description="Grace à son activité à domicile, Du regard à la Manucure, peut bichonner également vos pieds en les sublimant d'un beau vernis semi-permanent ou classique 
         et en leur appliquant un soin pour un véritable instant cocooning."
       />
+      <Certificate
+        title="Mes Certificats"
+        assets={certificate}
+      />
     </>
   )
 }
-
-export default About; 

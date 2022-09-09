@@ -1,0 +1,29 @@
+.imgwrapper {
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 90%;
+    margin: 0 auto; 
+}
+
+.firstimg{
+    width: 48%; 
+    height: 200px;
+    margin: 5px 5px;
+}
+
+.secondimg{
+    width: 48%; 
+    height: 200px;
+    margin: 5px 5px;
+}
+
+
+.thirdimg, .fourthimg, .fifthimg {
+    width: 32%; 
+    height: 200px;
+    margin: 5px 5px; 
+}
+
+.title {
+    margin-left: 20px; 
+}
