@@ -10,7 +10,7 @@ export default function LayoutThreeImg({ assets }: Assets) {
     return (
         <div className={styles.imgwrapper}>
             {assets.map(({ src, alt, className }) => (
-                <Image src={src} alt={alt} classNamewrapper={`${styles[className]}`} />
+                <Image src={src} alt={alt} classNamewrapper={`${styles[className!]}`} />
             ))}
         </div>
     )

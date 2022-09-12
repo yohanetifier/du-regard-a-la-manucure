@@ -2,7 +2,7 @@ import styles from './DescriptionWrapper.module.scss';
 import Title from "../../../Title/Title";
 import Description from "../../../Description/Description";
 
-interface Props {
+export interface Props {
     title: string
     description: string
 }

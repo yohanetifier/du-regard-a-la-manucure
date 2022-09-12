@@ -1,0 +1,14 @@
+.descriptionwrapper {
+    width: 50%;
+    display: flex; 
+    justify-content:center; 
+    align-items:center;
+}
+
+.descriptionsubwrapper  {
+    width: 90%;
+    height: 80%;
+    display: flex; 
+    flex-direction: column;
+    justify-content:center; 
+}

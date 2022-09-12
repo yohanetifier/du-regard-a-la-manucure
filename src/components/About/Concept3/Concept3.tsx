@@ -14,7 +14,7 @@ export default function Concept3(props: Assets) {
                     <Image
                         src={src}
                         alt={alt}
-                        classNamewrapper={`${styles[className]}`}
+                        classNamewrapper={`${styles[className!]}`}
                     />
                     <Description
                         children={props.description!}
