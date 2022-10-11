@@ -54,7 +54,7 @@ const Header = () => {
                     <li className={styles.list}><Link to={'/about'} className={styles.link} onClick={() => setMenu(false)}>A PROPOS</Link></li>
                     <li className={styles.list}><Link to={'/prestations'} className={styles.link} onClick={() => setMenu(false)}>NOS PRESTATIONS</Link></li>
                     <li className={styles.list}><Link to={'/services'} className={styles.link} onClick={() => setMenu(false)}>NOS SERVICES</Link> {/* <span>+</span> */}</li>
-                    <li className={styles.list}><Link to={'/succès'} className={styles.link} onClick={() => setMenu(false)}>NOS SUCCES</Link></li>
+                    <li className={styles.list}><Link to={'/succes'} className={styles.link} onClick={() => setMenu(false)}>NOS SUCCES</Link></li>
                     <li className={styles.list}><Link to={'/rendez-vous'} className={styles.link} onClick={() => setMenu(false)}>RESERVATIONS</Link></li>
                     <li className={styles.list}><Link to={'/contact'} className={styles.link} onClick={() => setMenu(false)}>CONTACT</Link></li>
                     <li className={styles.list}><Link to={'/conditions-de-vente'} className={styles.link} onClick={() => setMenu(false)}>CONDITIONS DE VENTE</Link></li>

@@ -55,7 +55,28 @@ export default function Prestation() {
             sentence: "Mais aussi au-delà du 7ème mois de grossesse ou en cas d’intervention chirurgicale proche."
         },
         {
-            sentence: "Pour une pose de vernis semi-permanent sur les ongles de pieds, il est nécessaire de venir avec les pieds propres, les ongles coupés et sains. Dans le cas contraire, la pose sera refusée"
+            sentence: "Veuillez m'envoyer un message privé avec vos disponibilités / la prestation que vous souhaitez / une photo de vos ongles / vos coordonnées (nom, prénom, téléphone)"
+        },
+        {
+            sentence: "Les remplissages extérieures ne sont pas possible, la dépose sera donc ajoutée au tarif de la prestation choisie"
+        },
+        {
+            sentence: "Un acompte de 30% sera demander pour valider la prise de rendez-vous"
+        },
+        {
+            sentence: "Veuillez confirmer votre rendez-vous la veille"
+        },
+        {
+            sentence: "Les paiements se feront uniquement par paypal ou espèces"
+        },
+        {
+            sentence: "Je me déplace à domicile donc merci de prévoir l'espace nécessaire pour mon matériel (table manucure / table de massage)"
+        },
+        {
+            sentence: "Merci d'être précise au maximum pour la prestation que vous voulez pour vos ongles ou couleur car je ne pourrais pas transporter tout mes vernis"
+        },
+        {
+            sentence: "Un supplément de 10€ sera demandé pour toutes prestations le dimanche et les jours fériés"
         },
     ]
 

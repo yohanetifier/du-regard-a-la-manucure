@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App/App';
+import App from './components/Routes/Routes';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import "../src/assets/fonts/DancingScript/DancingScript-Regular.ttf"
@@ -12,7 +12,7 @@ import "../src/assets/fonts/DancingScript/DancingScript-Regular.ttf"
 ReactDOM.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>, 
+  </BrowserRouter>,
   document.getElementById('root') as HTMLElement
 );
 

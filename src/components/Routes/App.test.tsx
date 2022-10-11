@@ -1,6 +1,6 @@
 import React from 'react';
 // import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from './Routes';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -8,7 +8,7 @@ import App from './App';
 //   expect(linkElement).toBeInTheDocument();
 // });
 
-describe('App', ()=> {
+describe('App', () => {
   it('should have a text result', () => {
     const result = 'result'
     const text = 'result'

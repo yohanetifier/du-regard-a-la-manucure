@@ -1,5 +1,7 @@
 import styles from './Preconditions.module.scss';
 import Title from "../../Title/Title";
+import TitleSubTitle from './TitleSubTitle/TitleSubTitle';
+import ConditionsList from './ConditionsList/ConditionsList';
 
 interface Condition {
     sentence: string
@@ -14,19 +16,13 @@ interface Props {
 export default function Preconditions({ title, subtitle, introsentence, conditions }: Props) {
     return (
         <div className={styles.mainwrapper}>
-            <div className={styles.titlewrapper}>
-                <Title className={styles.title}>{title}</Title>
-                <p className={styles.subtitle}>{subtitle}</p>
-            </div>
-            <div className={styles.conditionwrapper}>
-                <h3>{introsentence}</h3>
-                <ul>
-                    {conditions.map(({ sentence }) => (
-                        <li>{sentence}</li>
-                    ))}
-
-                </ul>
-            </div>
+            <TitleSubTitle
+                title={title}
+                subtitle={subtitle} />
+            <ConditionsList
+                introsentence={introsentence}
+                conditions={conditions}
+            />
         </div>
     )
 }

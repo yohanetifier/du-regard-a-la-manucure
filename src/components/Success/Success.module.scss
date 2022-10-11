@@ -1,0 +1,33 @@
+.mainwrapper {
+}
+
+.titlewrapper {
+    border: 2px solid red; 
+    text-align: center; 
+}
+
+
+.title {
+    margin-bottom: 10px; 
+}
+
+.introsentence {
+    margin-top: 0; 
+}
+
+.serviceswrapper {
+    display: flex;
+    justify-content: center;
+    border: 2px solid red; 
+}
+
+.servicessubwrapper{
+    width: 20%;
+    display: flex; 
+    justify-content: space-evenly; 
+    border: 2px solid red; 
+}
+
+.nails {
+    cursor: pointer; 
+}
