@@ -1,7 +1,7 @@
 import Banner from '../Banner/Banner';
 import Image from '../Image/Image';
 import styles from './Service.module.scss';
-import ServiceBar from '../ServiceBar/ServiceBar';
+import ServiceBar from './ServiceBar/ServiceBar';
 import imgTopNails from '../../assets/images/jesse-donoghoe-2aiP_wxNrfU-unsplash.jpg';
 // import imgTopNails from '../../assets/images/designecologist-r-Ej0NQmFlQ-unsplash.jpg';
 import defaultImgBottom from '../../assets/images/sour-moha-k47viB7Dt8I-unsplash.jpg';
@@ -26,71 +26,74 @@ export default function Service({ img }: Props) {
     const [changeService, setChangeService] = useState<string>('');
     const [image, setImage] = useState<string>('');
 
-   
+
 
     return (
         <div>
             <Banner src={img} className={styles.img} classNamewrapper={styles.wrapper} />
-            <ServiceBar classnamemainwrapper={styles.mainwrapper} classnametitlewrapper={styles.titlewrapper} toggleService={changeService} changeClass={(changeService: string) => setChangeService(changeService)} />
-          {!changeService ?   (
-            <div className={styles.wrappercenter}>
-                <div className={styles.wrapperimgbottom}>
-                    <img src={defaultImgBottom} alt="" className={styles.img}/>
-                </div>
-                <h1 className={styles.layoutitle}>De la beauté du regard</h1>
-                <div className={styles.wrapperimgtop}>
-                    <img src={defaultImgTop} alt="" className={styles.img}/>
-                </div>
-            </div>
-          ) : (
-            <div className={styles.wrappercenter}>
-            <div className={styles.price}>
-                <div className={changeService === 'Ongles' ? `${styles.ongles} ${styles.actif}` : `${styles.ongles}`}>
-                    <h2 className={styles.subtitle}>Beauté des mains</h2>
-                    <ul>
-                        {beautyOfHands.map(({ service, price }) => (
-                            <div className={styles.beautywrapper}>
-                                <li>{service}</li>
-                                <span className={styles.bold}>{price}</span>
-                             </div>
-                        ))}
-                    </ul>
-                    <div className={styles.test}>
-                    <h2 className={styles.subtitle}>Beauté des pieds</h2>
-                    <ul>
-                        {beautyOfFoot.map(({ service, price }) => (
-                            <div className={styles.beautywrapper}>
-                                <li>{service}</li>
-                                <span className={styles.bold}>{price}</span>
-                            </div>
-                        ))}
-                    </ul>
+            <ServiceBar
+                toggleService={changeService}
+                changeClass={(changeService: string) => setChangeService(changeService)}
+            />
+            {!changeService ? (
+                <div className={styles.wrappercenter}>
+                    <div className={styles.wrapperimgbottom}>
+                        <img src={defaultImgBottom} alt="" className={styles.img} />
+                    </div>
+                    <h1 className={styles.layoutitle}>De la beauté du regard</h1>
+                    <div className={styles.wrapperimgtop}>
+                        <img src={defaultImgTop} alt="" className={styles.img} />
                     </div>
                 </div>
-                <div className={changeService === 'Sourcils' ? `${styles.sourcils} ${styles.actif}` : `${styles.sourcils}`}>
-                <h2 className={styles.subtitle}>Beauté du regard</h2>
-                <ul>
-                        {beautyOfEyebrows.map(({ service, price }) => (
-                            <div className={styles.beautywrapper}>
-                                <li>{service}</li>
-                                <span className={styles.bold}>{price}</span>
+            ) : (
+                <div className={styles.wrappercenter}>
+                    <div className={styles.price}>
+                        <div className={changeService === 'Ongles' ? `${styles.ongles} ${styles.actif}` : `${styles.ongles}`}>
+                            <h2 className={styles.subtitle}>Beauté des mains</h2>
+                            <ul>
+                                {beautyOfHands.map(({ service, price }) => (
+                                    <div className={styles.beautywrapper}>
+                                        <li>{service}</li>
+                                        <span className={styles.bold}>{price}</span>
+                                    </div>
+                                ))}
+                            </ul>
+                            <div className={styles.test}>
+                                <h2 className={styles.subtitle}>Beauté des pieds</h2>
+                                <ul>
+                                    {beautyOfFoot.map(({ service, price }) => (
+                                        <div className={styles.beautywrapper}>
+                                            <li>{service}</li>
+                                            <span className={styles.bold}>{price}</span>
+                                        </div>
+                                    ))}
+                                </ul>
                             </div>
-                        ))}
-                    </ul>
-                </div>
-                <div className={changeService === 'Cils' ? `${styles.cils} ${styles.actif}` : `${styles.cils}`}>
-                    <h2 className={styles.subtitle}>Beauté du regard</h2>
-                <ul className={styles.listofservice}>
-                        {beautyOfEyelashes.map(({ service, price }) => (
-                            <div className={styles.beautywrapper}>
-                                <li>{service}</li>
-                                <span className={styles.bold}>{price}</span>
-                            </div>
-                        ))}
-                    </ul>
-                </div>
-            </div>
-            <div className={changeService === 'Ongles' ? `${styles.foot} ${styles.actif}` : `${styles.ongles}`}>
+                        </div>
+                        <div className={changeService === 'Sourcils' ? `${styles.sourcils} ${styles.actif}` : `${styles.sourcils}`}>
+                            <h2 className={styles.subtitle}>Beauté du regard</h2>
+                            <ul>
+                                {beautyOfEyebrows.map(({ service, price }) => (
+                                    <div className={styles.beautywrapper}>
+                                        <li>{service}</li>
+                                        <span className={styles.bold}>{price}</span>
+                                    </div>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className={changeService === 'Cils' ? `${styles.cils} ${styles.actif}` : `${styles.cils}`}>
+                            <h2 className={styles.subtitle}>Beauté du regard</h2>
+                            <ul className={styles.listofservice}>
+                                {beautyOfEyelashes.map(({ service, price }) => (
+                                    <div className={styles.beautywrapper}>
+                                        <li>{service}</li>
+                                        <span className={styles.bold}>{price}</span>
+                                    </div>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className={changeService === 'Ongles' ? `${styles.foot} ${styles.actif}` : `${styles.ongles}`}>
                         <h2 className={styles.subtitle}>Beauté des pieds</h2>
                         <ul>
                             {beautyOfFoot.map(({ service, price }) => (
@@ -100,11 +103,11 @@ export default function Service({ img }: Props) {
                                 </div>
                             ))}
                         </ul>
-                        </div>
-            <Image src={changeService === 'Ongles' ? imgTopNails : changeService === 'Cils' ? imgTopEyelashes : changeService === 'Sourcils' ? imgTopEyebrows : ""} alt={""} classNamewrapper={styles.imgtopright} />
-            <Image src={changeService === 'Ongles' ? imgBottomNails : changeService === 'Cils' ? imgBottomEyelashes : changeService === 'Sourcils' ? imgBottomEyebrows : ""}  alt={""} classNamewrapper={styles.imgbottomright} />
-        </div>
-          )}
+                    </div>
+                    <Image src={changeService === 'Ongles' ? imgTopNails : changeService === 'Cils' ? imgTopEyelashes : changeService === 'Sourcils' ? imgTopEyebrows : ""} alt={""} classNamewrapper={styles.imgtopright} />
+                    <Image src={changeService === 'Ongles' ? imgBottomNails : changeService === 'Cils' ? imgBottomEyelashes : changeService === 'Sourcils' ? imgBottomEyebrows : ""} alt={""} classNamewrapper={styles.imgbottomright} />
+                </div>
+            )}
         </div>
     )
 }

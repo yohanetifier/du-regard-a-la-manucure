@@ -11,34 +11,7 @@
     z-index: 3; 
 }
 
-.mainwrapper {
-    display: flex; 
-    justify-content: center;
-    position: relative;
-    bottom: 40px; 
-    background-color: var.$color-primary; 
-}
 
-.titlewrapper {
-    display: flex; 
-    justify-content: space-around;
-     width: 30%;
-     background-color: var.$color-primary; 
-     z-index: 4; 
-     @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
-        width: 40%; 
-     }
-     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        width: 50%; 
-     }
-     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
-        width: 70%; 
-     }
-     @media screen and (max-width: map-get(var.$breakpoints, "phone-up")){
-        width: 90%; 
-     }
-
-}
 
 .actiftitle {
     background-color: white; 

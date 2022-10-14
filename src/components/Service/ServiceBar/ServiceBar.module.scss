@@ -1,0 +1,53 @@
+@use "../../../styles//utils/variables.scss" as var; 
+
+$black: black; 
+
+.mainwrapper {
+    display: flex; 
+    justify-content: center;
+    position: relative;
+    bottom: 40px; 
+    background-color: var.$color-primary; 
+}
+
+.titlewrapper {
+    display: flex; 
+    justify-content: space-around;
+     width: 30%;
+     background-color: var.$color-primary; 
+     z-index: 4; 
+     @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+        width: 40%; 
+     }
+     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        width: 50%; 
+     }
+     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        width: 70%; 
+     }
+     @media screen and (max-width: map-get(var.$breakpoints, "phone-up")){
+        width: 90%; 
+     }
+
+}
+
+.title {
+    cursor: pointer; 
+}
+
+.default {
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+}
+
+.actif {
+    background-color: white; 
+    color: black; 
+}
+
+.inactif {
+    background-color: pink; 
+    color: white; 
+}
+

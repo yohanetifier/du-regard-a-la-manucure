@@ -5,6 +5,8 @@ import eyeLashesImg from '../../assets/images/engin-akyurt-EeVOgK2x0E4-unsplash.
 import nailsImg from '../../assets/images/pesce-huang-CNMMvIQJS2Y-unsplash.jpg';
 import { useState } from 'react';
 import Image from "../Image/Image";
+import ServiceBar from "../Service/ServiceBar/ServiceBar";
+import DisplayImage from "./DisplayImage/DisplayImage";
 
 export default function Success() {
     const [services, setServices] = useState('');
@@ -20,12 +22,24 @@ export default function Success() {
             categorie: "Sourcils"
         },
         {
+            src: eyeBrowsImg,
+            categorie: "Sourcils"
+        },
+        {
             src: eyeLashesImg,
             categorie: "Cils"
         },
         {
             src: eyeLashesImg,
             categorie: "Cils"
+        },
+        {
+            src: eyeLashesImg,
+            categorie: "Cils"
+        },
+        {
+            src: nailsImg,
+            categorie: "Ongles"
         },
         {
             src: nailsImg,
@@ -38,7 +52,6 @@ export default function Success() {
     ]
 
     const nailsImages = assets.filter(item => item.categorie === services)
-    console.log("nailsImages", nailsImages);
 
 
     return (
@@ -46,18 +59,13 @@ export default function Success() {
             <TitleSubTitle
                 title="Nos Succes"
                 subtitle="Nous savons prendre soin de vous" />
-            <div className={styles.serviceswrapper}>
-                <div className={styles.servicessubwrapper}>
-                    <p onClick={() => setServices('Ongles')} className={styles.nails}>Ongles</p>
-                    <p onClick={() => setServices('Sourcils')}>Sourcils</p>
-                    <p onClick={() => setServices('Cils')}>Cils</p>
-                </div>
-                <div>
-                    {nailsImages.map(item => (
-                        <p>{item.categorie}</p>
-                    ))}
-                </div>
-            </div>
+            <ServiceBar
+                toggleService={services}
+                changeClass={setServices}
+            />
+            <DisplayImage
+                imageAssets={nailsImages}
+            />
         </div>
     )
 }

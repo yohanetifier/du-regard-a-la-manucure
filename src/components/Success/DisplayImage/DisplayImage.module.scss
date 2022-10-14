@@ -1,0 +1,29 @@
+@use"../../../styles/utils/variables.scss" as var; 
+
+.imgwrapper {
+    display: flex; 
+    @media screen and (max-width: map-get(var.$breakpoints, "desktop-down")){
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+    }
+
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        flex-direction: column; 
+        align-items:center; 
+    }
+}
+
+.img {
+    @media screen and (max-width: map-get(var.$breakpoints, "desktop-down")){
+        width: 31%;  
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
+        width: 47%;  
+        margin: 10px 5px; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        width: 90%; 
+    }
+    margin: 10px 10px; 
+    max-height: 300px; 
+}
