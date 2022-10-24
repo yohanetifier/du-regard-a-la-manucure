@@ -1,10 +1,19 @@
+@use "../../../styles/utils/variables.scss" as var; 
+
 .mainwrapper {
     height: 100vh;
     display: flex; 
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        flex-direction: column; 
+        margin-bottom: 20px; 
+    }
 }
 
 .reverserow {
     flex-direction: row-reverse; 
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        flex-direction: column; 
+    }
 }
 
 

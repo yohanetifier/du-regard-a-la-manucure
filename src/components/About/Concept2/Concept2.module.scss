@@ -1,8 +1,12 @@
-.mainwrapper {
-    // border: 2px solid purple; 
-    display: flex; 
-}
+@use "../../../styles/utils/variables.scss" as var; 
 
+.mainwrapper {
+    display: flex; 
+    flex-direction: row; 
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        flex-direction: column; 
+    }
+}
 
 .imgfirstwrapper {
     z-index: 1; 
@@ -26,9 +30,11 @@
     display: flex; 
     align-items: center;
     justify-content: flex-end;
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        width: 100%;
+    }
 }
 
 .descriptionsubwrapper {
-    // border: 2px solid red; 
     width: 95%; 
 }

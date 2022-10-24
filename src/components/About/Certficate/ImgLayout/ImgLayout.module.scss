@@ -1,8 +1,13 @@
+@use "../../../../styles/utils/variables.scss" as var;
+
 .imgwrapper {
     display: flex; 
     flex-wrap: wrap; 
     width: 90%;
     margin: 0 auto; 
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        flex-direction: column; 
+    }
 }
 
 .firstimg{
@@ -12,18 +17,29 @@
 }
 
 .secondimg{
-    width: 48%; 
+    width: 47%; 
     height: 200px;
     margin: 5px 5px;
 }
 
+.firstimg, .secondimg {
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        width: 100%; 
+    }
+}
+
 
 .thirdimg, .fourthimg, .fifthimg {
-    width: 32%; 
+    width: 31.5%; 
     height: 200px;
     margin: 5px 5px; 
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        width: 100%; 
+    }
 }
 
 .title {
     margin-left: 20px; 
 }
+
+

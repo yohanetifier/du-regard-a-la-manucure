@@ -1,8 +1,15 @@
+@use "../../../../styles/utils/variables.scss" as var; 
+
 .descriptionwrapper {
     width: 50%;
     display: flex; 
     justify-content:center; 
     align-items:center;
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+        width: 100%; 
+        height: 50%; 
+    }
+    
 }
 
 .descriptionsubwrapper  {

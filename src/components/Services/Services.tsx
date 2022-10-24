@@ -1,9 +1,5 @@
 import styles from './Service.module.scss';
 import Title from '../Title/Title'
-// import img1 from '../../assets/images/hayley-kim-design-sRSRuxkOuzI-unsplash.jpg';
-// import img2 from '../../assets/images/gabe-pierce-_wK8VnF5yao-unsplash.jpg';
-// import img3 from '../../assets/images/kartik-gada--4iMX-4MIZ8-unsplash.jpg'; 
-// import img3 from '../../assets/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg';
 
 function Service() {
     return (
