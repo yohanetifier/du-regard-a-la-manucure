@@ -15,7 +15,7 @@
     grid-row: 2 / 8; 
     z-index: 1; 
     @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
-        grid-column: 2 / 7;     
+        grid-column: 2 / 7;
     }
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
         grid-column: 1 / 6; 
@@ -65,6 +65,7 @@
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
         color: white; 
     }
+    border: 2px solid red; 
 }
 
 
@@ -99,4 +100,23 @@
     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
         width: 100%; 
     }
+}
+
+.fade-enter{
+    opacity: 0; 
+    z-index: 1; 
+}
+
+.fade-enter-active{
+    opacity: 1; 
+    transition: opacity 300ms linear; 
+}
+
+.fade-exit {
+    opacity: 0; 
+    z-index: 1; 
+}
+
+.fade-exit-active {
+    transition: opacity 300ms linear; 
 }

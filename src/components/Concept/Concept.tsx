@@ -1,11 +1,16 @@
 import Image from '../Image/Image';
 import styles from './Concept.module.scss';
 import Button from "../Button/Button";
+import { useState, useRef } from "react";
+import { useSpring, animated } from '@react-spring/web';
+import useIntersection from '../UseIntersection/UseIntersection';
+
 
 export interface Img {
     src: string
     alt: string
     classNamewrapper?: string
+    ref?: null
 }
 
 interface Props {
@@ -33,10 +38,30 @@ function Concept({
     numberOfButton,
 
 }: Props) {
+    const ref = useRef<HTMLImageElement | null>(null);
+    const ifIsInViewport = useIntersection(ref, "-200px");
+    const state = useState(true);
+    const test = useSpring({
+        from: { opacity: "0" },
+        to: { opacity: state ? "1" : "0" },
+        config: { duration: 2000 }
+    })
+
+    if (ifIsInViewport) {
+        console.log('ifIsInViewport');
+    }
+
     return (
+
         <div className={styles.mainwrapper}>
             <div className={styles.imagewrapper}>
-                <Image src={src} alt={alt} classNamewrapper={styles.firstimage} />
+                <animated.img
+                    src={src}
+                    alt={alt}
+                    // classNamewrapper={styles.firstimage}
+                    style={{ ...test }}
+                    ref={ref}
+                />
             </div>
             <div className={styles.descriptionwrapper}>
                 <div className={styles.layoutwrapper}>
@@ -59,7 +84,8 @@ function Concept({
                         </div>}
                 </div>
             </div>
-        </div>
+        </div >
+
     )
 }
 
