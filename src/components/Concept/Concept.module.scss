@@ -68,7 +68,7 @@
 }
 
 
-.firstimage {
+.test {
     height: 100%; 
 }
 
@@ -101,21 +101,30 @@
     }
 }
 
-.fade-enter{
-    opacity: 0; 
-    z-index: 1; 
+.test {
+    // opacity: 0; 
+    transform: translateX(-100vw); 
 }
 
-.fade-enter-active{
+.testEnterActive {
+    // opacity: 1;
+    transform: translateX(0px); 
+    transition: transform 1000ms;
+}
+
+.testEnterDone {
+    transform: translateX(0px); 
+}
+
+.testExit {
     opacity: 1; 
-    transition: opacity 300ms linear; 
 }
 
-.fade-exit {
-    opacity: 0; 
-    z-index: 1; 
+.testExitActive {
+    opacity: 0;
+    transition: opacity 1000ms;
 }
 
-.fade-exit-active {
-    transition: opacity 300ms linear; 
+.testExitDone {
+    opacity: 0;
 }
