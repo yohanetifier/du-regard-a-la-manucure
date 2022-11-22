@@ -101,21 +101,21 @@
     }
 }
 
-.fade-enter{
-    opacity: 0; 
-    z-index: 1; 
+
+.test {
+    // border: 2px solid red; 
+    overflow: hidden; 
+    height: 80px; 
+    display: flex; 
+    align-items: center;
 }
 
-.fade-enter-active{
-    opacity: 1; 
-    transition: opacity 300ms linear; 
+.exercice {
+    overflow: hidden; 
+    // border: 2px solid blue; 
 }
 
-.fade-exit {
-    opacity: 0; 
-    z-index: 1; 
-}
-
-.fade-exit-active {
-    transition: opacity 300ms linear; 
+.testthree {
+    // border: 2px solid red; 
+    overflow: hidden; 
 }

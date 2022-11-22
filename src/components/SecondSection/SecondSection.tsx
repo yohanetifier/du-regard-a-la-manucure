@@ -27,7 +27,7 @@ function SecondSection() {
         config: { duration: 1000 }
     })
     const AppearByLine = useSpring({
-        ref: springRef,
+        // ref: springRef,
         from: { opacity: 0 },
         to: { opacity: ifIsInViewport ? 1 : 0 },
         config: { duration: 1000 }
