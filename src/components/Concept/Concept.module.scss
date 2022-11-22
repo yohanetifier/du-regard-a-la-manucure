@@ -68,7 +68,7 @@
 }
 
 
-.test {
+.firstimage {
     height: 100%; 
 }
 
@@ -101,30 +101,21 @@
     }
 }
 
+
 .test {
-    // opacity: 0; 
-    transform: translateX(-100vw); 
+    // border: 2px solid red; 
+    overflow: hidden; 
+    height: 80px; 
+    display: flex; 
+    align-items: center;
 }
 
-.testEnterActive {
-    // opacity: 1;
-    transform: translateX(0px); 
-    transition: transform 1000ms;
+.exercice {
+    overflow: hidden; 
+    // border: 2px solid blue; 
 }
 
-.testEnterDone {
-    transform: translateX(0px); 
-}
-
-.testExit {
-    opacity: 1; 
-}
-
-.testExitActive {
-    opacity: 0;
-    transition: opacity 1000ms;
-}
-
-.testExitDone {
-    opacity: 0;
+.testthree {
+    // border: 2px solid red; 
+    overflow: hidden; 
 }

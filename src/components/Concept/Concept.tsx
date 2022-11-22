@@ -1,9 +1,8 @@
 import Image from '../Image/Image';
 import styles from './Concept.module.scss';
 import Button from "../Button/Button";
-import { CSSTransition } from "react-transition-group";
-import useIntersection from "../UseIntersection/UseIntersection";
 import { useRef, useState } from "react";
+import { motion, useScroll, useInView } from "framer-motion";
 
 export interface Img {
     src: string
@@ -38,65 +37,71 @@ function Concept({
 
 }: Props) {
 
-    const wrapper = useRef<null>(null);
-    const [state, setState] = useState(false);
-    // const wrapperDescription = useRef<null>(null);
-    const ifIsInViewport = useIntersection(wrapper, 0.5);
-
-    function changeValue() {
-        setTimeout(() => {
-            setState(true)
-        }, 10000)
-    }
-    changeValue();
-    // console.log("ifIsInViewport", ifIsInViewport)
-    // const translationByTheLeft = useSpring({
-    //     from: { transform: "translateX(-100vw)" },
-    //     to: { transform: ifIsInViewport ? "translateX(0px)" : "translateX(-100vw)" },
-    //     config: { duration: 1000 }
-    // })
-
-    // const translationByTheRight = useSpring({
-    //     from: { transform: "translateX(100vw)" },
-    //     to: { transform: ifIsInViewport ? 'translateX(0px)' : "translateX(100vw)" },
-    //     config: { duration: 1000 }
-    // })
+    const scrollRef = useRef(null);
+    const isInView = useInView(scrollRef, { once: true, amount: 0.5 })
+    console.log(isInView)
 
     return (
 
-        <div className={styles.mainwrapper} >
-            <div className={styles.imagewrapper} ref={wrapper}>
-                < CSSTransition
-                    in={ifIsInViewport}
-                    timeout={1000}
-                    classNames={{
-                        enterActive: styles.testEnterActive,
-                        enterDone: styles.testEnterDone,
-                        exitActive: styles.ExitActive,
-                        exitDone: styles.testExitDone
-                    }}
-                >
-                    <img
-                        src={src}
-                        alt={alt}
-                        className={styles.test}
-                    // className="test"
-                    />
-                </CSSTransition>
-
-
-
-            </div>
-            <div className={styles.descriptionwrapper} >
+        <div className={styles.mainwrapper} ref={scrollRef}>
+            {isInView && <motion.div
+                className={styles.imagewrapper}
+                initial={{ x: "-100vw" }}
+                animate={{ x: 0 }}
+                transition={{ duration: 1 }}
+            >
+                <Image
+                    src={src}
+                    alt={alt}
+                    classNamewrapper={styles.firstimage}
+                />
+            </motion.div>}
+            {isInView && <motion.div
+                className={styles.descriptionwrapper}
+                initial={{ x: "100vw" }}
+                animate={{ x: 0 }}
+                transition={{ duration: 1 }}
+            >
                 <div className={styles.layoutwrapper}>
-                    <h2 className={styles.title}> {title}</h2>
-                    <p className={styles.description}>
-                        {children}</p>
+                    <span className={styles.test}><motion.h2
+                        className={styles.title}
+                        initial={{ y: 80 }}
+                        animate={{ y: 0 }}
+                        transition={{
+                            delay: 2,
+                            duration: 1
+                        }}
+                    > {title}</motion.h2>
+                    </span>
+                    <div className={styles.exercice}>
+                        <motion.p
+                            className={styles.description}
+                            initial={{ y: 100 }}
+                            animate={{ y: 0 }}
+                            transition={{
+                                delay: 3,
+                                duration: 1,
+                                staggerChildren: 0.05
+                            }}
+                        >
+                            {children}
+                        </motion.p>
+                    </div>
                     {numberOfButton === "one" ?
-                        <Button
-                            to={to}
-                            label={label}
-                        />
+                        <motion.div
+                            className={styles.testthree}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                delay: 4,
+                                duration: 1,
+                            }}
+                        >
+                            <Button
+                                to={to}
+                                label={label}
+                            />
+                        </motion.div>
                         :
                         <div className={styles.buttonwrapper}>
                             <Button
@@ -107,7 +112,7 @@ function Concept({
                                 label={secondLabel!} />
                         </div>}
                 </div>
-            </div>
+            </motion.div>}
         </div >
 
     )
