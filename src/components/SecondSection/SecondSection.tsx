@@ -1,60 +1,74 @@
 import styles from './SecondSection.module.scss';
-// import Image from '../Image/Image';
-// import { Img } from '../Concept/Concept'
-// import img1 from '../../assets/images/ana-francisconi-x-CXDIuhS3c-unsplash.jpg'
 import { useRef } from "react";
 import img2 from '../../assets/images/hadis-safari-A7rkoSFjrG0-unsplash.jpg'
 import img1 from '../../assets/images/sara-dabaghian-wZx6BeqZNUk-unsplash.jpg'
-import useIntersection from '../UseIntersection/UseIntersection';
-import { useSpring, animated, useChain, useSpringRef } from 'react-spring';
+import { delay, motion, useInView } from 'framer-motion';
+import { useState } from 'react';
+import Image from '../Image/Image';
 
 function SecondSection() {
     const wrapper = useRef(null);
-    const ifIsInViewport = useIntersection(wrapper, 0.3);
+    const isInView = useInView(wrapper, { once: true, amount: 0.5 });
+    const [isOver, setIsOver] = useState(false);
 
-    // Animation
-    const springRef = useSpringRef();
-    const testRef = useSpringRef();
-    const translationByTheLeft = useSpring({
-        // ref: testRef,
-        from: { transform: "translateX(-100%)" },
-        to: { transform: ifIsInViewport ? "translateX(0px)" : "translateX(-100%)" },
-        config: { duration: 1000 }
-    })
-    const translationByTheRight = useSpring({
-        from: { transform: "translateX(100%)" },
-        to: { transform: ifIsInViewport ? "translateX(0px)" : "translateX(100%)", },
-        config: { duration: 1000 }
-    })
-    const AppearByLine = useSpring({
-        // ref: springRef,
-        from: { opacity: 0 },
-        to: { opacity: ifIsInViewport ? 1 : 0 },
-        config: { duration: 1000 }
-    })
+    const container = {
+        show: {
+            transition: {
+                staggerChildren: 0.50,
+                duration: 1
+            }
+        }
+    }
 
-    // useChain([translationByTheLeft, translationByTheRight])
+    const item = {
+        hidden: {
+            x: -100,
+            opacity: 0
+        },
+        show: {
+            x: 0,
+            opacity: 1
+        }
+    }
 
     return (
         <div className={styles.mainwrapper} ref={wrapper}>
-            <div className={styles.imageleftwrapper} >
-                {ifIsInViewport && <animated.img src={img1} alt="" className={styles.imgleft} style={{ ...translationByTheLeft }} />}
-                {/* <div className={styles.sentence}>
-                    <p> La beauté est dans les yeux de celui qui regarde. Oscar Wilde</p>
-                </div> */}
-
-            </div>
-            <div className={styles.sentence}>
-                {/* <p> La beauté est  dans les yeux  de celui  qui regarde.  Oscar Wilde</p> */}
-                <animated.p style={{ ...translationByTheLeft }}> La beauté </animated.p>
-                <p> est </p>
-                <p> dans les yeux </p>
-                <p> de celui  qui regarde.   </p>
-                <p> Oscar Wilde </p>
-            </div>
-            <div className={styles.imagerightwrapper}>
-                {ifIsInViewport && <animated.img src={img2} alt="" className={styles.imgright} style={{ ...translationByTheRight }} />}
-            </div>
+            {isInView &&
+                <Image
+                    src={img1}
+                    alt={img1}
+                    classNamewrapper={styles.imageleftwrapper}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    animation={true}
+                    onAnimationComplete={() => setIsOver(true)}
+                />
+            }
+            {isOver &&
+                <motion.div
+                    className={styles.sentence}
+                    variants={container}
+                    initial="hidden"
+                    animate="show"
+                >
+                    <motion.p variants={item}> La beauté </motion.p>
+                    <motion.p variants={item}> est </motion.p>
+                    <motion.p variants={item}> dans les yeux </motion.p>
+                    <motion.p variants={item}> de celui  qui regarde.  </motion.p>
+                    <motion.p variants={item}> Oscar Wilde </motion.p>
+                </motion.div>}
+            {isInView &&
+                <Image
+                    src={img2}
+                    alt={img2}
+                    classNamewrapper={styles.imagerightwrapper}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                    animation={true}
+                />
+            }
         </div>
     )
 }
