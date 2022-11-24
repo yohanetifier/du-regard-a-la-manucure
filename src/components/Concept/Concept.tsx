@@ -1,8 +1,8 @@
 import Image from '../Image/Image';
 import styles from './Concept.module.scss';
 import Button from "../Button/Button";
-import { useRef, useState } from "react";
-import { motion, useScroll, useInView } from "framer-motion";
+import { useRef, } from "react";
+import { motion, useInView } from "framer-motion";
 
 export interface Img {
     src: string
@@ -38,8 +38,7 @@ function Concept({
 }: Props) {
 
     const scrollRef = useRef(null);
-    const isInView = useInView(scrollRef, { once: true, amount: 0.5 })
-    console.log(isInView)
+    const isInView = useInView(scrollRef, { once: true, amount: 0.5 });
 
     return (
 
