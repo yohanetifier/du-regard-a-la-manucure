@@ -124,14 +124,22 @@ function Concept({
                                 />
                             </motion.div>
                             :
-                            <div className={styles.buttonwrapper}>
+                            <motion.div
+                                className={styles.buttonwrapper}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{
+                                    delay: 4,
+                                    duration: 1,
+                                }}
+                            >
                                 <Button
                                     to={to}
                                     label={label} />
                                 <Button
                                     to={secondTo!}
                                     label={secondLabel!} />
-                            </div>}
+                            </motion.div>}
                     </div>
                 </motion.div>}
         </div >
