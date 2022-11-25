@@ -67,16 +67,16 @@
         grid-column: 1 / 5; 
     }
     & > p{
-        transform: translateX(-20%); 
+        // transform: translateX(-20%); 
         font-size: 2.5em;
         font-family: " Roboto";
         color: black; 
-        border: 2px solid red; 
+        // border: 2px solid red; 
         display: flex; 
         align-items: center;
     }
     & > p:last-child {
-        border: 2px solid purple; 
+        // border: 2px solid purple; 
         // position: absolute; 
         // bottom: 0; 
     }
