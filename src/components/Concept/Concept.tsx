@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { useRef, } from "react";
 import { motion, useInView } from "framer-motion";
 
-// 
+
 interface InitialProps {
     opacity?: number
     x?: string
