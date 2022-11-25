@@ -20,7 +20,7 @@ function Work() {
         show: {
             opacity: 1,
             transition: {
-                delayChildren: 1
+                staggerChildren: 1
             }
         }
     }
