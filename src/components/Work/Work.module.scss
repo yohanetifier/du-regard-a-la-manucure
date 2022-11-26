@@ -21,11 +21,13 @@
 
 .wrappertitle {
     height: 10%; 
+    overflow: hidden; 
 }
 
 .title {
     @include mixin.titlesectionhome; 
     margin-left: 120px;  
+    font-size: 75px; 
 }
 
 .wrapperimg {

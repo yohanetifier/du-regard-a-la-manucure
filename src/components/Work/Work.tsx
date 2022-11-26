@@ -11,75 +11,100 @@ import { useRef, useState } from 'react';
 
 
 function Work() {
+    const [firstAnimationIsOver ,setFirstAnimationIsOver] = useState(false); 
+    const [secondAnimationIsOver ,setSecondAnimationIsOver] = useState(false); 
     const wrapper = useRef(null);
     const isInView = useInView(wrapper, { once: true, amount: 0.5 });
     const container = {
-        hidden: {
+        initial: {
             opacity: 0
         },
-        show: {
+        animate: {
             opacity: 1,
             transition: {
-                staggerChildren: 1
+                delayChildren: .6, 
+                staggerChildren: 0.2
             }
         }
     }
 
     const item = {
-        hidden: {
+        initial: {
             opacity: 0
         },
-        show: {
-            opacity: 1
-        }
+        animate: {
+            opacity: 1, 
+            transition: {
+                duration: 1
+            }
+        },
+        
     }
 
     return (
         <div className={styles.wrapper} ref={wrapper}>
             <div className={styles.wrappertitle}>
-                <h2 className={styles.title}>Mes succès</h2>
+                {isInView && 
+                <motion.h2 
+                    className={styles.title}
+                    initial={{y: 200}}
+                    animate={{y: 0}}
+                    transition={{
+                        duration: 1
+                    }}
+                    onAnimationComplete={() => setFirstAnimationIsOver(true)}
+                    >Mes Succès
+                </motion.h2>}
             </div>
             <motion.div
                 className={styles.mainwrapper}
                 variants={container}
-                initial="hidden"
-                animate="show"
+                initial="initial"
+                animate="animate"
+                onAnimationComplete={() => setSecondAnimationIsOver(true)}
+                
             >
-                {isInView &&
-                    <motion.div
+                
+                   <motion.div
                         className={styles.wrapperimg}
                         variants={item}
-                    // initial="hidden"
-                    // animate='show'
                     >
                         <img src={img1} className={styles.img} />
-                    </motion.div>}
-                {isInView &&
+                    </motion.div>
+                
                     <motion.div
                         className={styles.wrapperimg}
                         variants={item}
                     >
                         <img src={img2} className={styles.img} />
-                    </motion.div>}
-                {isInView &&
+                    </motion.div>
+                
                     <motion.div
                         className={styles.wrapperimg}
                         variants={item}
                     >
                         <img src={img3} className={styles.img} />
-                    </motion.div>}
-                {isInView &&
+                    </motion.div>
+                
                     <motion.div
                         className={styles.wrapperimg}
                         variants={item}
                     >
                         <img src={img4} className={styles.img} />
-                    </motion.div>}
+                    </motion.div>
 
             </motion.div>
-            <div className={styles.wrapperlink}>
+           {secondAnimationIsOver &&  
+           <motion.div 
+            className={styles.wrapperlink}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{
+                duration: 1
+            }}
+            >
                 <Link to="/succes" className={styles.link}>Voir plus de succès</Link>
-            </div>
+            </motion.div>}
         </div>
     )
 };
