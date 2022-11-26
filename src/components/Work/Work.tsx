@@ -17,7 +17,7 @@ function Work() {
     const isInView = useInView(wrapper, { once: true, amount: 0.5 });
     const container = {
         initial: {
-            opacity: 0
+            opacity: 0, 
         },
         animate: {
             opacity: 1,
@@ -56,15 +56,16 @@ function Work() {
                     >Mes Succès
                 </motion.h2>}
             </div>
-            <motion.div
+             <div
+             className={styles.test}
+             >
+                {firstAnimationIsOver && <motion.div
                 className={styles.mainwrapper}
                 variants={container}
                 initial="initial"
                 animate="animate"
                 onAnimationComplete={() => setSecondAnimationIsOver(true)}
-                
-            >
-                
+                >
                    <motion.div
                         className={styles.wrapperimg}
                         variants={item}
@@ -92,8 +93,9 @@ function Work() {
                     >
                         <img src={img4} className={styles.img} />
                     </motion.div>
+                    </motion.div>}
 
-            </motion.div>
+            </div>
            {secondAnimationIsOver &&  
            <motion.div 
             className={styles.wrapperlink}
