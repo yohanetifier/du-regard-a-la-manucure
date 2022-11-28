@@ -8,9 +8,11 @@ import Image from "../Image/Image";
 import ServiceBar from "../Service/ServiceBar/ServiceBar";
 import DisplayImage from "./DisplayImage/DisplayImage";
 
-export default function Success() {
+
+export default function Success({}) {
     const [services, setServices] = useState('');
     const [img, setImg] = useState([]);
+
 
     const assets = [
         {

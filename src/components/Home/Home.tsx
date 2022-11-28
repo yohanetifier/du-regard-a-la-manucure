@@ -8,8 +8,11 @@ import Footer from '../Footer/Footer';
 import imgBelowRight from '../../assets/images/apostolos-vamvouras-Mky1mc85XQQ-unsplash (1).jpg'
 import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 
+export interface Props {
+    animationDone(arg: boolean): void
+}
 
-function Home() {
+function Home({animationDone}: Props) {
 
     return (
         <div className={styles.wrapper}>
@@ -31,8 +34,8 @@ function Home() {
             />
             <SecondSection />
             <Services />
-            <Work />
-            <Footer />
+            <Work animationDone={animationDone}/>
+            {/* <Footer /> */}
         </div>
     )
 }

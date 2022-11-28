@@ -5,11 +5,16 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {Link} from 'react-router-dom'; 
 import Follow from '../Follow/Follow'
+import {motion} from 'framer-motion'; 
 
 interface Link {
     label: string
     to: string
     className: string
+}
+
+interface Props {
+    animation: boolean
 }
 
 const FooterLink: Link[] = [
@@ -30,10 +35,26 @@ const FooterLink: Link[] = [
     },
 ]
 
-function Footer() {
+function Footer({animation}: Props) {
+    // const wrapperAppear, setWrapperApper
     return (
-        <div className={styles.mainwrapper}>
-            <div className={styles.firstwrapper}>
+        <div className={styles.layoutwrapper}>
+       {animation && 
+       <motion.div 
+       className={styles.mainwrapper}
+       initial={{
+        scaleY: 0, 
+        transformOrigin: `bottom`
+    }}
+       animate={{
+        scaleY: 1, 
+        transformOrigin: `bottom`,
+    }}
+    transition={{
+        duration: 1
+    }}
+       >
+             <div className={styles.firstwrapper}>
                 <div className={styles.imgwrapper}>
                     <img src="" alt="" className={styles.img} />
                 </div>
@@ -46,9 +67,10 @@ function Footer() {
                     <Follow />
                 </div>
             </div>
-            <div className={styles.bottomwrapper}>
+             <div className={styles.bottomwrapper}>
                 <p>All Right Reserved 2022</p>
             </div>
+        </motion.div>}
         </div>
     )
 };
