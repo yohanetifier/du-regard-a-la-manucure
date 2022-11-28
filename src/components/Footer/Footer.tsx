@@ -6,6 +6,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import {Link} from 'react-router-dom'; 
 import Follow from '../Follow/Follow'
 import {motion} from 'framer-motion'; 
+import {useState} from 'react'; 
 
 interface Link {
     label: string
@@ -36,7 +37,8 @@ const FooterLink: Link[] = [
 ]
 
 function Footer({animation}: Props) {
-    // const wrapperAppear, setWrapperApper
+    const [wrapperAppear, setWrapperApper] = useState(false);
+
     return (
         <div className={styles.layoutwrapper}>
        {animation && 
@@ -53,23 +55,37 @@ function Footer({animation}: Props) {
     transition={{
         duration: 1
     }}
+    onAnimationComplete={() => setWrapperApper(true)}
        >
              <div className={styles.firstwrapper}>
                 <div className={styles.imgwrapper}>
                     <img src="" alt="" className={styles.img} />
                 </div>
                 <div className={styles.menu}>
-                    <div className={styles.wrapperlink}>
+                    {wrapperAppear && 
+                    <motion.div 
+                    className={styles.wrapperlink}
+                    initial={{opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{
+                        duration: 1
+                    }}
+                    >
                         {FooterLink.map(({label, to, className}) => (
                             <Link to={to} className={className} >{label}</Link>
                         ))}
-                    </div>
-                    <Follow />
+                    </motion.div>}
+                    <Follow 
+                    wrapperAppear={wrapperAppear}
+                    />
                 </div>
             </div>
-             <div className={styles.bottomwrapper}>
+             {wrapperAppear && 
+             <motion.div 
+             className={styles.bottomwrapper}
+             >
                 <p>All Right Reserved 2022</p>
-            </div>
+            </motion.div>}
         </motion.div>}
         </div>
     )
