@@ -57,7 +57,7 @@ function Work() {
                 </motion.h2>}
             </div>
              <div
-             className={styles.test}
+             className={styles.wrapperlayout}
              >
                 {firstAnimationIsOver && <motion.div
                 className={styles.mainwrapper}
@@ -95,7 +95,7 @@ function Work() {
                     </motion.div>
                     </motion.div>}
 
-            </div>
+            
            {secondAnimationIsOver &&  
            <motion.div 
             className={styles.wrapperlink}
@@ -107,6 +107,7 @@ function Work() {
             >
                 <Link to="/succes" className={styles.link}>Voir plus de succès</Link>
             </motion.div>}
+            </div>
         </div>
     )
 };

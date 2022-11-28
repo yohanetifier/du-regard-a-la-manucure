@@ -14,7 +14,7 @@
     margin: auto 0; 
     justify-content: center; 
     align-items:center;
-    height: 45vh;  
+    // height: 45vh;  
     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
         flex-direction: column; 
     }
@@ -79,7 +79,7 @@
     }
 }
 
-.test {
+.wrapperlayout {
     // border: 2px solid red; 
     min-height: 500px; 
 }

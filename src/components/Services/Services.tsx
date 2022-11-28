@@ -13,48 +13,47 @@ function Service() {
 
     return (
         <div className={styles.mainwrapper} ref={wrapper}>
-            {fourthAnimationIsOver &&
+            {isInView &&
                 <div className={styles.titlewrapper}>
                     <motion.h2
                         className={styles.titlesection}
                         initial={{ y: 200 }}
                         animate={{ y: 0 }}
                         transition={{ duration: 1 }}
+                        onAnimationComplete={() => setFirstAnimationIsOver(true)}
                     >Nos Services
                     </motion.h2>
                 </div>
             }
             <div className={styles.imgwrapper}>
-                {isInView &&
+                {firstAnimationIsOver &&
                     <motion.div
                         className={styles.img1wrapper}
                         initial={{ y: "100vh" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.10 }}
-                        onAnimationComplete={() => setFirstAnimationIsOver(true)}
-
+                        onAnimationComplete={() => setSecondAnimationIsOver(true)}
                     >
                         <div className={styles.pwrapper}>
-                            {thirdAnimationIsOver &&
+                            {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
                                     initial={{ y: 200 }}
                                     animate={{ y: 0 }}
                                     transition={{ duration: 1 }}
-                                    onAnimationComplete={() => setFourthAnimationIsOver(true)}
                                 >Cils</motion.p>}
                         </div>
                     </motion.div>}
-                {firstAnimationIsOver &&
+                {secondAnimationIsOver &&
                     <motion.div
                         className={styles.img2wrapper}
                         initial={{ y: "-100vh" }}
                         animate={{ y: 0 }}
                         transition={{ duration: 0.10 }}
-                        onAnimationComplete={() => setSecondAnimationIsOver(true)}
+                        onAnimationComplete={() => setThirdAnimationIsOver(true)}
                     >
                         <div className={styles.pwrapper}>
-                            {thirdAnimationIsOver &&
+                            {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
                                     initial={{ y: 200 }}
@@ -63,16 +62,16 @@ function Service() {
                                 >Sourcils</motion.p>}
                         </div>
                     </motion.div>}
-                {secondAnimationIsOver &&
+                {thirdAnimationIsOver &&
                     <motion.div
                         className={styles.img3wrapper}
                         initial={{ x: "100vw" }}
                         animate={{ x: 0 }}
                         transition={{ duration: 0.10 }}
-                        onAnimationComplete={() => setThirdAnimationIsOver(true)}
+                        onAnimationComplete={() => setFourthAnimationIsOver(true)}
                     >
                         <div className={styles.pwrapper}>
-                            {thirdAnimationIsOver &&
+                            {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
                                     initial={{ y: 200 }}
