@@ -3,10 +3,24 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import styles from './Follow.module.scss';
+import {motion} from 'framer-motion';
 
-function Follow() {
+interface Props {
+    wrapperAppear: boolean
+}
+
+function Follow({wrapperAppear}: Props) {
     return (
-        <div className={styles.followwrapper}>
+        <>
+        { wrapperAppear && 
+         <motion.div
+          className={styles.followwrapper}
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{
+            duration: 1
+          }}
+          >
             <p className={styles.follow}>Suivez nous</p>
             <div className={styles.icon}>
                 <a href="https://google.fr" target="_blank" rel="noreferrer" className={styles.link}>
@@ -19,7 +33,8 @@ function Follow() {
                     {/* <FontAwesomeIcon icon={faInstagram} /> */}
                 </a>
             </div>
-        </div>
+        </motion.div>}
+        </>
     )
 }
 

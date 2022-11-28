@@ -8,9 +8,9 @@ import Title from "../Title/Title";
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
+import { Props } from '../Home/Home'; 
 
-
-function Work() {
+function Work({animationDone}: Props ) {
     const [firstAnimationIsOver ,setFirstAnimationIsOver] = useState(false); 
     const [secondAnimationIsOver ,setSecondAnimationIsOver] = useState(false); 
     const wrapper = useRef(null);
@@ -104,6 +104,7 @@ function Work() {
             transition={{
                 duration: 1
             }}
+            onAnimationComplete={() => animationDone(true)}
             >
                 <Link to="/succes" className={styles.link}>Voir plus de succès</Link>
             </motion.div>}
