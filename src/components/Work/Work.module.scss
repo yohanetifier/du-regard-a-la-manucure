@@ -13,7 +13,8 @@
     flex-wrap: wrap; 
     margin: auto 0; 
     justify-content: center; 
-    align-items:center; 
+    align-items:center;
+    // height: 45vh;  
     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
         flex-direction: column; 
     }
@@ -21,11 +22,13 @@
 
 .wrappertitle {
     height: 10%; 
+    overflow: hidden; 
 }
 
 .title {
     @include mixin.titlesectionhome; 
     margin-left: 120px;  
+    font-size: 75px; 
 }
 
 .wrapperimg {
@@ -76,4 +79,7 @@
     }
 }
 
-
+.wrapperlayout {
+    // border: 2px solid red; 
+    min-height: 500px; 
+}
