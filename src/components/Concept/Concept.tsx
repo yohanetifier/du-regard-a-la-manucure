@@ -57,7 +57,7 @@ function Concept({
 }: Props) {
 
     const scrollRef = useRef(null);
-    const isInView = useInView(scrollRef, { once: true, amount: 0.5 });
+    const isInView = useInView(scrollRef, { once: true, amount: 0.2 });
 
     return (
 
@@ -83,7 +83,7 @@ function Concept({
                     transition={{ duration: 1 }}
                 >
                     <div className={styles.layoutwrapper}>
-                        <span className={styles.test}>
+                        <span>
                             <motion.h2
                                 className={styles.title}
                                 initial={{ y: 80 }}
@@ -97,8 +97,7 @@ function Concept({
                         </span>
                         <div className={styles.exercice}>
                             <motion.p
-                                className={styles.description}
-                                initial={{ y: 100 }}
+                                initial={{ y: 120 }}
                                 animate={{ y: 0 }}
                                 transition={{
                                     delay: 3,
@@ -111,7 +110,7 @@ function Concept({
                         </div>
                         {numberOfButton === "one" ?
                             <motion.div
-                                className={styles.testthree}
+                                className={styles.buttonwrapper}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{

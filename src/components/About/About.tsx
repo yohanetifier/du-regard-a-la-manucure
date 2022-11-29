@@ -83,7 +83,7 @@ export default function About() {
       De l'épilation des sourcils, au brow lift, en passant par la teinture des cils et les extensions de cil à cil ou volume russe
       , vivez une véritable expérience sur mesure en magnifiant votre regard pour un résultat du plus naturel
       au plus sophistiqué, qui répondra à votre envie du moment."
-        to="/nos-prestations"
+        to="/prestations"
         label="Nos prestations"
         numberOfButton="two"
         secondTo="/services"
