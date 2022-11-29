@@ -144,8 +144,19 @@
     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
         top: 5%; 
     }
+    & > h2 {
+        @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+            font-size: 50px; 
+        }
+    }
 }
 
 .pwrapper {
     overflow: hidden; 
+    & > p {
+        font-size: 40px; 
+        @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+            font-size: 20px; 
+        }
+    }
 }
