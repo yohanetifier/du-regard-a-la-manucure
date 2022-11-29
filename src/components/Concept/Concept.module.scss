@@ -19,10 +19,18 @@
     }
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
         grid-column: 1 / 6; 
+
     }
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        grid-row: 1 / 5; 
+        grid-row: 1 / 4; 
         grid-column: 1 / 8; 
+        // z-index: 0; 
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-up")){
+        grid-row: 1 / 4; 
+    }
+    @media screen and (max-width: 280px){
+        grid-row: 1 / 3; 
     }
 }
 
@@ -67,7 +75,7 @@
 
 
 .title {
-    border: 2px solid red; 
+    // border: 2px solid red; 
     font-family: "DancingScript";
     font-size: var.$font-size-title; 
     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
