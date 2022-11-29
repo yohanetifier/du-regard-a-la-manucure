@@ -14,8 +14,8 @@ function SecondSection() {
     const container = {
         show: {
             transition: {
-                staggerChildren: 0.50,
-                duration: 1
+                staggerChildren: 0.8,
+                // duration: 2
             }
         }
     }
@@ -27,7 +27,11 @@ function SecondSection() {
         },
         show: {
             x: 0,
-            opacity: 1
+            opacity: 1,
+            transition: {
+                duration: 0.8, 
+                ease: "easeIn"
+            }
         }
     }
 
