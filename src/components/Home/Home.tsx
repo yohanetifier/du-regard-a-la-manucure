@@ -38,11 +38,9 @@ function Home({animationDone}: Props) {
         
         <motion.div 
             // className={styles.wrapperTest}
-            initial={{x: 500}}
-            animate={{x: 0 }}
-            transition={{
-                duration: 3
-            }}
+            initial={{x: 200}}
+            animate={{x: 0, transition: {duration: 2, delay: 2} }}
+            exit={{opacity: 0,  transition: {duration: 1}} }
         >
              <Banner
                 src={imgBelowRight}
