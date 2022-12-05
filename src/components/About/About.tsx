@@ -74,7 +74,7 @@ export default function About() {
   ]
 
   return (
-    <>
+    <div>
       <Concept
         src={img1}
         alt={img1}
@@ -106,6 +106,6 @@ export default function About() {
         title="Mes Certificats"
         assets={certificate}
       />
-    </>
+    </div>
   )
 }
