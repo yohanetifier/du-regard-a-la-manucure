@@ -1,8 +1,10 @@
 import styles from "./Contact.module.scss";
 import img1 from '../../assets/images/ana-francisconi-x-CXDIuhS3c-unsplash.jpg';
+import PageTransition from '../PageTransition/PageTransition'; 
 
 function Contact() {
     return (
+        <PageTransition>
         <div className={styles.mainwrapper}>
             <figure className={styles.imgwrapper}>
                 <img src={img1} alt="" className={styles.img} />
@@ -24,6 +26,7 @@ function Contact() {
                 </form>
             </div>
         </div>
+        </PageTransition>
     )
 }
 

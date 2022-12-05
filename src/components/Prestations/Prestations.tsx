@@ -2,6 +2,7 @@ import styles from './Prestations.module.scss';
 import ServiceDescription from './ServiceDescription/ServiceDescription';
 import img1 from '../../assets/images/amanda-dalbjorn-fvInY-Gh7sc-unsplash.jpg';
 import Preconditions from './Preconditions/Preconditions';
+import PageTransition from '../PageTransition/PageTransition'
 
 export default function Prestation() {
     const service = [
@@ -81,7 +82,8 @@ export default function Prestation() {
     ]
 
     return (
-        <div className={styles.mainwrapper}>
+        <PageTransition>
+        {/* <div> */}
             <ServiceDescription
                 assets={service} />
             <Preconditions
@@ -90,6 +92,7 @@ export default function Prestation() {
                 introsentence="Du regard à la manucure refuse: "
                 conditions={conditions}
             />
-        </div>
+        {/* </div> */}
+        </PageTransition>
     )
 }

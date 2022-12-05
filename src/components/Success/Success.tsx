@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Image from "../Image/Image";
 import ServiceBar from "../Service/ServiceBar/ServiceBar";
 import DisplayImage from "./DisplayImage/DisplayImage";
+import  PageTransition  from "../PageTransition/PageTransition";
 
 
 export default function Success({}) {
@@ -57,7 +58,7 @@ export default function Success({}) {
 
 
     return (
-        <div className={styles.mainwrapper}>
+        <PageTransition>
             <TitleSubTitle
                 title="Nos Succes"
                 subtitle="Nous savons prendre soin de vous" />
@@ -68,6 +69,6 @@ export default function Success({}) {
             <DisplayImage
                 imageAssets={nailsImages}
             />
-        </div>
+        </PageTransition>
     )
 }

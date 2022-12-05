@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Banner from '../Banner/Banner';
 import Image from '../Image/Image';
 import styles from './Service.module.scss';
@@ -16,7 +17,7 @@ import { beautyOfHands } from './ServiceCard/BeautyOfNails/BeautyOfHands';
 import { beautyOfFoot } from './ServiceCard/BeautyOfNails/BeautyOfFoot';
 import { beautyOfEyebrows } from './ServiceCard/beautyOfEyebrows';
 import { beautyOfEyelashes } from './ServiceCard/beautyOfEyelashes';
-import { useState } from 'react';
+import PageTransition from '../PageTransition/PageTransition'; 
 
 interface Props {
     img: string
@@ -29,7 +30,7 @@ export default function Service({ img }: Props) {
 
 
     return (
-        <div>
+        <PageTransition>
             <Banner src={img} className={styles.img} classNamewrapper={styles.wrapper} />
             <ServiceBar
                 toggleService={changeService}
@@ -108,6 +109,6 @@ export default function Service({ img }: Props) {
                     <Image src={changeService === 'Ongles' ? imgBottomNails : changeService === 'Cils' ? imgBottomEyelashes : changeService === 'Sourcils' ? imgBottomEyebrows : ""} alt={""} classNamewrapper={styles.imgbottomright} />
                 </div>
             )}
-        </div>
+        </PageTransition>
     )
 }

@@ -6,6 +6,8 @@ import img3 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import Concept2 from "./Concept2/Concept2";
 import Concept3 from "./Concept3/Concept3";
 import Certificate from './Certficate/Certificate';
+import { motion } from "framer-motion";
+import PageTransition from '../PageTransition/PageTransition'; 
 
 export default function About() {
 
@@ -74,7 +76,7 @@ export default function About() {
   ]
 
   return (
-    <div>
+    <PageTransition>
       <Concept
         src={img1}
         alt={img1}
@@ -106,6 +108,6 @@ export default function About() {
         title="Mes Certificats"
         assets={certificate}
       />
-    </div>
+    </PageTransition>
   )
 }

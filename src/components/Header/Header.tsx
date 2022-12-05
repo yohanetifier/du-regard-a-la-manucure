@@ -77,7 +77,7 @@ const Header = () => {
                     <motion.li variants={item} className={styles.list}><Link to={'/succes'} className={styles.link} onClick={() => setMenu(false)}>NOS SUCCES</Link></motion.li>
                     <motion.li variants={item} className={styles.list}><Link to={'/rendez-vous'} className={styles.link} onClick={() => setMenu(false)}>RESERVATIONS</Link></motion.li>
                     <motion.li variants={item} className={styles.list}><Link to={'/contact'} className={styles.link} onClick={() => setMenu(false)}>CONTACT</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/conditions-de-vente'} className={styles.link} onClick={() => setMenu(false)}>CONDITIONS DE VENTE</Link></motion.li>
+                    {/* <motion.li variants={item} className={styles.list}><Link to={'/conditions-de-vente'} className={styles.link} onClick={() => setMenu(false)}>CONDITIONS DE VENTE</Link></motion.li> */}
                     <motion.li variants={item} className={styles.list}><Link to={'/mentions-legales'} className={styles.link} onClick={() => setMenu(false)}>MENTIONS LEGALES</Link></motion.li>
 
 
