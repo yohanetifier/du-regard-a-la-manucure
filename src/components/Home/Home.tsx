@@ -16,14 +16,10 @@ export interface Props {
 
 function Home({animationDone}: Props) {
     const [ isLoading, setIsLoading ] = useState(false); 
-    // const removeLoading = () => {
-    //     setTimeout(() => {
-    //         setIsLoading(true)
-    //     }, 100)
-    // }
+
     return (
         <div>
-        {!isLoading ? 
+       { !isLoading && 
         <motion.div 
         className={styles.wrapper}
         initial={{opacity: 0,}}
@@ -32,14 +28,15 @@ function Home({animationDone}: Props) {
         onAnimationComplete={() => setIsLoading(true)}
         
         >
-            <p>Du regard à la Manucure</p>
-             </motion.div>     
-        : 
+            <p>Du regard à la Manucure</p> 
+             </motion.div>}
         
-        <motion.div 
-            // className={styles.wrapperTest}
-            initial={{x: 200}}
-            animate={{x: 0, transition: {duration: 2, delay: 2} }}
+        
+       { isLoading && 
+       <motion.div 
+            className={styles.wrapperTest}
+            initial={{opacity: 0}}
+            animate={{opacity: 1, transition: {duration: 2} }}
             exit={{opacity: 0,  transition: {duration: 1}} }
         >
              <Banner
@@ -62,28 +59,6 @@ function Home({animationDone}: Props) {
             <Services />
             <Work animationDone={animationDone}/> 
              </motion.div>     }
-
-            {/* <Banner
-                src={imgBelowRight}
-                className={styles.imgbelowright}
-                classNamewrapper={styles.mainwrapper}
-            />
-            <Concept
-                src={img1}
-                alt={img1}
-                title="Notre Concept"
-                children="Que diriez-vous de sublimer vos ongles et votre regard sans sortir de chez vous? C'est possible avec Du Regard à La Manucure,
-                professionnelle de l'esthétique, prothésiste ongulaire. L'institut Du Regard à la Manucure est basé à Aincourt, dans le Val d'Oise et se
-                déplace dans toute l'Ile de France pour vous mettre en beauté."
-                to="/about"
-                label="En savoir plus"
-                numberOfButton="one"
-            />
-            <SecondSection />
-            <Services />
-            <Work animationDone={animationDone}/> */}
-            {/* <Footer /> */}
-       
         </div>
     )
 }
