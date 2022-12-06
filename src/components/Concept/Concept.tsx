@@ -5,29 +5,27 @@ import { useRef, } from "react";
 import { motion, useInView } from "framer-motion";
 
 
-interface InitialProps {
+interface AnimationProps {
     opacity?: number
     x?: string
-}
-
-interface TransitionProps {
     duration?: number
 }
 
-interface AnimateProps {
-    opacity?: number
+interface VariantsProps {
+    initial: AnimationProps
+    animate: AnimationProps
 }
-
 
 export interface Img {
     src: string
     alt: string
     classNamewrapper?: string
     animation?: boolean
-    initial?: InitialProps
-    animate?: AnimateProps
-    transition?: TransitionProps
+    initial?: AnimationProps
+    animate?: AnimationProps
+    transition?: AnimationProps
     onAnimationComplete?: () => void
+    variants?: VariantsProps
 }
 
 interface Props {

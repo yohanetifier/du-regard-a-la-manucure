@@ -3,7 +3,15 @@ import styles from "./Image.module.scss";
 import { motion } from 'framer-motion';
 
 export default function Image({
-    src, alt, classNamewrapper, animation, initial, animate, transition, onAnimationComplete }: Img) {
+    src,
+    alt,
+    classNamewrapper,
+    animation,
+    initial,
+    animate,
+    transition,
+    onAnimationComplete,
+}: Img) {
     return (
         <>
             {animation ?
