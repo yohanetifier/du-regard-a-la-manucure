@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 
 interface AnimationProps {
     opacity?: number
-    x?: string
+    x?: string | number
     duration?: number
 }
 

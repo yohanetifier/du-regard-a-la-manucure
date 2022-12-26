@@ -9,26 +9,23 @@ interface Props {
 
 function Description({ children, className, animationOnTitleOver }: Props) {
     return (
-        <>
+        <div className={`${styles.wrapper} ${className}`}>
             {animationOnTitleOver ?
-                <div className={styles.wrapper}>
-                    <motion.p
-                        className={`{className} ${styles.translateY}`}
-                        initial={{ y: 200 }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 2 }}
-                    >
-                        {children}
-                    </motion.p>
-                </div>
+                <motion.p
+                    className={` ${styles.translateY}`}
+                    initial={{ y: 200 }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 2 }}
+                >
+                    {children}
+                </motion.p>
                 :
-                <div className={styles.wrapper}>
-                    <p className={`{className} ${styles.translateY}`}>
-                        {children}
-                    </p>
-                </div>
+                <p className={` ${styles.translateY}`}>
+                    {children}
+                </p>
+
             }
-        </>
+        </div>
 
     )
 }
