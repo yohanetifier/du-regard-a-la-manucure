@@ -20,12 +20,13 @@ export interface Img {
     src: string
     alt: string
     classNamewrapper?: string
-    animation?: boolean
-    initial?: AnimationProps
-    animate?: AnimationProps
-    transition?: AnimationProps
-    onAnimationComplete?: () => void
-    variants?: VariantsProps
+    ref?: string
+    // animation?: boolean
+    // initial?: AnimationProps
+    // animate?: AnimationProps
+    // transition?: AnimationProps
+    // onAnimationComplete?: () => void
+    // variants?: VariantsProps
 }
 
 interface Props {

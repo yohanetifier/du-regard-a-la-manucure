@@ -10,6 +10,7 @@ function SecondSection() {
     const wrapper = useRef(null);
     const isInView = useInView(wrapper, { once: true, amount: 0.5 });
     const [isOver, setIsOver] = useState(false);
+    const MotionImage = motion(Image);
 
     const container = {
         show: {
@@ -29,7 +30,7 @@ function SecondSection() {
             x: 0,
             opacity: 1,
             transition: {
-                duration: 0.8, 
+                duration: 0.8,
                 ease: "easeIn"
             }
         }
@@ -38,14 +39,14 @@ function SecondSection() {
     return (
         <div className={styles.mainwrapper} ref={wrapper}>
             {isInView &&
-                <Image
+                <MotionImage
                     src={img1}
                     alt={img1}
                     classNamewrapper={styles.imageleftwrapper}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
-                    animation={true}
+                    // animation={true}
                     onAnimationComplete={() => setIsOver(true)}
                 />
             }
@@ -63,14 +64,14 @@ function SecondSection() {
                     <motion.p variants={item}> Oscar Wilde </motion.p>
                 </motion.div>}
             {isInView &&
-                <Image
+                <MotionImage
                     src={img2}
                     alt={img2}
                     classNamewrapper={styles.imagerightwrapper}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
-                    animation={true}
+                // animation={true}
                 />
             }
         </div>

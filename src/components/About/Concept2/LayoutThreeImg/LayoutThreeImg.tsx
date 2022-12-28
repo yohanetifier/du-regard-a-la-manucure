@@ -15,6 +15,10 @@ export default function LayoutThreeImg({ assets, setAnimationOver }: Assets) {
         },
         animate: {
             scale: 1,
+            transition: {
+                staggerChildren: 0.5,
+                // delayChildren: 1
+            }
         }
     }
 
@@ -25,7 +29,7 @@ export default function LayoutThreeImg({ assets, setAnimationOver }: Assets) {
         animate: {
             scale: 1,
             transition: {
-                duration: 10
+                duration: 2
             }
         },
     }
@@ -38,21 +42,22 @@ export default function LayoutThreeImg({ assets, setAnimationOver }: Assets) {
             ref={wrapper}
             variants={container}
             initial="initial"
-            animate="animate"
+            animate={isInView && "animate"}
         >
-            {assets.map(({ src, alt, className }) => (
+            {assets.map(({ src, alt, className }, index) => (
                 <>
-                    {isInView && <motion.div
+                    <motion.div
                         className={`${styles[className!]}`}
                         variants={item}
                         onAnimationComplete={() => setAnimationOver!(true)}
+                        key={index}
                     >
                         <Image
                             src={src}
                             alt={alt}
                             classNamewrapper={styles.fullHeight}
                         />
-                    </motion.div>}
+                    </motion.div>
                 </>
 
 
