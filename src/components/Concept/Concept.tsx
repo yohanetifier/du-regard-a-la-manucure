@@ -52,8 +52,8 @@ function Concept({
 
     const scrollRef = useRef(null);
     const isInView = useInView(scrollRef, { once: true, amount: 0.2 });
-    const isPhoneUp = useMediaQuery({ query: "(max-width: 375px)" });
     const isMobileS = useMediaQuery({ query: "(max-width: 280px)" });
+    const isPhoneDown = useMediaQuery({ query: "(max-width: 500px)" });
 
     return (
 
@@ -93,7 +93,7 @@ function Concept({
                         </span>
                         <div className={styles.exercice}>
                             <motion.p
-                                initial={{ y: isMobileS ? 300 : isPhoneUp ? 220 : 120 }}
+                                initial={{ y: 300 }}
                                 animate={{ y: 0 }}
                                 transition={{
                                     delay: 3,
