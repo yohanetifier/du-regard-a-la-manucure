@@ -13,12 +13,14 @@
 
 
 .img{
-    // margin-left: 100px; 
     margin-top: 30px;
     height:300px; 
     width: 300px;
-    // filter: invert(48%);
-    // border: 2px solid purple;
+    @media only screen and (max-width: map-get(var.$breakpoints, "phone-up")){
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+    }
 }
 
 .logo {
@@ -27,7 +29,6 @@
     width: 30%;
     height: 100%;
     color: white;
-    // border: 2px solid red;
 }
 
 
