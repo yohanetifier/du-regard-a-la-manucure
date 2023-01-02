@@ -29,12 +29,13 @@
 }
 
 .description {
-    position: absolute;     
-    font-size: 30px;
+    position: absolute;
+    // font-size: 30px;
     align-self: center;
-    width: 50%; 
+    top: 40%;
+    width: 50%;
     left: 30%;
     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
-        left: 5%; 
+        left: 5%;
     }
 }

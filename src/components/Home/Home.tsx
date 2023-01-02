@@ -7,16 +7,39 @@ import Work from '../Work/Work';
 import Footer from '../Footer/Footer';
 import imgBelowRight from '../../assets/images/apostolos-vamvouras-Mky1mc85XQQ-unsplash (1).jpg'
 import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export interface Props {
     animationDone(arg: boolean): void
 }
 
 function Home({animationDone}: Props) {
+    const [ isLoading, setIsLoading ] = useState(false); 
 
     return (
-        <div className={styles.wrapper}>
-            <Banner
+        <div>
+       { !isLoading && 
+        <motion.div 
+        className={styles.wrapper}
+        initial={{opacity: 0,}}
+        animate={{opacity: 1 }}
+        transition={{duration: 3}}
+        onAnimationComplete={() => setIsLoading(true)}
+        
+        >
+            <p>Du regard à la Manucure</p> 
+             </motion.div>}
+        
+        
+       { isLoading && 
+       <motion.div 
+            className={styles.wrapperTest}
+            initial={{opacity: 0}}
+            animate={{opacity: 1, transition: {duration: 2} }}
+            exit={{opacity: 0,  transition: {duration: 1}} }
+        >
+             <Banner
                 src={imgBelowRight}
                 className={styles.imgbelowright}
                 classNamewrapper={styles.mainwrapper}
@@ -34,8 +57,8 @@ function Home({animationDone}: Props) {
             />
             <SecondSection />
             <Services />
-            <Work animationDone={animationDone}/>
-            {/* <Footer /> */}
+            <Work animationDone={animationDone}/> 
+             </motion.div>     }
         </div>
     )
 }

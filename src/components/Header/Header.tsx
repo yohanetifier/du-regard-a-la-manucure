@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo/V1_Rose.svg'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from '../Image/Image';
 
 export interface Navigation {
     label: string
@@ -11,20 +12,28 @@ export interface Navigation {
 
 const navigation: Navigation[] = [
     {
-        label: 'Home',
+        label: 'ACCUEIL',
         to: '/'
     },
     {
-        label: 'Services',
+        label: 'A PROPOS',
+        to: '/about'
+    },
+    {
+        label: 'NOS PRESTATIONS',
+        to: '/prestations'
+    },
+    {
+        label: 'NOS SERVICES',
         to: '/services'
     },
     {
-        label: 'Contact',
+        label: 'CONTACT',
         to: '/contact'
     },
     {
-        label: 'Reservez',
-        to: '/rendez-vous'
+        label: 'MENTIONS LEGALES',
+        to: '/mentions-legales'
     },
 
 ]
@@ -52,9 +61,9 @@ const Header = () => {
 
     return (
         <div className={styles.header}>
-            <div className={styles.logo}>
+            <Link className={styles.logo} to='/'>
                 <img src={logo} alt="" className={styles.img} />
-            </div>
+            </Link>
             <div className={styles.menu}>
                 <div className={styles.menulayout} onClick={() => !menu ? setMenu(true) : setMenu(false)}>
                     <span className={!menu ? styles.firstline : `${styles.firstline} ${styles.movefirstline}`}></span>
@@ -69,18 +78,9 @@ const Header = () => {
                     initial='hidden'
                     animate='show'
                 >
-
-                    <motion.li variants={item} className={styles.list}><Link to={'/'} className={styles.link} onClick={() => setMenu(false)}>ACCUEIL</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/about'} className={styles.link} onClick={() => setMenu(false)}>A PROPOS</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/prestations'} className={styles.link} onClick={() => setMenu(false)}>NOS PRESTATIONS</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/services'} className={styles.link} onClick={() => setMenu(false)}>NOS SERVICES</Link> {/* <span>+</span> */}</motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/succes'} className={styles.link} onClick={() => setMenu(false)}>NOS SUCCES</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/rendez-vous'} className={styles.link} onClick={() => setMenu(false)}>RESERVATIONS</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/contact'} className={styles.link} onClick={() => setMenu(false)}>CONTACT</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/conditions-de-vente'} className={styles.link} onClick={() => setMenu(false)}>CONDITIONS DE VENTE</Link></motion.li>
-                    <motion.li variants={item} className={styles.list}><Link to={'/mentions-legales'} className={styles.link} onClick={() => setMenu(false)}>MENTIONS LEGALES</Link></motion.li>
-
-
+                    {navigation.map(({ label, to }) => (
+                        <motion.li variants={item} className={styles.list}><Link to={to} className={styles.link} onClick={() => setMenu(false)}>{label}</Link></motion.li>
+                    ))}
                 </motion.ul>}
             </div>
         </div>

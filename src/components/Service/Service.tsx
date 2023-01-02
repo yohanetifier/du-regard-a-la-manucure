@@ -1,22 +1,21 @@
+import { useState } from 'react';
 import Banner from '../Banner/Banner';
 import Image from '../Image/Image';
 import styles from './Service.module.scss';
 import ServiceBar from './ServiceBar/ServiceBar';
 import imgTopNails from '../../assets/images/jesse-donoghoe-2aiP_wxNrfU-unsplash.jpg';
-// import imgTopNails from '../../assets/images/designecologist-r-Ej0NQmFlQ-unsplash.jpg';
 import defaultImgBottom from '../../assets/images/sour-moha-k47viB7Dt8I-unsplash.jpg';
 import defaultImgTop from '../../assets/images/billie-5OXE3KjDEfI-unsplash.jpg';
 import imgBottomNails from '../../assets/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg';
-// import imgTopEyebrows from '../../assets/images/hayley-kim-design-sRSRuxkOuzI-unsplash.jpg';
 import imgTopEyebrows from '../../assets/images/amanda-dalbjorn-fvInY-Gh7sc-unsplash.jpg';
 import imgBottomEyebrows from '../../assets/images/gabe-pierce-_wK8VnF5yao-unsplash.jpg';
-import imgTopEyelashes from '../../assets/images/sharon-mccutcheon-y_VhmHCZ8FY-unsplash.jpg';
+import imgTopEyelashes from '../../assets/images/PHOTO-2022-12-31-13-01-03.jpg';
 import imgBottomEyelashes from '../../assets/images/hayley-kim-design-sRSRuxkOuzI-unsplash.jpg';
 import { beautyOfHands } from './ServiceCard/BeautyOfNails/BeautyOfHands';
 import { beautyOfFoot } from './ServiceCard/BeautyOfNails/BeautyOfFoot';
 import { beautyOfEyebrows } from './ServiceCard/beautyOfEyebrows';
 import { beautyOfEyelashes } from './ServiceCard/beautyOfEyelashes';
-import { useState } from 'react';
+import PageTransition from '../PageTransition/PageTransition';
 
 interface Props {
     img: string
@@ -29,7 +28,7 @@ export default function Service({ img }: Props) {
 
 
     return (
-        <div>
+        <PageTransition>
             <Banner src={img} className={styles.img} classNamewrapper={styles.wrapper} />
             <ServiceBar
                 toggleService={changeService}
@@ -56,6 +55,7 @@ export default function Service({ img }: Props) {
                                         <li>{service}</li>
                                         <span className={styles.bold}>{price}</span>
                                     </div>
+
                                 ))}
                             </ul>
                             <div className={styles.test}>
@@ -108,6 +108,6 @@ export default function Service({ img }: Props) {
                     <Image src={changeService === 'Ongles' ? imgBottomNails : changeService === 'Cils' ? imgBottomEyelashes : changeService === 'Sourcils' ? imgBottomEyebrows : ""} alt={""} classNamewrapper={styles.imgbottomright} />
                 </div>
             )}
-        </div>
+        </PageTransition>
     )
 }

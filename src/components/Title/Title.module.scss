@@ -3,4 +3,11 @@
 .defaultstyles {
     font-size: var.$font-size-title; 
     font-family: var.$font-title;
+    // transform: translateY(100px);
 }
+
+.mainwrapper {
+    overflow: hidden; 
+}
+
+

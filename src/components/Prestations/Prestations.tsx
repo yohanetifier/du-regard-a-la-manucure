@@ -1,39 +1,57 @@
 import styles from './Prestations.module.scss';
 import ServiceDescription from './ServiceDescription/ServiceDescription';
-import img1 from '../../assets/images/amanda-dalbjorn-fvInY-Gh7sc-unsplash.jpg';
+import img1 from '../../assets/images/IMG_3104.jpg';
+import VernisSemiPermanent from '../../assets/images/IMG_60821.jpeg';
+import Gainage from '../../assets/images/5A9FB37B-4BFF-47E5-AD5F-1A08E667B3D1.jpg';
+import RehaussementDeCils from '../../assets/images/IMG_3104.jpg';
+import PoseAmericaine from '../../assets/images/52F9835B-903C-4B09-B0B4-615A45FC9386.jpg';
+import Renforcement from '../../assets/images/IMG_5413.jpeg';
 import Preconditions from './Preconditions/Preconditions';
+import PageTransition from '../PageTransition/PageTransition'
 
 export default function Prestation() {
     const service = [
         {
-            src: img1,
-            alt: img1,
-            title: "First service",
-            description: "Lorem ipsum dolor sit amet. Qui quas voluptatem quo esse dolores et beatae necessitatibus qui facilis itaque.Vel omnis numquam id vitae quam ut odio quae qui architecto galisum Cum tenetur incidunt At assumenda aspernatur et officiis delectus et maiores est tempore neque.  Id sapiente tenetur qui optio beatae quo voluptatem repudiandae ea sint provident et explicabo modi Est voluptatem exercitationem eum excepturi saepe  sit sint ullam vel fugiat et quaerat ratione qui enim distinctio a explicabo explicabo.At quisquam rerum in quidem voluptates est autem assumenda."
+            src: VernisSemiPermanent,
+            alt: VernisSemiPermanent,
+            title: "Vernis Semi Permanent",
+            description: "Cette pose est l'alternative entre une pose en gel uv et une pose de vernis classique, elle est possible sur les ongles naturels des mains et des pieds avec un renforcement, ce qui permet d'avoir des ongles plus résistants aux chocs et donc une tenue plus longue qu'un vernis ordinaire. Le vernis semi-permanent peut être complété avec une décoration ou Nail art. Sa tenue est de 3 semaines sans entretien, voire plus 4 à 5 semaines au niveau des pieds."
         },
         {
-            src: img1,
-            alt: img1,
-            title: "Second service",
-            description: "Lorem ipsum dolor sit amet. Qui quas voluptatem quo esse dolores et beatae necessitatibus qui facilis itaque.Vel omnis numquam id vitae quam ut odio quae qui architecto galisum Cum tenetur incidunt At assumenda aspernatur et officiis delectus et maiores est tempore neque.  Id sapiente tenetur qui optio beatae quo voluptatem repudiandae ea sint provident et explicabo modi Est voluptatem exercitationem eum excepturi saepe  sit sint ullam vel fugiat et quaerat ratione qui enim distinctio a explicabo explicabo.At quisquam rerum in quidem voluptates est autem assumenda."
+            src: Renforcement,
+            alt: Renforcement,
+            title: "Le Renforcement",
+            description: "Le renforcement reste le plus naturel. C'est tout simplement une pose de semi permanent mais renforcée avec une basse épaisse (rubber base) sur ongles courts uniquement sinon on parlera de gainage. On créer une mini construction avec cette base pour garantir une pose solide et durable dans le temps. Idéal pour les personnes souhaitant garder leur longueur naturelle, renforcer et faire pousser leurs ongles sans les casser. Il est nécessaire de faire un remplissage entre 3 et 4 semaines."
         },
         {
-            src: img1,
-            alt: img1,
-            title: "Third service",
-            description: "Lorem ipsum dolor sit amet. Qui quas voluptatem quo esse dolores et beatae necessitatibus qui facilis itaque.Vel omnis numquam id vitae quam ut odio quae qui architecto galisum Cum tenetur incidunt At assumenda aspernatur et officiis delectus et maiores est tempore neque.  Id sapiente tenetur qui optio beatae quo voluptatem repudiandae ea sint provident et explicabo modi Est voluptatem exercitationem eum excepturi saepe  sit sint ullam vel fugiat et quaerat ratione qui enim distinctio a explicabo explicabo.At quisquam rerum in quidem voluptates est autem assumenda."
+            src: Gainage,
+            alt: Gainage,
+            title: "Le Gainage",
+            description: "Le gainage est une pose de gel sur ongles naturels et sur votre longueur actuelle (sans rallongement). Cette pose permet le renforcement de vos ongles."
         },
         {
-            src: img1,
-            alt: img1,
-            title: "Fourth service",
-            description: "Lorem ipsum dolor sit amet. Qui quas voluptatem quo esse dolores et beatae necessitatibus qui facilis itaque.Vel omnis numquam id vitae quam ut odio quae qui architecto galisum Cum tenetur incidunt At assumenda aspernatur et officiis delectus et maiores est tempore neque.  Id sapiente tenetur qui optio beatae quo voluptatem repudiandae ea sint provident et explicabo modi Est voluptatem exercitationem eum excepturi saepe  sit sint ullam vel fugiat et quaerat ratione qui enim distinctio a explicabo explicabo.At quisquam rerum in quidem voluptates est autem assumenda."
+            src: PoseAmericaine,
+            alt: PoseAmericaine,
+            title: "La Pose Americaine",
+            description: "La pose Américaine, aussi connue sous le nom de 'Gel X' vise à coller des capsules en gel avec un gel flexible sur la totalité de l'ongle naturel. Celle ci est déjà préformée au niveau du bombé, de la forme et de la longueur mais elle peut être ajustée selon les envies de la cliente. Cette technique est aussi solide que du gel de construction. Ne s\'adapte pas au ongles très bombés / crochu. Une Dépose et pose sera a effectuer entre 3 et 4 semaines."
         },
+        // {
+        //     src: img1,
+        //     alt: img1,
+        //     title: "La Depose",
+        //     description: "La dépose consiste à retirer le gel , le semi permanent , le Gel X posé sur l'ongle au cas où la cliente souhaite arrêter. Un soin adapté sera appliqué après la dépose."
+        // },
+        // {
+        //     src: img1,
+        //     alt: img1,
+        //     title: "Le Remplissage",
+        //     description: "Les ongles des mains poussent de 3 à 5 millimètres par mois, l’ongle naturel continue à pousser faisant ainsi avancer le gel. Pour combler l'espace vide entre l'ongle naturel et le faux ongle, il faudra effectuer un 'remplissage', en général entre 3 et 4 semaines de repousse. Lors de ce remplissage, la cliente peut choisir de changer la forme, le style, la couleur ainsi que la décoration de ses ongles."
+        // },
         {
-            src: img1,
-            alt: img1,
-            title: "Fifth service",
-            description: "Lorem ipsum dolor sit amet. Qui quas voluptatem quo esse dolores et beatae necessitatibus qui facilis itaque.Vel omnis numquam id vitae quam ut odio quae qui architecto galisum Cum tenetur incidunt At assumenda aspernatur et officiis delectus et maiores est tempore neque.  Id sapiente tenetur qui optio beatae quo voluptatem repudiandae ea sint provident et explicabo modi Est voluptatem exercitationem eum excepturi saepe  sit sint ullam vel fugiat et quaerat ratione qui enim distinctio a explicabo explicabo.At quisquam rerum in quidem voluptates est autem assumenda."
+            src: RehaussementDeCils,
+            alt: RehaussementDeCils,
+            title: "Le Rehaussement de Cils",
+            description: "Le rehaussement de cils est un traitement innovant qui permet de rehausser vos cils naturels mais aussi de les réparer, les nourrir et les renforcer. Il permet d’avoir un regard éclatant sans extensions de cils"
         },
 
     ]
@@ -81,7 +99,7 @@ export default function Prestation() {
     ]
 
     return (
-        <div className={styles.mainwrapper}>
+        <PageTransition>
             <ServiceDescription
                 assets={service} />
             <Preconditions
@@ -90,6 +108,7 @@ export default function Prestation() {
                 introsentence="Du regard à la manucure refuse: "
                 conditions={conditions}
             />
-        </div>
+            {/* </div> */}
+        </PageTransition>
     )
 }
