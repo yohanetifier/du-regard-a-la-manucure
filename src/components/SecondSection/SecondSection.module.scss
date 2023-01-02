@@ -56,29 +56,29 @@
 }
 
 .sentence {
-    grid-column: 4 / 7; 
-    grid-row: 1 / 6; 
+    grid-column: 4 / 7;
+    grid-row: 1 / 6;
+    align-self: center;
+    font-size: 2.5em;
     @media screen and (max-width: map-get(var.$breakpoints, 'tablet-down')){
-        grid-column: 1 / 6; 
-        grid-row: 3 / 6; 
+        grid-column: 1 / 6;
+        grid-row: 3 / 6;
+        font-size: 2.5em;
+
     }
     @media screen and (max-width: map-get(var.$breakpoints, 'phone-down')){
-        grid-row: 2 / 6;  
-        grid-column: 1 / 5; 
+        grid-row: 3 / 6;
+        grid-column: 1 / 5;
+        font-size: 1.5em;
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, 'phone-up')){
+        font-size: 1.2em;
     }
     & > p{
-        // transform: translateX(-20%); 
-        font-size: 2.5em;
         font-family: " Roboto";
         color: black; 
-        // border: 2px solid red; 
-        display: flex; 
+        display: flex;
         align-items: center;
-    }
-    & > p:last-child {
-        // border: 2px solid purple; 
-        // position: absolute; 
-        // bottom: 0; 
     }
 }
 
