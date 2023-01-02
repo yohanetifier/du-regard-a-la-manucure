@@ -13,15 +13,21 @@
 
 
 .img{
-    margin-left: 100px; 
-    height:100%; 
+    // margin-left: 100px; 
+    margin-top: 30px;
+    height:300px; 
+    width: 300px;
+    // filter: invert(48%);
+    // border: 2px solid purple;
 }
 
 .logo {
-    display: flex; 
-    align-items: center; 
-    width: 30%; 
-    height: 100%; 
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    color: white;
+    // border: 2px solid red;
 }
 
 
