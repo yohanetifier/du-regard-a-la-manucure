@@ -2,21 +2,19 @@ import styles from './Work.module.scss';
 import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Props } from '../Home/Home';
 import { Img } from '../Concept/Concept'
 import Title from '../Title/Title';
 
-export interface WorkProps extends Props {
+export interface WorkProps {
     title: string
     img: Img[]
 }
 
-function Work({ animationDone, title, img }: WorkProps) {
+function Work({ title, img }: WorkProps) {
     const [firstAnimationIsOver, setFirstAnimationIsOver] = useState(false);
     const [secondAnimationIsOver, setSecondAnimationIsOver] = useState(false);
     const wrapper = useRef(null);
     const isInView = useInView(wrapper, { once: true, amount: 0.5 });
-    const MotionTitle = motion(Title);
     const container = {
         initial: {
             opacity: 0,
@@ -47,15 +45,6 @@ function Work({ animationDone, title, img }: WorkProps) {
         <div className={styles.wrapper} ref={wrapper}>
             <div className={styles.wrappertitle}>
                 {isInView &&
-                    // <MotionTitle
-                    //     children={title}
-                    //     initial={{ y: 200 }}
-                    //     animate={{ y: 0 }}
-                    //     transition={{
-                    //         duration: 1
-                    //     }}
-                    //     onAnimationComplete={() => setFirstAnimationIsOver(true)}
-                    // />
                     <motion.h2
                         className={styles.title}
                         initial={{ y: 200 }}
@@ -97,7 +86,6 @@ function Work({ animationDone, title, img }: WorkProps) {
                         transition={{
                             duration: 1
                         }}
-                        onAnimationComplete={() => animationDone(true)}
                     >
                         <Link to="/succes" className={styles.link}>Voir plus de succès</Link>
                     </motion.div>}

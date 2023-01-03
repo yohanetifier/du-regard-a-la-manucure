@@ -14,14 +14,10 @@ import img4 from '../../assets/images/majid-akbari--CE-5hQSoOQ-unsplash.jpg';
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Img } from '../Concept/Concept';
-
-export interface Props {
-    animationDone(arg: boolean): void
-}
+import PageTransition from '../PageTransition/PageTransition';
 
 
-function Home({ animationDone }: Props) {
-    const [isLoading, setIsLoading] = useState(false);
+function Home() {
     const workImage: Img[] =
         [
             {
@@ -45,20 +41,7 @@ function Home({ animationDone }: Props) {
 
     return (
         <div>
-            {!isLoading &&
-                <motion.div
-                    className={styles.wrapper}
-                    initial={{ opacity: 0, }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 3 }}
-                    onAnimationComplete={() => setIsLoading(true)}
-
-                >
-                    <p>Du regard à la Manucure</p>
-                </motion.div>}
-
-
-            {isLoading &&
+            <PageTransition>
                 <motion.div
                     className={styles.wrapperTest}
                     initial={{ opacity: 0 }}
@@ -84,11 +67,12 @@ function Home({ animationDone }: Props) {
                     <SecondSection />
                     <Services />
                     <Work
-                        animationDone={animationDone}
                         title="Mes Succès"
                         img={workImage}
                     />
-                </motion.div>}
+                </motion.div>
+                <Footer />
+            </PageTransition>
         </div>
     )
 }

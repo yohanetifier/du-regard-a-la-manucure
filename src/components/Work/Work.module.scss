@@ -26,13 +26,20 @@
     // margin-left: 120px;
     font-size: 50px; 
     font-family: var.$font-title;
-    margin-left: 30px;
+    margin-left: 80px;
+    // position: relative;
+    // width: 100%;
+    // left: 100px;
+    // border: 2px solid green;
     @media (max-width: map-get(var.$breakpoints, "tablet-down")) {
         margin-left: 30px;
+        // border: 2px solid red;
     }
     @media (max-width: map-get(var.$breakpoints, "phone-down")) {
-        text-align: center;
-        margin-left: 0px;
+        // border: 2px solid purple;
+        // width: 60%;
+        text-align: left;
+        margin-left: 50px;
     }
     
 }
