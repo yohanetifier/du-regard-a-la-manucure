@@ -40,7 +40,7 @@
     align-items: center;
     width: 30%;
     height: 100%;
-    color: white;
+    // color: white;
 }
 
 
@@ -158,4 +158,13 @@
 
 .sectionimage {
     width: 50%; 
+}
+
+.socialNetwork {
+    position: fixed;
+    top: 45%;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
 }

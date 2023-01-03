@@ -4,6 +4,7 @@ import logo from '../../assets/images/logo/V1_Rose.svg'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from '../Image/Image';
+import SocialNetwork from '../SocialNetwork/SocialNetwork';
 
 export interface Navigation {
     label: string
@@ -83,8 +84,12 @@ const Header = () => {
                     ))}
                 </motion.ul>}
             </div>
+            <SocialNetwork
+                className={styles.socialNetwork}
+            />
         </div>
     )
 }
 
 export default Header
+
