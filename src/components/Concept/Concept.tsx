@@ -3,6 +3,7 @@ import styles from './Concept.module.scss';
 import Button from "../Button/Button";
 import { useRef, } from "react";
 import { motion, useInView } from "framer-motion";
+import { useMediaQuery } from 'react-responsive';
 
 
 interface AnimationProps {
@@ -21,12 +22,6 @@ export interface Img {
     alt: string
     classNamewrapper?: string
     ref?: string
-    // animation?: boolean
-    // initial?: AnimationProps
-    // animate?: AnimationProps
-    // transition?: AnimationProps
-    // onAnimationComplete?: () => void
-    // variants?: VariantsProps
 }
 
 interface Props {
@@ -57,6 +52,8 @@ function Concept({
 
     const scrollRef = useRef(null);
     const isInView = useInView(scrollRef, { once: true, amount: 0.2 });
+    const isMobileS = useMediaQuery({ query: "(max-width: 280px)" });
+    const isPhoneDown = useMediaQuery({ query: "(max-width: 500px)" });
 
     return (
 
@@ -96,7 +93,7 @@ function Concept({
                         </span>
                         <div className={styles.exercice}>
                             <motion.p
-                                initial={{ y: 120 }}
+                                initial={{ y: 300 }}
                                 animate={{ y: 0 }}
                                 transition={{
                                     delay: 3,
