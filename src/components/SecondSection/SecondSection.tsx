@@ -21,9 +21,6 @@ function SecondSection() {
         setIsBackgroundColorIsPink(false);
     }
 
-    console.log('isBackgroundColorIsPink', isBackgroundColorIsPink);
-
-
     const container = {
         show: {
             transition: {

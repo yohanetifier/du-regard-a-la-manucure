@@ -65,10 +65,12 @@ const Header = () => {
 
     const changeColor = {
         purple: {
-            filter: 'invert(7%) sepia(85%) saturate(6792%) hue-rotate(334deg) brightness(103%) contrast(89%)'
+            filter: 'invert(7%) sepia(85%) saturate(6792%) hue-rotate(334deg) brightness(103%) contrast(89%)',
+            transition: 'filter 200ms'
         },
         black: {
-            fill: 'black'
+            fill: 'black',
+            transition: 'fill 200ms'
         }
     }
 
@@ -107,5 +109,5 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;
 

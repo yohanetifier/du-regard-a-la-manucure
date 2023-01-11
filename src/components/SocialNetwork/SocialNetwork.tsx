@@ -13,7 +13,7 @@ function SocialNetwork({ className, menu }: Props) {
     return (
         <div className={`${className} ${styles.wrapper}`}>
             <a href="https://google.fr" target="_blank" rel="noreferrer" className={styles.link}>
-                <FontAwesomeIcon icon={faFacebook} /* color={!menu ? "#9E0E40" : "null"} */ className={!menu ? styles.purpleColor : styles.blackColor} />
+                <FontAwesomeIcon icon={faFacebook} className={!menu ? styles.purpleColor : styles.blackColor} />
             </a>
             <a href="https://www.tiktok.com/@duregardalamanucure" target="_blank" className={styles.link}>
                 <FontAwesomeIcon icon={faTiktok} className={!menu ? styles.purpleColor : styles.blackColor} />
@@ -25,4 +25,4 @@ function SocialNetwork({ className, menu }: Props) {
     )
 }
 
-export default SocialNetwork
+export default SocialNetwork;

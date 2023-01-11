@@ -61,6 +61,7 @@
 
 .firstline,.secondline, .thirdline  {
     background-color: #9E0E40;
+    // transition: background-color 200ms;
     position: absolute; 
     top: 10%; 
     width: 100%;
@@ -78,7 +79,8 @@
 }
 
 .movefirstline, .movethirdline,  .movesecondline {
-    background-color: black; 
+    background-color: black;
+    transition: background-color 200ms;
 }
 
 .movefirstline {
