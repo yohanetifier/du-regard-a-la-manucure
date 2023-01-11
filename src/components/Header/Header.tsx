@@ -1,10 +1,12 @@
-import styles from './Header.module.scss'
-import { Link } from 'react-router-dom'
-import logo from '../../assets/images/logo/V1_Rose.svg'
-import { useState } from 'react';
+import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo/V1_Rose.svg';
+// import logo from '../../assets/images/logo/du_regard_a_la_manucure.svg'
+import { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import Image from '../Image/Image';
 import SocialNetwork from '../SocialNetwork/SocialNetwork';
+import { BackgroundColor } from '../App/App';
 
 export interface Navigation {
     label: string
@@ -59,11 +61,24 @@ const item = {
 
 const Header = () => {
     const [menu, setMenu] = useState(false);
+    const { isBackgroundColorIsPink } = useContext(BackgroundColor);
+
+    const changeColor = {
+        purple: {
+            filter: 'invert(7%) sepia(85%) saturate(6792%) hue-rotate(334deg) brightness(103%) contrast(89%)'
+        },
+        black: {
+            fill: 'black'
+        }
+    }
+
+    const { purple } = changeColor;
+    const { black } = changeColor;
 
     return (
         <div className={styles.header}>
             <Link className={styles.logo} to='/'>
-                <img src={logo} alt="" className={styles.img} />
+                <img src={logo} alt="" className={styles.img} style={!menu ? purple : black} />
             </Link>
             <div className={styles.menu}>
                 <div className={styles.menulayout} onClick={() => !menu ? setMenu(true) : setMenu(false)}>
@@ -86,6 +101,7 @@ const Header = () => {
             </div>
             <SocialNetwork
                 className={styles.socialNetwork}
+                menu={menu}
             />
         </div>
     )

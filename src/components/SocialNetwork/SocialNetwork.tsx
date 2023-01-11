@@ -6,19 +6,20 @@ import styles from './SocialNetwork.module.scss';
 
 interface Props {
     className?: string
+    menu?: boolean
 }
 
-function SocialNetwork({ className }: Props) {
+function SocialNetwork({ className, menu }: Props) {
     return (
         <div className={`${className} ${styles.wrapper}`}>
             <a href="https://google.fr" target="_blank" rel="noreferrer" className={styles.link}>
-                <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={faFacebook} /* color={!menu ? "#9E0E40" : "null"} */ className={!menu ? styles.purpleColor : styles.blackColor} />
             </a>
             <a href="https://www.tiktok.com/@duregardalamanucure" target="_blank" className={styles.link}>
-                <FontAwesomeIcon icon={faTiktok} />
+                <FontAwesomeIcon icon={faTiktok} className={!menu ? styles.purpleColor : styles.blackColor} />
             </a>
             <a href="https://www.instagram.com/du_regard_a_la_manucure/" target="_blank" className={styles.link}>
-                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={faInstagram} className={!menu ? styles.purpleColor : styles.blackColor} />
             </a>
         </div>
     )

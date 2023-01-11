@@ -1,4 +1,5 @@
-@use "../../styles/utils/variables.scss" as var; 
+// @use "../../styles/utils/variables.scss" as var; 
+@import  "../../styles/utils/variables.scss" ; 
 
 .header {
     display: flex;
@@ -13,21 +14,16 @@
 
 
 .img{
-    margin-top: 30px;
-    height:300px; 
+    margin-top: 40px;
+    height:200px; 
     width: 300px;
-    // @media only screen and (max-width: map-get(var.$breakpoints, "mobileS")){
-    //     border: 2px solid blue;
-    //     margin-top: 10px;
-    //     width: 100px;
-    //     height: 100px;
-    // }
-    @media only screen and (max-width: map-get(var.$breakpoints, "phone-up")){
+    z-index: 10;
+    @media only screen and (max-width: map-get($breakpoints, "phone-up")){
         margin-top: 10px;
         width: 150px;
         height: 150px;
     }
-    @media only screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+    @media only screen and (max-width: map-get($breakpoints, "tablet-down")){
         // border: 2px solid red;
         margin-left: -30px;
         width: 200px;
@@ -64,7 +60,7 @@
 }
 
 .firstline,.secondline, .thirdline  {
-    background-color: var.$color-primary; 
+    background-color: #9E0E40;
     position: absolute; 
     top: 10%; 
     width: 100%;
@@ -78,8 +74,7 @@
 }
 
 .thirdline {
-    top: 60%; 
-
+    top: 60%;
 }
 
 .movefirstline, .movethirdline,  .movesecondline {
@@ -117,8 +112,7 @@
 .actifmenu {
     transform: translateX(-0%); 
     transition: transform 400ms; 
-    background-color: var.$color-primary;
-
+    background-color: $color-primary;
 }
 
 .wrapperlink {
@@ -168,3 +162,4 @@
     flex-direction: column;
     height: 100px;
 }
+

@@ -3,14 +3,26 @@ import { useRef } from "react";
 import img2 from '../../assets/images/hadis-safari-A7rkoSFjrG0-unsplash.jpg'
 import img1 from '../../assets/images/sara-dabaghian-wZx6BeqZNUk-unsplash.jpg'
 import { delay, motion, useInView } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Image from '../Image/Image';
+import { BackgroundColor } from '../App/App';
 
 function SecondSection() {
     const wrapper = useRef(null);
     const isInView = useInView(wrapper, { once: true, amount: 0.5 });
+    const forBackgroundColor = useInView(wrapper, { amount: 0.5 });
     const [isOver, setIsOver] = useState(false);
     const MotionImage = motion(Image);
+    const { isBackgroundColorIsPink, setIsBackgroundColorIsPink } = useContext(BackgroundColor);
+
+    if (forBackgroundColor) {
+        setIsBackgroundColorIsPink(true);
+    } else {
+        setIsBackgroundColorIsPink(false);
+    }
+
+    console.log('isBackgroundColorIsPink', isBackgroundColorIsPink);
+
 
     const container = {
         show: {
