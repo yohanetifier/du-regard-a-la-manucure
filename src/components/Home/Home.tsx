@@ -5,7 +5,7 @@ import Concept from '../Concept/Concept';
 import Services from '../Services/Services';
 import Work from '../Work/Work';
 import Footer from '../Footer/Footer';
-import imgBelowRight from '../../assets/images/apostolos-vamvouras-Mky1mc85XQQ-unsplash (1).jpg'
+import imgBelowRight from '../../assets/images/apostolos-vamvouras-Mky1mc85XQQ-unsplash-_1_.webp';
 import img1 from '../../assets/images/clay-banks-_3Sud4WPPYE-unsplash.jpg';
 import img from '../../assets/images/henry-co-OpjlRo-31SI-unsplash.jpg';
 import img2 from '../../assets/images/oliver-johnson-yH0dth2yEQE-unsplash.jpg';
@@ -50,8 +50,6 @@ function Home() {
                 >
                     <Banner
                         src={imgBelowRight}
-                        className={styles.imgbelowright}
-                        classNamewrapper={styles.mainwrapper}
                     />
                     <Concept
                         src={img1}
@@ -67,7 +65,7 @@ function Home() {
                     <SecondSection />
                     <Services />
                     <Work
-                        title="Mes Succès"
+                        title="Nos Services"
                         img={workImage}
                     />
                 </motion.div>

@@ -1,5 +1,5 @@
-@use '../../styles/utils/variables.scss' as var; 
-@use '../../styles/utils/mixins.scss' as mixin; 
+@import '../../styles/utils/variables.scss' ; 
+@import '../../styles/utils/mixins.scss' ; 
 
 .wrapper{
     display: flex; 
@@ -7,12 +7,10 @@
 }
 
 .mainwrapper {
-    display: flex;
+    @include centerItem;
     flex-wrap: wrap; 
     margin: auto 0; 
-    justify-content: center; 
-    align-items:center;
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    @media screen and (max-width: map-get($breakpoints, "phone-down")){
         flex-direction: column; 
     }
 }
@@ -23,21 +21,13 @@
 }
 
 .title {
-    // margin-left: 120px;
     font-size: 50px; 
-    font-family: var.$font-title;
-    margin-left: 80px;
-    // position: relative;
-    // width: 100%;
-    // left: 100px;
-    // border: 2px solid green;
-    @media (max-width: map-get(var.$breakpoints, "tablet-down")) {
+    font-family: $font-title;
+    margin-left: 16%;
+    @media (max-width: map-get($breakpoints, "tablet-down")) {
         margin-left: 30px;
-        // border: 2px solid red;
     }
-    @media (max-width: map-get(var.$breakpoints, "phone-down")) {
-        // border: 2px solid purple;
-        // width: 60%;
+    @media (max-width: map-get($breakpoints, "phone-down")) {
         text-align: left;
         margin-left: 50px;
     }
@@ -51,13 +41,13 @@
     height: 400px;  
     margin-right: 10px; 
     margin-bottom: 10px; 
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+    @media screen and (max-width: map-get($breakpoints, "tablet-down")){
         width: 45%; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+    @media screen and (max-width: map-get($breakpoints, "tablet-up")){
         width: 90%; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    @media screen and (max-width: map-get($breakpoints, "phone-down")){
         width: 90%; 
     }
 }
@@ -68,28 +58,17 @@
 }
 
 .wrapperlink{
-    // background-color: var.$color-primary; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    // border: 2px solid red; 
+    @include centerItem;
     margin-top: 10px; 
     
 }
 
 .link {
+    @include buttonOnHoverMorePink;
     width: 200px;
     height: 40px; 
     text-decoration: none;  
-    color: white; 
-    background-color: var.$color-primary; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    &:hover {
-        background-color: darken(var.$color-primary, 10); 
-        transition: background-color 200ms; 
-    }
+   @include centerItem;
 }
 
 .wrapperlayout {

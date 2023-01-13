@@ -10,6 +10,7 @@ function Service() {
     const [secondAnimationIsOver, setSecondAnimationIsOver] = useState(false);
     const [thirdAnimationIsOver, setThirdAnimationIsOver] = useState(false);
     const [fourthAnimationIsOver, setFourthAnimationIsOver] = useState(false);
+    const motionTitle = motion(Title);
 
     return (
         <div className={styles.mainwrapper} ref={wrapper}>

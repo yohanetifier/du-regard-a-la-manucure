@@ -1,4 +1,5 @@
-@use '../../styles/utils/variables.scss' as var; 
+@import '../../styles/utils/variables.scss'; 
+@import '../../styles/utils/mixins.scss'; 
 
 .mainwrapper {
     height: 105vh; 
@@ -23,16 +24,16 @@
     display: flex; 
     justify-content: center;
     align-items: center; 
-    @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
+    @media screen and (max-width: map-get($breakpoints, "desktop-up")){
         grid-column: 2 / 6; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+    @media screen and (max-width: map-get($breakpoints, "tablet-down")){
         grid-column: 1 / 6;
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+    @media screen and (max-width: map-get($breakpoints, "tablet-up")){
         grid-column: 1 / 7; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    @media screen and (max-width: map-get($breakpoints, "phone-down")){
         grid-column: 3 / 10; 
         grid-row: 4 / 6; 
     }
@@ -43,7 +44,7 @@
     bottom: -25px; 
     left: 300px;
     width: 500px;
-    font-family: "DancingScript";
+    font-family: $font-title;
     font-size: 40px;
     color: red;  
 }
@@ -70,23 +71,25 @@
         transition: transform 500ms;
         
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "desktop-up")){
+    @media screen and (max-width: map-get($breakpoints, "desktop-up")){
         grid-column: 3 / 7; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
+    @media screen and (max-width: map-get($breakpoints, "tablet-down")){
         grid-column: 2 / 7; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+    @media screen and (max-width: map-get($breakpoints, "tablet-up")){
         grid-column: 2 / 8; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    @media screen and (max-width: map-get($breakpoints, "phone-down")){
         grid-column: 2 / 8; 
         grid-row: 1 / 3; 
     }
 }
 
 .img3wrapper {
-    background-image: url("../../assets/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg"); 
+    // border: 2px solid yellow;
+    @include background-image ("giorgio-trovato-gb6gtiTZKB8-unsplash.jpg");
+    // background-image: url("../../assets/images/giorgio-trovato-gb6gtiTZKB8-unsplash.jpg"); 
     background-position: center; 
     background-size: 100% 100%;
     position: relative; 
@@ -97,11 +100,11 @@
     z-index: 0; 
     grid-column: 7 / 12; 
     grid-row: 1 / 5; 
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
+    @media screen and (max-width: map-get($breakpoints, "tablet-up")){
         grid-column: 7 / 13; 
         grid-row:  1 / 5; 
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    @media screen and (max-width: map-get($breakpoints, "phone-down")){
         grid-row: 2 / 4; 
     }
     
@@ -122,16 +125,16 @@
     position: absolute; 
     z-index: 3;     
     // top: 15%;
-    left: 10%;
+    left: 15%;
     color: white; 
-    font-size: var.$font-size-title;
-    font-family: "DancingScript"; 
+    font-size: $font-size-title;
+    font-family: $font-title; 
     overflow: hidden; 
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+    @media screen and (max-width: map-get($breakpoints, "phone-down")){
         top: 5%; 
     }
     & > h2 {
-        @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        @media screen and (max-width: map-get($breakpoints, "phone-down")){
             font-size: 50px; 
         }
     }
@@ -141,7 +144,7 @@
     overflow: hidden; 
     & > p {
         font-size: 40px; 
-        @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
+        @media screen and (max-width: map-get($breakpoints, "phone-down")){
             font-size: 20px; 
         }
     }
