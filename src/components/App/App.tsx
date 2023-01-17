@@ -9,13 +9,22 @@ export const BackgroundColor = createContext({
   setIsBackgroundColorIsPink: (arg: boolean) => { }
 });
 
+export const SelectedService = createContext({
+  selectedService: '',
+  setSelectedService: (arg: string) => { }
+});
+
+
 function App() {
   const [isBackgroundColorIsPink, setIsBackgroundColorIsPink] = useState<boolean>(false);
+  const [selectedService, setSelectedService] = useState<string>('');
   return (
     <>
       <BackgroundColor.Provider value={{ isBackgroundColorIsPink, setIsBackgroundColorIsPink }}>
-        <Header />
-        <AnimatedRoutes />
+        <SelectedService.Provider value={{ selectedService, setSelectedService }}>
+          <Header />
+          <AnimatedRoutes />
+        </SelectedService.Provider>
       </BackgroundColor.Provider>
     </>
   );

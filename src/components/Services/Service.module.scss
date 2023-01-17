@@ -142,6 +142,7 @@
 
 .pwrapper {
     overflow: hidden; 
+    text-decoration: none;
     & > p {
         font-size: 40px; 
         @media screen and (max-width: map-get($breakpoints, "phone-down")){

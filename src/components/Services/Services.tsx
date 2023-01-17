@@ -1,7 +1,9 @@
 import styles from './Service.module.scss';
 import Title from '../Title/Title';
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { SelectedService } from '../App/App';
 
 function Service() {
     const wrapper = useRef(null);
@@ -10,7 +12,8 @@ function Service() {
     const [secondAnimationIsOver, setSecondAnimationIsOver] = useState(false);
     const [thirdAnimationIsOver, setThirdAnimationIsOver] = useState(false);
     const [fourthAnimationIsOver, setFourthAnimationIsOver] = useState(false);
-    const motionTitle = motion(Title);
+    const choosenService = useContext(SelectedService);
+    const { selectedService, setSelectedService } = choosenService;
 
     return (
         <div className={styles.mainwrapper} ref={wrapper}>
@@ -35,7 +38,7 @@ function Service() {
                         transition={{ duration: 0.10 }}
                         onAnimationComplete={() => setSecondAnimationIsOver(true)}
                     >
-                        <div className={styles.pwrapper}>
+                        <Link className={styles.pwrapper} to='/services' onClick={() => setSelectedService('Cils')}>
                             {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
@@ -43,7 +46,7 @@ function Service() {
                                     animate={{ y: 0 }}
                                     transition={{ duration: 1 }}
                                 >Cils</motion.p>}
-                        </div>
+                        </Link>
                     </motion.div>}
                 {secondAnimationIsOver &&
                     <motion.div
@@ -53,7 +56,7 @@ function Service() {
                         transition={{ duration: 0.10 }}
                         onAnimationComplete={() => setThirdAnimationIsOver(true)}
                     >
-                        <div className={styles.pwrapper}>
+                        <Link className={styles.pwrapper} to='/services' onClick={() => setSelectedService('Sourcils')}>
                             {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
@@ -61,7 +64,7 @@ function Service() {
                                     animate={{ y: 0 }}
                                     transition={{ duration: 1 }}
                                 >Sourcils</motion.p>}
-                        </div>
+                        </Link>
                     </motion.div>}
                 {thirdAnimationIsOver &&
                     <motion.div
@@ -71,7 +74,7 @@ function Service() {
                         transition={{ duration: 0.10 }}
                         onAnimationComplete={() => setFourthAnimationIsOver(true)}
                     >
-                        <div className={styles.pwrapper}>
+                        <Link className={styles.pwrapper} to='/services' onClick={() => setSelectedService('Ongles')}>
                             {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
@@ -79,7 +82,7 @@ function Service() {
                                     animate={{ y: 0 }}
                                     transition={{ duration: 1 }}
                                 >Ongles</motion.p>}
-                        </div>
+                        </Link>
                     </motion.div>}
             </div>
         </div>
