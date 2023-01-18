@@ -4,9 +4,9 @@ import logo from '../../assets/images/logo/V1_Rose.svg';
 // import logo from '../../assets/images/logo/du_regard_a_la_manucure.svg'
 import { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
-import Image from '../Image/Image';
 import SocialNetwork from '../SocialNetwork/SocialNetwork';
 import { BackgroundColor, SelectedService } from '../App/App';
+import { Loader } from "../App/App";
 import PageTransition from '../PageTransition/PageTransition';
 
 export interface Navigation {
@@ -65,10 +65,15 @@ const Header = () => {
     const { isBackgroundColorIsPink } = useContext(BackgroundColor);
     const choosenService = useContext(SelectedService);
     const { selectedService, setSelectedService } = choosenService;
+    const loader = useContext(Loader);
+    const { isLoading, setIsLoading } = loader;
+    console.log('isLoading', isLoading);
 
-    const resetService = () => {
+
+    const handleClick = () => {
         setMenu(false);
         setSelectedService('');
+        setIsLoading(true);
     }
 
     const changeColor = {
@@ -87,7 +92,7 @@ const Header = () => {
 
     return (
         <PageTransition>
-            <div className={styles.header}>
+            <div className={styles.header} style={isLoading ? { display: 'none' } : { display: 'flex' }}>
                 <Link className={styles.logo} to='/'>
                     <img src={logo} alt="" className={styles.img} style={!menu ? purple : black} />
                 </Link>
@@ -105,8 +110,8 @@ const Header = () => {
                         initial='hidden'
                         animate='show'
                     >
-                        {navigation.map(({ label, to }) => (
-                            <motion.li variants={item} className={styles.list}><Link to={to} className={styles.link} onClick={() => resetService()}>{label}</Link></motion.li>
+                        {navigation.map(({ label, to }, i) => (
+                            <motion.li key={i} variants={item} className={styles.list}><Link to={to} className={styles.link} onClick={() => handleClick()}>{label}</Link></motion.li>
                         ))}
                     </motion.ul>}
                 </div>

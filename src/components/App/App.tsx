@@ -14,18 +14,26 @@ export const SelectedService = createContext({
   setSelectedService: (arg: string) => { }
 });
 
+export const Loader = createContext({
+  isLoading: false,
+  setIsLoading: (arg: boolean) => { }
+});
 
 function App() {
   const [isBackgroundColorIsPink, setIsBackgroundColorIsPink] = useState<boolean>(false);
   const [selectedService, setSelectedService] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   return (
     <>
-      <BackgroundColor.Provider value={{ isBackgroundColorIsPink, setIsBackgroundColorIsPink }}>
-        <SelectedService.Provider value={{ selectedService, setSelectedService }}>
-          <Header />
-          <AnimatedRoutes />
-        </SelectedService.Provider>
-      </BackgroundColor.Provider>
+      <Loader.Provider value={{ isLoading, setIsLoading }}>
+        <BackgroundColor.Provider value={{ isBackgroundColorIsPink, setIsBackgroundColorIsPink }}>
+          <SelectedService.Provider value={{ selectedService, setSelectedService }}>
+            <Header />
+            <AnimatedRoutes />
+          </SelectedService.Provider>
+        </BackgroundColor.Provider>
+      </Loader.Provider>
     </>
   );
 }

@@ -14,6 +14,7 @@ function Service() {
     const [fourthAnimationIsOver, setFourthAnimationIsOver] = useState(false);
     const choosenService = useContext(SelectedService);
     const { selectedService, setSelectedService } = choosenService;
+    console.log(selectedService);
 
     return (
         <div className={styles.mainwrapper} ref={wrapper}>
