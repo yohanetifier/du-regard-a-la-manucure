@@ -22,11 +22,12 @@
 .titleWrapper {
     position: absolute;
     top: 40%;
-    border: 2px solid red;
+    // border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     & > h1 {
         font-size: 30px;
     }
