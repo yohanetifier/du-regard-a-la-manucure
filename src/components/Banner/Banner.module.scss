@@ -22,39 +22,19 @@
 .titleWrapper {
     position: absolute;
     top: 40%;
-    
-    // left: 80%;
-    // border: 2px solid red;
-    // text-align: center;
+    border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // height: 300px;
-    // width: 1000px;
-    & > h1:nth-child(1) {
+    & > h1 {
         font-size: 30px;
-        // border: 2px solid blue;
-        // position: absolute;
-        // bottom: 100px;
-        // right: 100%;
-        // width: 850px;
-    }
-    & > h1:nth-child(2) {
-        font-size: 30px;
-        // border: 2px solid red;
-        // position: absolute;
-        // top: 200px;
-        // left: 1000px;
-        // width: 600px;
     }
 }
 
 h1 {
     font-size: 50px;
     color: #9E0E40;
-    // color: white;
-    // border: 2px solid red;
     margin: 0;
 }
 

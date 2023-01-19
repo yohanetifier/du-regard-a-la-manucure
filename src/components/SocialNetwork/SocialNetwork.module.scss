@@ -1,6 +1,10 @@
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/breakpoints.scss";
+
 .wrapper {
     display: flex;
     justify-content: space-between;
+    border: 2px solid red;
 }
 
 .link {
@@ -16,3 +20,10 @@
     color: black;
     transition: color 300ms;
 }
+
+.disappear {
+    @include tabletM {
+        transform: scale(0);
+    }
+}
+
