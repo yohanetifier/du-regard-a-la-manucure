@@ -1,5 +1,6 @@
 // @use "../../styles/utils/variables.scss" as var; 
 @import  "../../styles/utils/variables.scss" ;
+@import  "../../styles/utils/breakpoints.scss" ;
 
 .header {
     display: flex;
@@ -163,5 +164,8 @@
     display: flex;
     flex-direction: column;
     height: 100px;
+    @include tabletM {
+        transform: scale(0);
+    }
 }
 

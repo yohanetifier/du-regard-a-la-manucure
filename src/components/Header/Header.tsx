@@ -118,7 +118,6 @@ const Header = () => {
                 <SocialNetwork
                     className={styles.socialNetwork}
                     menu={menu}
-                    disappear={true}
                 />
             </div>
         </PageTransition>

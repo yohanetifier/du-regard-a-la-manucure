@@ -7,12 +7,11 @@ import styles from './SocialNetwork.module.scss';
 interface Props {
     className?: string
     menu?: boolean
-    disappear?: boolean
 }
 
-function SocialNetwork({ className, menu, disappear }: Props) {
+function SocialNetwork({ className, menu}: Props) {
     return (
-        <div className={disappear ? ` ${styles.disappear} ${styles.wrapper}  ${className}` : `${className} ${styles.wrapper}` }>
+        <div className={`${className} ${styles.wrapper}` }>
             <a href="https://google.fr" target="_blank" rel="noreferrer" className={styles.link}>
                 <FontAwesomeIcon icon={faFacebook} className={!menu ? styles.purpleColor : styles.blackColor} />
             </a>

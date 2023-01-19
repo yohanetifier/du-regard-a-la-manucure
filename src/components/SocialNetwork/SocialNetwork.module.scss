@@ -21,9 +21,3 @@
     transition: color 300ms;
 }
 
-.disappear {
-    @include tabletM {
-        transform: scale(0);
-    }
-}
-
