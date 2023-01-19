@@ -22,7 +22,8 @@ function PageTransition({ children }: any) {
           // exit={{ opacity: 0 }}
           onAnimationComplete={() => setIsLoading(false)}
         >
-          <img src={svgLoader} alt="" />
+          <img src={svgLoader} alt="" className={styles.img} />
+
         </motion.div>
       }
       {!isLoading &&

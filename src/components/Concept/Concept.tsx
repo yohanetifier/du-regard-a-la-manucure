@@ -82,7 +82,7 @@ function Concept({
                         <span>
                             <motion.h2
                                 className={styles.title}
-                                initial={{ y: 80 }}
+                                initial={{ y: 200 }}
                                 animate={{ y: 0 }}
                                 transition={{
                                     delay: 2,
