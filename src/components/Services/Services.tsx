@@ -1,20 +1,22 @@
-import styles from './Service.module.scss';
+import styles from './Services.module.scss';
 import Title from '../Title/Title';
 import { motion, useInView } from 'framer-motion';
 import { useContext, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SelectedService } from '../App/App';
+import Button from "../Button/Button";
 
 function Service() {
     const wrapper = useRef(null);
     const isInView = useInView(wrapper, { once: true, amount: 0.5 });
-    const [firstAnimationIsOver, setFirstAnimationIsOver] = useState(false);
-    const [secondAnimationIsOver, setSecondAnimationIsOver] = useState(false);
-    const [thirdAnimationIsOver, setThirdAnimationIsOver] = useState(false);
-    const [fourthAnimationIsOver, setFourthAnimationIsOver] = useState(false);
+    const [firstAnimationIsOver, setFirstAnimationIsOver] = useState<boolean>(false);
+    const [secondAnimationIsOver, setSecondAnimationIsOver] = useState<boolean>(false);
+    const [thirdAnimationIsOver, setThirdAnimationIsOver] = useState<boolean>(false);
+    const [fourthAnimationIsOver, setFourthAnimationIsOver] = useState<boolean>(false);
     const choosenService = useContext(SelectedService);
     const { selectedService, setSelectedService } = choosenService;
-    console.log(selectedService);
+    const motionButton = motion(Button);
+
 
     return (
         <div className={styles.mainwrapper} ref={wrapper}>
@@ -43,10 +45,11 @@ function Service() {
                             {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
-                                    initial={{ y: 200 }}
-                                    animate={{ y: 0 }}
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
                                     transition={{ duration: 1 }}
-                                >Cils</motion.p>}
+                                >Cils</motion.p>
+                                }
                         </Link>
                     </motion.div>}
                 {secondAnimationIsOver &&
@@ -61,8 +64,8 @@ function Service() {
                             {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
-                                    initial={{ y: 200 }}
-                                    animate={{ y: 0 }}
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
                                     transition={{ duration: 1 }}
                                 >Sourcils</motion.p>}
                         </Link>
@@ -79,8 +82,8 @@ function Service() {
                             {fourthAnimationIsOver &&
                                 <motion.p
                                     className={styles.title}
-                                    initial={{ y: 200 }}
-                                    animate={{ y: 0 }}
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
                                     transition={{ duration: 1 }}
                                 >Ongles</motion.p>}
                         </Link>

@@ -8,7 +8,7 @@ interface Props {
 }
 
 function Button({ to, classnamelink, label }: Props) {
-    return <Link to={to} className={`${classnamelink} ${styles.defaultstyles}`}>{label}</Link>
+    return <Link to={to} className={`${classnamelink} ${styles.defaultStyles}`}>{label}</Link>
 
 }
 

@@ -21,7 +21,7 @@
 }
 
 .title {
-    font-size: 50px; 
+    font-size: 50px;
     font-family: $font-title;
     margin-left: 16%;
     @media (max-width: map-get($breakpoints, "tablet-down")) {
