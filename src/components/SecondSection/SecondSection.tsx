@@ -10,21 +10,21 @@ import { BackgroundColor } from '../App/App';
 function SecondSection() {
     const wrapper = useRef(null);
     const isInView = useInView(wrapper, { once: true, amount: 0.5 });
-    const forBackgroundColor = useInView(wrapper, { amount: 0.5 });
-    const [isOver, setIsOver] = useState(false);
+    // const forBackgroundColor = useInView(wrapper, { amount: 0.5 });
+    const [isOver, setIsOver] = useState<boolean>(false);
     const MotionImage = motion(Image);
-    const { isBackgroundColorIsPink, setIsBackgroundColorIsPink } = useContext(BackgroundColor);
+    // const { isBackgroundColorIsPink, setIsBackgroundColorIsPink } = useContext(BackgroundColor);
 
-    if (forBackgroundColor) {
-        setIsBackgroundColorIsPink(true);
-    } else {
-        setIsBackgroundColorIsPink(false);
-    }
+    // if (forBackgroundColor) {
+    //     setIsBackgroundColorIsPink(true);
+    // } else {
+    //     setIsBackgroundColorIsPink(false);
+    // }
 
     const container = {
         show: {
             transition: {
-                staggerChildren: 0.8,
+                staggerChildren: 1,
                 // duration: 2
             }
         }
@@ -32,15 +32,15 @@ function SecondSection() {
 
     const item = {
         hidden: {
-            x: -100,
+            x: -500,
             opacity: 0
         },
         show: {
             x: 0,
             opacity: 1,
             transition: {
-                duration: 0.8,
-                ease: "easeIn"
+                duration: 2,
+                ease: "easeIn",
             }
         }
     }
@@ -56,7 +56,7 @@ function SecondSection() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                     // animation={true}
-                    onAnimationComplete={() => setIsOver(true)}
+                    onAnimationStart={() => setIsOver(true)}
                 />
             }
             {isOver &&
