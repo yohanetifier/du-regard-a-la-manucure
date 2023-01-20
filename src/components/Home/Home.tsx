@@ -15,6 +15,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Img } from '../Concept/Concept';
 import PageTransition from '../PageTransition/PageTransition';
+import imgSecondSection1 from '../../assets/images/sara-dabaghian-wZx6BeqZNUk-unsplash.jpg';
+import imgSecondSection2 from '../../assets/images/hadis-safari-A7rkoSFjrG0-unsplash.jpg';
 
 
 function Home() {
@@ -39,6 +41,24 @@ function Home() {
 
         ]
 
+    const quote = [
+        {
+            sentence: "La beauté"
+        },
+        {
+            sentence: "est"
+        },
+        {
+            sentence: "dans les yeux"
+        },
+        {
+            sentence: "de celui qui regarde"
+        },
+        {
+            sentence: "Oscar Wilde"
+        },
+    ]
+
     return (
         <div>
             <PageTransition>
@@ -62,7 +82,13 @@ function Home() {
                         label="En savoir plus"
                         numberOfButton="one"
                     />
-                    <SecondSection />
+                    <SecondSection
+                        img1={imgSecondSection1}
+                        alt1={imgSecondSection1}
+                        img2={imgSecondSection2}
+                        alt2={imgSecondSection2}
+                        quote={quote}
+                    />
                     <Services />
                     <Work
                         title="Nos Succès"
