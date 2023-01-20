@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Img } from '../Concept/Concept'
 import Title from '../Title/Title';
+import Button from '../Button/Button';
 
 export interface WorkProps {
     title: string
@@ -87,7 +88,13 @@ function Work({ title, img }: WorkProps) {
                             duration: 1
                         }}
                     >
-                        <Link to="/succes" className={styles.link}>Voir plus de succès</Link>
+                        <Button
+                            to="https://www.instagram.com/du_regard_a_la_manucure/"
+                            label="Voir plus de succès"
+                            classnamelink={styles.link}
+                            width='300px'
+                        />
+                        {/* <a href="https://www.instagram.com/du_regard_a_la_manucure/" className={styles.link}>Voir plus de succès</a> */}
                     </motion.div>}
             </div>
         </div >

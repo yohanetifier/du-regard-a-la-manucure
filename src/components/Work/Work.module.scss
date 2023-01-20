@@ -24,26 +24,12 @@
 .title {
     font-size: $font-size-title;
     font-family: $font-title;
-    // margin-left: 16%;
     text-align: center;
-    // @include desktopM {
-    //     border: 2px solid red;
-    //     text-align: center;
-    // }
-    // @media (max-width: map-get($breakpoints, "tablet-down")) {
-    //     margin-left: 30px;
-    // }
-    // @media (max-width: map-get($breakpoints, "phone-down")) {
-    //     text-align: left;
-    //     margin-left: 50px;
-    // }
     
 }
 
 .wrapperimg {
-    // width: 24%; 
     width: 300px; 
-    // height: 80%;
     height: 400px;  
     margin-right: 10px; 
     margin-bottom: 10px; 
@@ -71,13 +57,14 @@
 
 .link {
     @include buttonOnHoverMorePink;
-    width: 200px;
-    height: 40px; 
-    text-decoration: none;  
-   @include centerItem;
+    // width: 200px;
+    // height: 40px;
+    text-decoration: none;
+    border: 2px solid green;
+    text-align: center;
+//    @include centerItem;
 }
 
 .wrapperlayout {
-    // border: 2px solid red; 
     min-height: 500px; 
 }

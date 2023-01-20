@@ -17,7 +17,8 @@ function Banner({ src, className, classNamewrapper }: Props) {
                 <Button
                     to="/"
                     label='Reservez'
-                    classnamelink={ styles.backgroundColor }
+                    classnamelink={styles.backgroundColor}
+                    width='200px'
                 />
             </div>
         </div>
