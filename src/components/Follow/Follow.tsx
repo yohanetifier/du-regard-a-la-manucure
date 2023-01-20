@@ -6,11 +6,7 @@ import styles from './Follow.module.scss';
 import { motion } from 'framer-motion';
 import SocialNetwork from '../SocialNetwork/SocialNetwork';
 
-interface Props {
-    wrapperAppear: boolean
-}
-
-function Follow({ wrapperAppear }: Props) {
+function Follow() {
     return (
         <div className={styles.followwrapper}>
             <p className={styles.follow}>Suivez nous</p>

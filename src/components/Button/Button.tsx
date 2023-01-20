@@ -5,10 +5,11 @@ interface Props {
     to: string
     classnamelink?: string
     label: string
+    width?: string
 }
 
-function Button({ to, classnamelink, label }: Props) {
-    return <Link to={to} className={`${classnamelink} ${styles.defaultStyles}`}>{label}</Link>
+function Button({ to, classnamelink, label, width }: Props) {
+    return <Link to={to} className={`${classnamelink} ${styles.defaultStyles}`} style={{ width }}>{label}</Link>
 
 }
 

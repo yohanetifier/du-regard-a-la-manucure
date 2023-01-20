@@ -115,6 +115,7 @@ function Concept({
                                 <Button
                                     to={to}
                                     label={label}
+                                    width="200px"
                                 />
                             </motion.div>
                             :
