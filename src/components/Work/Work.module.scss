@@ -17,8 +17,8 @@
 }
 
 .wrappertitle {
-    height: 10%; 
-    overflow: hidden; 
+    height: 10%;
+    overflow: hidden;
 }
 
 .title {
@@ -57,12 +57,9 @@
 
 .link {
     @include buttonOnHoverMorePink;
-    // width: 200px;
-    // height: 40px;
     text-decoration: none;
-    border: 2px solid green;
     text-align: center;
-//    @include centerItem;
+    height: 40px;
 }
 
 .wrapperlayout {
