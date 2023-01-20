@@ -52,8 +52,6 @@ function Concept({
 
     const scrollRef = useRef(null);
     const isInView = useInView(scrollRef, { once: true, amount: 0.2 });
-    const isMobileS = useMediaQuery({ query: "(max-width: 280px)" });
-    const isPhoneDown = useMediaQuery({ query: "(max-width: 500px)" });
 
     return (
 
