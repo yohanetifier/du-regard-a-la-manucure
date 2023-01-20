@@ -65,7 +65,7 @@ function Home() {
                     <SecondSection />
                     <Services />
                     <Work
-                        title="Nos Services"
+                        title="Nos Succès"
                         img={workImage}
                     />
                 </motion.div>

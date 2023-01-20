@@ -1,5 +1,6 @@
-@import '../../styles/utils/variables.scss' ; 
-@import '../../styles/utils/mixins.scss' ; 
+@import '../../styles/utils/variables.scss' ;
+@import '../../styles/utils/mixins.scss' ;
+@import '../../styles/utils/breakpoints.scss' ;
 
 .wrapper{
     display: flex; 
@@ -21,16 +22,21 @@
 }
 
 .title {
-    font-size: 50px;
+    font-size: $font-size-title;
     font-family: $font-title;
-    margin-left: 16%;
-    @media (max-width: map-get($breakpoints, "tablet-down")) {
-        margin-left: 30px;
-    }
-    @media (max-width: map-get($breakpoints, "phone-down")) {
-        text-align: left;
-        margin-left: 50px;
-    }
+    // margin-left: 16%;
+    text-align: center;
+    // @include desktopM {
+    //     border: 2px solid red;
+    //     text-align: center;
+    // }
+    // @media (max-width: map-get($breakpoints, "tablet-down")) {
+    //     margin-left: 30px;
+    // }
+    // @media (max-width: map-get($breakpoints, "phone-down")) {
+    //     text-align: left;
+    //     margin-left: 50px;
+    // }
     
 }
 
