@@ -15,10 +15,11 @@ function Banner({ src, className, classNamewrapper }: Props) {
             <div className={styles.titleWrapper}>
                 <h1>Plus qu'une parenthèse bien être... une mise en beauté unique </h1>
                 <Button
-                    to="/"
+                    to="https://www.planity.com/du-regard-a-la-manucure-deplacement-a-domicile-95510-aincourt"
                     label='Reservez'
                     classnamelink={styles.backgroundColor}
                     width='200px'
+                    external={true}
                 />
             </div>
         </div>

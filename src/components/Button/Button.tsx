@@ -6,10 +6,21 @@ interface Props {
     classnamelink?: string
     label: string
     width?: string
+    external?: boolean
 }
 
-function Button({ to, classnamelink, label, width }: Props) {
-    return <Link to={to} className={`${classnamelink} ${styles.defaultStyles}`} style={{ width }}>{label}</Link>
+function Button({ to, classnamelink, label, width, external = false }: Props) {
+    return (
+        <>
+            {external ?
+
+                <a href={to} className={`${classnamelink} ${styles.defaultStyles}`} style={{ width }} target="_blank">{label}</a>
+                :
+                <Link to={to} className={`${classnamelink} ${styles.defaultStyles}`} style={{ width }}>{label}</Link>
+
+            }
+
+        </>)
 
 }
 

@@ -93,6 +93,7 @@ function Work({ title, img }: WorkProps) {
                             label="Voir plus de succès"
                             classnamelink={styles.link}
                             width='280px'
+                            external={true}
                         />
                         {/* <a href="https://www.instagram.com/du_regard_a_la_manucure/" className={styles.link}>Voir plus de succès</a> */}
                     </motion.div>}
