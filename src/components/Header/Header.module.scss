@@ -133,9 +133,11 @@
 
 .link {
     text-decoration: none;
+    // text-align: center;
     font-size: 40px;
     font-family: $textFont;
     color: black;
+    // border: 2px solid red;
     @include mobileL {
         width: 100%;
         font-size: 25px;
@@ -155,6 +157,11 @@
     margin: 0 auto;
     text-align: center;
     width: 100vw;
+    border: 2px solid blue;
+    // width: 50%;
+    @include mobileM {
+        text-align: left;
+    }
 }
 
 .sectionimage {
