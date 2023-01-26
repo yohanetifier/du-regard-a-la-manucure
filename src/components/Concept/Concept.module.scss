@@ -76,14 +76,14 @@
     font-family: $font-title;
     font-size: $font-size-title;
     @include mobileM {
-        border: 2px solid green;
+        // border: 2px solid green;
         font-size: calc($font-size-title - 10px);
     }
     @media screen and (max-width: map-get($breakpoints, "tablet-up")) {
         color: white;
     }
     @include mobileS {
-        border: 2px solid red;
+        // border: 2px solid red;
         font-size: calc($font-size-title - 15px);
     }
 }

@@ -18,6 +18,7 @@ function Button({ to, classnamelink, label, width, external = false }: Props) {
 					className={`${classnamelink} ${styles.defaultStyles}`}
 					style={{ width }}
 					target="_blank"
+					rel="noreferrer"
 				>
 					{label}
 				</a>

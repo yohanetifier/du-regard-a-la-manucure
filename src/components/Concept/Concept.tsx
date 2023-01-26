@@ -48,6 +48,8 @@ function Concept({
 Props) {
 	const scrollRef = useRef(null);
 	const isInView = useInView(scrollRef, { once: true, amount: 0.2 });
+	const isMobileS = useMediaQuery({ query: "(max-width: 280px)" });
+	console.log(isMobileS);
 
 	return (
 		<div className={styles.mainwrapper} ref={scrollRef}>

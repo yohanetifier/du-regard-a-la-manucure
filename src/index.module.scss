@@ -22,20 +22,14 @@ p {
   font-family: "Montserrat";
   font-size: 20px;
   @include mobileL {
-    font-size: 18px;
+    font-size: calc($textFontSize - 2px);
+  }
+  @include mobileS {
+    font-size: calc($textFontSize - 4px);
   }
 }
 
 h2 {
   font-family: "DancingScript";
   font-size: $font-size-title;
-  // @include mobileL {
-  //   border: 2px solid green;
-  //   font-size: calc($font-size-title - 10px);
-  // }
-  // @include mobileS {
-  //   border: 2px solid red;
-  //   font-size: calc($font-size-title - 15px);
-  //   // font-size: 18px;
-  // }
 }
