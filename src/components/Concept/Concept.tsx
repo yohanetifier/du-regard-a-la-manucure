@@ -1,9 +1,9 @@
-import Image from '../Image/Image';
-import styles from './Concept.module.scss';
-import Button from '../Button/Button';
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useMediaQuery } from 'react-responsive';
+import Image from "../Image/Image";
+import styles from "./Concept.module.scss";
+import Button from "../Button/Button";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 interface AnimationProps {
 	opacity?: number;
@@ -32,7 +32,7 @@ interface Props {
 	label: string;
 	secondTo?: string;
 	secondLabel?: string;
-	numberOfButton: string;
+	// numberOfButton: string;
 }
 
 function Concept({
@@ -42,10 +42,10 @@ function Concept({
 	children,
 	to,
 	label,
-	secondTo,
-	secondLabel,
-	numberOfButton,
-}: Props) {
+}: // secondTo,
+// secondLabel,
+// numberOfButton,
+Props) {
 	const scrollRef = useRef(null);
 	const isInView = useInView(scrollRef, { once: true, amount: 0.2 });
 
@@ -54,7 +54,7 @@ function Concept({
 			{isInView && (
 				<motion.div
 					className={styles.imagewrapper}
-					initial={{ x: '-100vw' }}
+					initial={{ x: "-100vw" }}
 					animate={{ x: 0 }}
 					transition={{ duration: 1 }}
 				>
@@ -68,7 +68,7 @@ function Concept({
 			{isInView && (
 				<motion.div
 					className={styles.descriptionwrapper}
-					initial={{ x: '100vw' }}
+					initial={{ x: "100vw" }}
 					animate={{ x: 0 }}
 					transition={{ duration: 1 }}
 				>
@@ -107,40 +107,21 @@ function Concept({
 								{children}
 							</motion.p>
 						</div>
-						{numberOfButton === 'one' ? (
-							<motion.div
-								className={styles.buttonwrapper}
-								initial={{
-									opacity: 0,
-								}}
-								animate={{
-									opacity: 1,
-								}}
-								transition={{
-									delay: 4,
-									duration: 1,
-								}}
-							>
-								<Button to={to} label={label} width="200px" />
-							</motion.div>
-						) : (
-							<motion.div
-								className={styles.buttonwrapper}
-								initial={{
-									opacity: 0,
-								}}
-								animate={{
-									opacity: 1,
-								}}
-								transition={{
-									delay: 4,
-									duration: 1,
-								}}
-							>
-								<Button to={to} label={label} />
-								<Button to={secondTo!} label={secondLabel!} />
-							</motion.div>
-						)}
+						<motion.div
+							className={styles.buttonwrapper}
+							initial={{
+								opacity: 0,
+							}}
+							animate={{
+								opacity: 1,
+							}}
+							transition={{
+								delay: 4,
+								duration: 1,
+							}}
+						>
+							<Button to={to} label={label} width="200px" />
+						</motion.div>
 					</div>
 				</motion.div>
 			)}

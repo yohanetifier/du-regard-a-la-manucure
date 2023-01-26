@@ -1,3 +1,6 @@
+@import "./styles/utils/breakpoints.scss";
+@import "./styles/utils/variables.scss";
+
 @font-face {
   font-family: "DancingScript";
   src: local("DancingScript"), url("./assets/fonts/DancingScript/DancingScript-Regular.ttf") format("truetype");
@@ -18,5 +21,21 @@ code {
 p {
   font-family: "Montserrat";
   font-size: 20px;
-  // border: 2px solid red;
+  @include mobileL {
+    font-size: 18px;
+  }
+}
+
+h2 {
+  font-family: "DancingScript";
+  font-size: $font-size-title;
+  // @include mobileL {
+  //   border: 2px solid green;
+  //   font-size: calc($font-size-title - 10px);
+  // }
+  // @include mobileS {
+  //   border: 2px solid red;
+  //   font-size: calc($font-size-title - 15px);
+  //   // font-size: 18px;
+  // }
 }
