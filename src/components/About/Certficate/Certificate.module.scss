@@ -1,9 +1,25 @@
+@import "../../../styles/utils/breakpoints.scss";
+
 .mainwrapper {
-    height: 100vh;
-    
+    height: 70vh;
+    @include tabletM {
+        border: 2px solid green;
+        height: 130vh;
+    }
+    // @include tabletS {
+    //     border: 2px solid grey;
+    //     height: 130vh;
+    // }
+    // @include mobileL {
+    //     border: 2px solid red;
+    //     height: 140vh;
+    // }
+    // @include mobileS {
+    //     border: 2px solid blue;
+    //     height: 140vh;
+    // }
 }
 
 .title {
-    margin-left: 20px; 
+    text-align: center;
 }
-

@@ -12,6 +12,7 @@ import Concept3 from "./Concept3/Concept3";
 import Certificate from "./Certficate/Certificate";
 import { motion } from "framer-motion";
 import PageTransition from "../PageTransition/PageTransition";
+import Footer from "../Footer/Footer";
 
 export default function About() {
 	const imgConcept2 = [
@@ -105,6 +106,7 @@ export default function About() {
         et en leur appliquant un soin pour un véritable instant cocooning."
 			/>
 			<Certificate title="Mes Certificats" assets={certificate} />
+			<Footer />
 		</PageTransition>
 	);
 }

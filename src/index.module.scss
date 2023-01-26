@@ -20,7 +20,7 @@ code {
 
 p {
   font-family: "Montserrat";
-  font-size: 20px;
+  font-size: $textFontSize;
   @include mobileL {
     font-size: calc($textFontSize - 2px);
   }
