@@ -122,7 +122,7 @@ Props) {
 								duration: 1,
 							}}
 						>
-							<Button to={to} label={label} width="200px" />
+							<Button to={to} label={label} width="220px" />
 						</motion.div>
 					</div>
 				</motion.div>
