@@ -1,7 +1,6 @@
-import { Img } from '../Concept/Concept';
+import { Img } from "../Concept/Concept";
 import styles from "./Image.module.scss";
-import { forwardRef, Ref } from 'react';
-
+import { forwardRef, Ref } from "react";
 
 // export default function Image({
 //     src,
@@ -35,11 +34,12 @@ import { forwardRef, Ref } from 'react';
 //     )
 // }
 
-const Image = forwardRef(({ classNamewrapper, src, alt }: Img, ref: Ref<HTMLDivElement>) => (
-    <div className={classNamewrapper} ref={ref} >
-        <img src={src} className={styles.img} alt={alt} />
-    </div>
-))
+const Image = forwardRef(
+	({ classNamewrapper, src, alt }: Img, ref: Ref<HTMLDivElement>) => (
+		<figure className={classNamewrapper} ref={ref}>
+			<img src={src} className={styles.img} alt={alt} />
+		</figure>
+	)
+);
 
 export default Image;
-

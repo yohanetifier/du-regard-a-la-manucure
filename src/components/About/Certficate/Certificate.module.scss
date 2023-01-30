@@ -3,8 +3,7 @@
 .mainwrapper {
     height: 70vh;
     @include tabletS {
-        // border: 2px solid black;
-        height: 140vh;
+        height: 50vh;
     }
 }
 
