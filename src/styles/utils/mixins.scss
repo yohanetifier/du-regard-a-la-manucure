@@ -1,33 +1,33 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 @mixin titlezonecontact {
-    font-size: 40px; 
-    font-family: $font-title; 
+    font-size: 40px;
+    font-family: $font-title;
 }
 
 @mixin inputstyle {
-    outline: none; 
-    border: 1px solid lightgrey; 
+    outline: none;
+    // border: 1px solid lightgrey;
 }
 
-@mixin background-image ($image) {
+@mixin background-image($image) {
     $url: "../../assets/images/";
     background-image: url($url + $image);
 }
 
 @mixin buttonOnHoverMorePink {
-    color: white; 
-    background-color: $color-primary; 
-        &:hover {
-               background-color: darken($color-primary, 10); 
-               transition: background-color 200ms; 
-           }
+    color: white;
+    background-color: $color-primary;
+    &:hover {
+        background-color: darken($color-primary, 10);
+        transition: background-color 200ms;
+    }
 }
 
 @mixin centerItem {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin customButton {

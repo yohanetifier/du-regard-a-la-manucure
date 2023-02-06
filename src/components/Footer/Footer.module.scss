@@ -1,18 +1,17 @@
-@import '../../styles/utils/variables.scss'; 
+@import "../../styles/utils/variables.scss";
 
 .layoutwrapper {
-    margin-top: 50px; 
+    margin-top: 50px;
     height: 250px;
     background-color: $color-primary;
     display: flex;
     justify-content: center;
-
 }
 
 .customLink {
     text-align: center;
     font-size: $textFontSize;
-    font-weight: bold; 
+    font-weight: bold;
     position: relative;
     top: 20px;
     text-align: center;
