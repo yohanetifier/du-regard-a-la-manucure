@@ -1,10 +1,11 @@
 import styles from "./Contact.module.scss";
 import img1 from "../../assets/images/ana-francisconi-x-CXDIuhS3c-unsplash.jpg";
 import PageTransition from "../PageTransition/PageTransition";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
+	const [message, setMessage] = useState<boolean | null>(null);
 	const form = useRef(null);
 	const sendEmail = (e: any) => {
 		e.preventDefault();
@@ -17,12 +18,11 @@ function Contact() {
 			)
 			.then(
 				(result: any) => {
-					console.log(result.text);
-					alert("mail sent");
+					setMessage(true);
+					e.target.reset();
 				},
 				(error: any) => {
-					console.log(error.text);
-					alert("mail not sent");
+					setMessage(false);
 				}
 			);
 	};
@@ -79,6 +79,19 @@ function Contact() {
 								value="Contactez-moi"
 								className={styles.button}
 							/>
+							{message && (
+								<div className={styles.message}>
+									{message ? (
+										<p>Votre message a bien éte envoyé</p>
+									) : (
+										<p>
+											Une erreur s'est produite lors de
+											l'envoi du message. Veuillez
+											réessayer plus tard.
+										</p>
+									)}
+								</div>
+							)}
 						</div>
 					</form>
 				</div>
