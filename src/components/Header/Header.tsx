@@ -95,9 +95,10 @@ const Header = () => {
 
 	return (
 		<PageTransition>
-			<div
-				className={styles.header}
-				style={isLoading ? { display: "none" } : { display: "flex" }}
+			<header
+				className={
+					isLoading ? `${styles.inactifHeader}` : `${styles.header}`
+				}
 			>
 				<Link className={styles.logo} to="/">
 					<img
@@ -168,7 +169,7 @@ const Header = () => {
 					)}
 				</div>
 				<SocialNetwork className={styles.socialNetwork} menu={menu} />
-			</div>
+			</header>
 		</PageTransition>
 	);
 };
