@@ -30,7 +30,7 @@ function Contact() {
 		<PageTransition>
 			<div className={styles.mainwrapper}>
 				<figure className={styles.imgwrapper}>
-					<img src={img1} alt="" className={styles.img} />π
+					<img src={img1} alt="" className={styles.img} />
 				</figure>
 				<div className={styles.contactForm}>
 					<form
@@ -40,7 +40,7 @@ function Contact() {
 					>
 						<div className={styles.titlewrapper}>
 							<h2 className={styles.titleone}>
-								Plus qu'à un doigt de la beauté...
+								Plus qu'à un doigt de la beauté
 							</h2>
 						</div>
 						<div className={styles.spaceInput}>
