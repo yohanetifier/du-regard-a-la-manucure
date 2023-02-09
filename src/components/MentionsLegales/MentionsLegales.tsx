@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./MentionsLegales.module.scss";
 import img from "../../assets/images/oliver-johnson-yH0dth2yEQE-unsplash.jpg";
 import SplitContainer from "../SplitContainer/SplitContainer";
+import PageTransition from "../PageTransition/PageTransition";
 
 type Props = {
 	siteUrl: string;
@@ -21,45 +22,49 @@ function MentionsLegales({
 	courrier,
 }: Props) {
 	return (
-		<SplitContainer img={img} imgAlt={img}>
-			<p>
-				Conformément aux dispositions sur la loi n 2004-575 du 21 juin
-				2004 pour la confiance en l'économie numérique. Il est précisé
-				aux utilisatieurs du site duregardalamanucure.com l'identité des
-				différents intervenants dans le cadre de sa réalisation et de
-				son suivi.
-			</p>
-			<div>
-				<h2>Édition du site</h2>
+		<PageTransition>
+			<SplitContainer img={img} imgAlt={img}>
 				<p>
-					Le présent site, accessible à l'URL
-					{siteUrl}
-					duregardalamanucure.com est édité par:
+					Conformément aux dispositions sur la loi n 2004-575 du 21
+					juin 2004 pour la confiance en l'économie numérique. Il est
+					précisé aux utilisatieurs du site duregardalamanucure.com
+					l'identité des différents intervenants dans le cadre de sa
+					réalisation et de son suivi.
 				</p>
-				<p>
-					{editor}
-					{editorAddress}
-				</p>
-			</div>
-			<div>
-				<h2>Hébergement</h2>
-				<p></p>ß
-			</div>
-			<div>
-				<h2>Directeur de publication</h2>
-				<p>Le directeur de publication du site est Yohan Etifier</p>
-			</div>
-			<div>
-				<h2>Nous contacter</h2>
-				<p>Par téléphone: {phoneNumber}</p>
-				<p>Par email: {mail}</p>
-				<p>Par courrier: {courrier}</p>
-			</div>
-			<div>
-				<h2>Données personnelles</h2>
-				<p>Le traitement de vos données à caractère personnel est</p>
-			</div>
-		</SplitContainer>
+				<div>
+					<h2>Édition du site</h2>
+					<p>
+						Le présent site, accessible à l'URL
+						{siteUrl}
+						duregardalamanucure.com est édité par:
+					</p>
+					<p>
+						{editor}
+						{editorAddress}
+					</p>
+				</div>
+				<div>
+					<h2>Hébergement</h2>
+					<p></p>ß
+				</div>
+				<div>
+					<h2>Directeur de publication</h2>
+					<p>Le directeur de publication du site est Yohan Etifier</p>
+				</div>
+				<div>
+					<h2>Nous contacter</h2>
+					<p>Par téléphone: {phoneNumber}</p>
+					<p>Par email: {mail}</p>
+					<p>Par courrier: {courrier}</p>
+				</div>
+				<div>
+					<h2>Données personnelles</h2>
+					<p>
+						Le traitement de vos données à caractère personnel est
+					</p>
+				</div>
+			</SplitContainer>
+		</PageTransition>
 	);
 }
 
