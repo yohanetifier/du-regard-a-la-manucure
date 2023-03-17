@@ -90,9 +90,6 @@ export default function About() {
       , vivez une véritable expérience sur mesure."
 				to="/prestations"
 				label="Nos prestations"
-				// numberOfButton='two'
-				// secondTo='/services'
-				// secondLabel='Nos services'
 			/>
 			<Concept2
 				assets={imgConcept2}
