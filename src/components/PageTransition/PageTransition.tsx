@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
+import { SelectedService } from "../App/App";
 import Footer from "../Footer/Footer";
 import styles from "./PageTransition.module.scss";
+import svgLoader from '../../assets/images/logo/svgloader.svg';
+import { Loader } from '../App/App';
 
 function PageTransition({ children }: any) {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
+  const loader = useContext(Loader);
+  const { isLoading, setIsLoading } = loader;
 
   return (
     <>
@@ -14,10 +19,11 @@ function PageTransition({ children }: any) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          exit={{ opacity: 0 }}
+          // exit={{ opacity: 0 }}
           onAnimationComplete={() => setIsLoading(false)}
         >
-          <p>Du regard à la manucure</p>
+          <img src={svgLoader} alt="" className={styles.img} />
+
         </motion.div>
       }
       {!isLoading &&
@@ -25,7 +31,8 @@ function PageTransition({ children }: any) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          exit={{ opacity: 0, transition: { duration: 1 } }}
+          // exit={{ opacity: 0, transition: { duration: 1 } }}
+          onAnimationComplete={() => setIsLoading(false)}
         >
           {children}
         </motion.div>

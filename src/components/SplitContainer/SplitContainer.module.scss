@@ -1,0 +1,59 @@
+@import "../../styles/utils/breakpoints.scss";
+
+.mainWrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    // border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 10%);
+}
+
+.imgWrapper {
+    grid-column: 1 / 4;
+    grid-row: 1 / 11;
+    @include desktopL {
+        grid-column: 1 / 7;
+        grid-row: 1 / 6;
+    }
+    // border: 2px solid red;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+.mentionsWrapper {
+    grid-row: 2 / 10;
+    grid-column: 3 / 6;
+    @include desktopL {
+        grid-column: 2 / 6;
+        grid-row: 3 / 11;
+    }
+    @include tabletM {
+        grid-column: 1 / 7;
+        grid-row: 4 / 11;
+    }
+    // border: 2px solid blue;
+}
+
+.superimposeWrapper {
+    // border: 2px solid orange;
+    border-radius: 30px;
+    background-color: lightgrey;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reduceWidth {
+    margin: auto auto;
+    // border: 2px solid orange;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    overflow-y: scroll;
+}

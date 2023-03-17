@@ -1,0 +1,39 @@
+@import "./styles/utils/breakpoints.scss";
+@import "./styles/utils/variables.scss";
+
+@font-face {
+  font-family: "DancingScript";
+  src: local("DancingScript"), url("./assets/fonts/DancingScript/DancingScript-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+p {
+  font-family: "Montserrat";
+  font-size: $textFontSize;
+  @include mobileL {
+    font-size: calc($textFontSize - 2px);
+  }
+  @include mobileS {
+    font-size: calc($textFontSize - 4px);
+  }
+}
+
+h2 {
+  font-family: "DancingScript";
+  font-size: $font-size-title;
+}
+
+figure {
+  margin: 0;
+}

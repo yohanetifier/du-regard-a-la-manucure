@@ -1,98 +1,65 @@
-@use '../../styles/utils/variables.scss' as var; 
-@use '../../styles/utils/mixins.scss' as mixin; 
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/mixins.scss";
+@import "../../styles/utils/breakpoints.scss";
 
-.wrapper{
-    display: flex; 
-    flex-direction: column; 
+.wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .mainwrapper {
-    display: flex;
-    flex-wrap: wrap; 
-    margin: auto 0; 
-    justify-content: center; 
-    align-items:center;
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
-        flex-direction: column; 
+    @include centerItem;
+    flex-wrap: wrap;
+    margin: auto 0;
+    @media screen and (max-width: map-get($breakpoints, "phone-down")) {
+        flex-direction: column;
     }
 }
 
 .wrappertitle {
-    height: 10%; 
-    overflow: hidden; 
+    height: 10%;
+    overflow: hidden;
 }
 
 .title {
-    // margin-left: 120px;
-    font-size: 50px; 
-    font-family: var.$font-title;
-    margin-left: 80px;
-    // position: relative;
-    // width: 100%;
-    // left: 100px;
-    // border: 2px solid green;
-    @media (max-width: map-get(var.$breakpoints, "tablet-down")) {
-        margin-left: 30px;
-        // border: 2px solid red;
-    }
-    @media (max-width: map-get(var.$breakpoints, "phone-down")) {
-        // border: 2px solid purple;
-        // width: 60%;
-        text-align: left;
-        margin-left: 50px;
-    }
-    
+    // font-size: $font-size-title;
+    // font-family: $font-title;
+    text-align: center;
 }
 
 .wrapperimg {
-    // width: 24%; 
-    width: 300px; 
-    // height: 80%;
-    height: 400px;  
-    margin-right: 10px; 
-    margin-bottom: 10px; 
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
-        width: 45%; 
+    width: 300px;
+    height: 400px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    @media screen and (max-width: map-get($breakpoints, "tablet-down")) {
+        width: 45%;
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        width: 90%; 
+    @media screen and (max-width: map-get($breakpoints, "tablet-up")) {
+        width: 90%;
     }
-    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
-        width: 90%; 
+    @media screen and (max-width: map-get($breakpoints, "phone-down")) {
+        width: 90%;
     }
 }
 
 .img {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
 }
 
-.wrapperlink{
-    // background-color: var.$color-primary; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    // border: 2px solid red; 
-    margin-top: 10px; 
-    
+.wrapperlink {
+    @include centerItem;
+    margin-top: 10px;
 }
 
 .link {
-    width: 200px;
-    height: 40px; 
-    text-decoration: none;  
-    color: white; 
-    background-color: var.$color-primary; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    &:hover {
-        background-color: darken(var.$color-primary, 10); 
-        transition: background-color 200ms; 
-    }
+    @include buttonOnHoverMorePink;
+    text-decoration: none;
+    text-align: center;
+    height: 40px;
 }
 
 .wrapperlayout {
-    // border: 2px solid red; 
-    min-height: 500px; 
+    min-height: 500px;
 }

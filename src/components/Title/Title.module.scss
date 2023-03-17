@@ -1,13 +1,11 @@
-@use "../../styles/utils/variables.scss" as var; 
+@import "../../styles/utils/variables.scss";
 
 .defaultstyles {
-    font-size: var.$font-size-title; 
-    font-family: var.$font-title;
+    font-size: $font-size-title;
+    font-family: $font-title;
     // transform: translateY(100px);
 }
 
 .mainwrapper {
-    overflow: hidden; 
+    overflow: hidden;
 }
-
-

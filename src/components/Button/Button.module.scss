@@ -1,15 +1,21 @@
-.defaultstyles {
-    border: 2px solid white; 
-    text-decoration: none; 
-    color: black; 
-    width: 150px; 
-    height: 30px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    transition: background-color 300ms; 
-    margin-top: 20px; 
+@import "../../styles/utils/variables.scss";
+
+.defaultStyles {
+    border: 2px solid white;
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 300ms;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $textFont;
+    font-size: $textFontSize;
     &:hover {
-        background-color: white;  
+        background-color: white;
     }
 }

@@ -1,6 +1,9 @@
-$font-title: "DancingScript"; 
+$font-title: "DancingScript";
 $font-size-title: 50px;
-$color-primary: pink; 
+$color-primary: pink;
+$textFont: "Montserrat";
+$textFontSize: 20px;
+$lineHeight: 30px;
 
 $breakpoints: (
     "mobileS": 280px,
@@ -10,5 +13,5 @@ $breakpoints: (
     "tablet-down": 900px,
     "desktop-up": 1024px,
     "desktop-down": 1280px,
-    "widescreen-up": 1440px
+    "widescreen-up": 1440px,
 );

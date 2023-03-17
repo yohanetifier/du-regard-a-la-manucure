@@ -8,14 +8,16 @@ function Footer() {
 
     return (
         <div className={styles.layoutwrapper}>
-            <div>
+            <div className={styles.wrapper}>
                 <p>Du regard à la manucure</p>
+                {/* <div className={styles.wrapperButton}> */}
                 <Button
                     label="Contact"
                     to="/contact"
                 />
+                {/* </div> */}
                 <Follow
-                    wrapperAppear={true}
+                // wrapperAppear={true}
                 />
                 <Link
                     className={styles.customLink}
