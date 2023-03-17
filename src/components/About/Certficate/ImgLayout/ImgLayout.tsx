@@ -40,13 +40,18 @@ export default function ImgLayout({ assets, isInView }: Props) {
 	return (
 		<>
 			{isTablet ? (
-				<div className={styles.test}>
-					<img src={img} alt="" />
-					<img src={img} alt="" />
-					<img src={img} alt="" />
-					<img src={img} alt="" />
-					<img src={img} alt="" />
-				</div>
+				<motion.div
+					className={styles.slide}
+					variants={container}
+					initial="initial"
+					animate={isInView && "animate"}
+				>
+					<motion.img src={img} alt="" variants={item} />
+					<motion.img src={img} alt="" variants={item} />
+					<motion.img src={img} alt="" variants={item} />
+					<motion.img src={img} alt="" variants={item} />
+					<motion.img src={img} alt="" variants={item} />
+				</motion.div>
 			) : (
 				<motion.div
 					className={styles.imgwrapper}
