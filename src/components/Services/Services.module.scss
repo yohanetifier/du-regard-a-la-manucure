@@ -114,6 +114,7 @@
     color: black;
     font-weight: bold;
     background-color: white;
+    border-radius: 20px;
     @include customButton;
     display: flex;
     align-items: center;
