@@ -1,6 +1,13 @@
-@use "../../../../styles/utils/variables.scss" as var; 
+@use "../../../../styles/utils/variables.scss" as var;
+@import "../../../../styles/utils/breakpoints.scss";
 
 .descriptionsubwrapper {
-    width: 95%; 
+    width: 95%;
 }
 
+.reduceWidth {
+    width: 60%;
+    @include desktopL {
+        width: 95%;
+    }
+}

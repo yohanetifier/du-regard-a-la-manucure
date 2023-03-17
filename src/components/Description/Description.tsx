@@ -8,30 +8,6 @@ interface Props {
     animationOnTitleOver?: boolean
 }
 
-// function Description({ children, className, animationOnTitleOver }: Props) {
-//     return (
-//         <div className={`${styles.wrapper} ${className}`}>
-//             {/* {animationOnTitleOver ?
-//                 <motion.p
-//                     className={` ${styles.translateY}`}
-//                     initial={{ y: 200 }}
-//                     animate={{ y: 0 }}
-//                     transition={{ duration: 2 }}
-//                 >
-//                     {children}
-//                 </motion.p>
-//                 : */}
-//             <p className={` ${styles.translateY}`}>
-//                 {children}
-//             </p>
-
-
-//         </div>
-
-//     )
-// }
-
-
 const Description = forwardRef(({ children, className }: Props, ref: Ref<HTMLDivElement>) => (
     <div className={`${styles.wrapper} ${className}`} >
         <p ref={ref}>
