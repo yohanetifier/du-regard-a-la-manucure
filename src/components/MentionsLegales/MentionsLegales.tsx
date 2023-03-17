@@ -45,7 +45,7 @@ function MentionsLegales({
 				</div>
 				<div>
 					<h2>Hébergement</h2>
-					<p></p>ß
+					<p></p>
 				</div>
 				<div>
 					<h2>Directeur de publication</h2>
