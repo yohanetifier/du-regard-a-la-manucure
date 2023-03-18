@@ -1,21 +1,49 @@
-@use "../../../../styles/utils/variables.scss" as var; 
+@import "../../../../styles/utils/breakpoints.scss";
 
 .descriptionwrapper {
     width: 50%;
-    display: flex; 
-    justify-content:center; 
-    align-items:center;
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        width: 100%; 
-        height: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desktopS {
+        width: 100%;
+        height: 50%;
     }
-    
 }
 
-.descriptionsubwrapper  {
+.descriptionsubwrapper {
     width: 90%;
     height: 80%;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    justify-content:center; 
+    justify-content: center;
+}
+
+.title {
+    // border: 2px solid lightcoral;
+    @include tabletXs {
+        font-size: 40px;
+    }
+    @include mobileM {
+        font-size: 30px;
+    }
+    @include mobileS {
+        font-size: 25px;
+    }
+
+    // position: relative;
+    // bottom: 50px;
+}
+
+.description {
+    // border: 2px solid green;
+    @include tabletXs {
+        font-size: 16px;
+    }
+    @include mobileM {
+        font-size: 13px;
+    }
+    @include mobileS {
+        font-size: 11px;
+    }
 }

@@ -1,19 +1,17 @@
-@use "../../../styles/utils/variables.scss" as var; 
+@import "../../../styles/utils/breakpoints.scss";
 
 .mainwrapper {
     height: 100vh;
-    display: flex; 
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        flex-direction: column; 
-        margin-bottom: 20px; 
+    display: flex;
+    @include desktopS {
+        flex-direction: column;
+        margin-bottom: 20px;
     }
 }
 
 .reverserow {
-    flex-direction: row-reverse; 
-    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        flex-direction: column; 
+    flex-direction: row-reverse;
+    @include desktopS {
+        flex-direction: column;
     }
 }
-
-
