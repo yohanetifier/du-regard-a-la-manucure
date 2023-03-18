@@ -1,53 +1,60 @@
-@use "../../../styles//utils/variables.scss" as var; 
+@use "../../../styles//utils/variables.scss" as var;
+@import "../../../styles/utils/breakpoints.scss";
 
-$black: black; 
+$black: black;
 
 .mainwrapper {
-    display: flex; 
+    display: flex;
     justify-content: center;
     position: relative;
-    bottom: 40px; 
-    background-color: var.$color-primary; 
+    // bottom: 40px;
+    background-color: var.$color-primary;
 }
 
 .titlewrapper {
-    display: flex; 
+    display: flex;
     justify-content: space-around;
-     width: 30%;
-     background-color: var.$color-primary; 
-     z-index: 4; 
-     @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")){
-        width: 40%; 
-     }
-     @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")){
-        width: 50%; 
-     }
-     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")){
-        width: 70%; 
-     }
-     @media screen and (max-width: map-get(var.$breakpoints, "phone-up")){
-        width: 90%; 
-     }
-
+    width: 30%;
+    background-color: var.$color-primary;
+    position: relative;
+    bottom: 40px;
+    z-index: 4;
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-down")) {
+        width: 40%;
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "tablet-up")) {
+        width: 50%;
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-down")) {
+        width: 70%;
+    }
+    @media screen and (max-width: map-get(var.$breakpoints, "phone-up")) {
+        width: 90%;
+    }
 }
 
 .title {
-    cursor: pointer; 
+    cursor: pointer;
+    @include tabletXs {
+        font-size: 25px;
+    }
+    @include mobileL {
+        font-size: 30px;
+    }
 }
 
 .default {
-    width: 100%; 
-    display: flex; 
-    justify-content: center; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .actif {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
 }
 
 .inactif {
-    background-color: pink; 
-    color: white; 
+    background-color: pink;
+    color: white;
 }
-
