@@ -35,6 +35,9 @@ $black: black;
 
 .title {
     cursor: pointer;
+    @include tabletXs {
+        font-size: 25px;
+    }
     @include mobileL {
         font-size: 30px;
     }
