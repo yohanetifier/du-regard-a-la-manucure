@@ -20,7 +20,6 @@
 }
 
 .title {
-    // border: 2px solid lightcoral;
     @include tabletXs {
         font-size: 40px;
     }
@@ -30,13 +29,9 @@
     @include mobileS {
         font-size: 25px;
     }
-
-    // position: relative;
-    // bottom: 50px;
 }
 
 .description {
-    // border: 2px solid green;
     @include tabletXs {
         font-size: 16px;
     }
