@@ -22,16 +22,15 @@
     height: 200px;
     width: 300px;
     z-index: 10;
-    @media only screen and (max-width: map-get($breakpoints, "phone-up")) {
-        margin-top: 10px;
-        width: 150px;
-        height: 150px;
-    }
     @media only screen and (max-width: map-get($breakpoints, "tablet-down")) {
-        // border: 2px solid red;
-        // margin-left: -30px;
         width: 200px;
         height: 200px;
+    }
+    @include mobileM {
+        position: relative;
+        bottom: 20px;
+        width: 100px;
+        height: 100px;
     }
 }
 
