@@ -1,8 +1,19 @@
+@import "../../../../styles/utils/breakpoints.scss";
+
 .titlewrapper {
-    text-align: center; 
+    text-align: center;
     height: 30%;
 }
 
 .title {
-    margin-bottom: 0; 
+    margin-bottom: 0;
+}
+
+.subtitle {
+    @include mobileM {
+        font-size: 14px;
+    }
+    @include mobileS {
+        font-size: 12px;
+    }
 }
