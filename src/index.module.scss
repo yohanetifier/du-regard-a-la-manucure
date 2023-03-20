@@ -25,7 +25,8 @@ p {
     font-size: calc($textFontSize - 2px);
   }
   @include mobileS {
-    font-size: calc($textFontSize - 4px);
+    // font-size: calc($textFontSize - 4px);
+    font-size: 11px;
   }
 }
 

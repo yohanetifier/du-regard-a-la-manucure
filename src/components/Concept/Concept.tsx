@@ -122,7 +122,11 @@ Props) {
 								duration: 1,
 							}}
 						>
-							<Button to={to} label={label} width="220px" />
+							<Button
+								to={to}
+								label={label}
+								classnamelink={styles.button}
+							/>
 						</motion.div>
 					</div>
 				</motion.div>

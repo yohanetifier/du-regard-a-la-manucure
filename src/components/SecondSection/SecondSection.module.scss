@@ -43,7 +43,6 @@
     grid-column: 4 / 7;
     grid-row: 1 / 6;
     align-self: center;
-    // font-size: 2.5em;
     @include tabletM {
         grid-column: 1 / 6;
         grid-row: 3 / 6;
@@ -52,21 +51,22 @@
     @include mobileL {
         grid-row: 1 / 7;
         grid-column: 1 / 5;
-        // font-size: 1em;
-        // font-size: 10px !important;
-        // border: 2px solid red;
     }
     @include mobileM {
         font-size: 1.2em;
     }
-    & > p {
-        font-family: $font-title;
-        color: black;
-        display: flex;
-        align-items: center;
-        font-size: $font-size-title;
-        @include tabletS {
-            font-size: 40px;
-        }
+}
+
+.quote {
+    font-family: $font-title;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: $font-size-title;
+    @include tabletS {
+        font-size: 40px;
+    }
+    @include mobileS {
+        font-size: 31px;
     }
 }
