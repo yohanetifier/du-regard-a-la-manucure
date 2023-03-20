@@ -38,7 +38,6 @@ function Banner({
 							to={linkButton!}
 							label={labelButton!}
 							classnamelink={styles.backgroundColor}
-							width="200px"
 							external={true}
 						/>
 					</>

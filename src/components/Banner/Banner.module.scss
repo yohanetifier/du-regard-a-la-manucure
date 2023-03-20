@@ -1,11 +1,11 @@
-@import '../../styles/utils/variables.scss';
-@import '../../styles/utils/mixins.scss';
+@import "../../styles/utils/variables.scss";
+@import "../../styles/utils/mixins.scss";
 
 .mainwrapper {
     // border: 2px solid red;
-    height: 120vh; 
-    display: flex; 
-    flex-direction: column; 
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@
     height: 100%;
     object-fit: cover;
     filter: brightness(70%);
-    // border: 2px solid orange; 
+    // border: 2px solid orange;
 }
 
 .titleWrapper {
@@ -35,12 +35,13 @@
 
 h1 {
     font-size: 50px;
-    color: #9E0E40;
+    color: #9e0e40;
     margin: 0;
 }
 
 .backgroundColor {
     @include buttonOnHoverMorePink;
     border: none;
+    width: 200px;
     // @include customButton;
 }

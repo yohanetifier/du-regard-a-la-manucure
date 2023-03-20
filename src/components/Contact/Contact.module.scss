@@ -48,9 +48,21 @@
 }
 
 .titleone {
-    // border: 2px solid blue;
+    @include desktopS {
+        font-size: 42px;
+    }
+    // @include tabletXs {
+    //     font-size: 42px;
+    // }
     @include mobileL {
         font-size: 40px;
+    }
+
+    @include mobileM {
+        font-size: 32px;
+    }
+    @include mobileS {
+        font-size: 30px;
     }
 }
 

@@ -110,7 +110,8 @@
 }
 
 .title {
-    font-size: 20px !important;
+    // font-size: 20px !important;
+    font-size: 40px;
     color: black;
     font-weight: bold;
     background-color: white;
@@ -121,28 +122,27 @@
     justify-content: center;
     transition: all 300ms;
     text-transform: uppercase;
-    // margin-top: 20px;
     &:hover {
         background-color: $color-primary;
         color: white;
     }
     @include tabletS {
-        // border: 2px solid green;
         width: 150px;
         height: 50px;
         font-size: 20px !important;
-        // font-size: 15px !important;
+    }
+    @include mobileS {
+        font-size: 11px !important;
+        width: 80px;
+        height: 30px;
     }
 }
 
 .titlewrapper {
-    // border: 2px solid red;
     position: absolute;
     z-index: 3;
     width: 100vw;
     text-align: center;
-    // top: 15%;
-    // left: 15%;
     color: white;
     font-size: $font-size-title;
     font-family: $font-title;
@@ -160,17 +160,8 @@
 .pwrapper {
     overflow: hidden;
     text-decoration: none;
-    & > p {
-        font-size: 40px;
-        @media screen and (max-width: map-get($breakpoints, "phone-down")) {
-            font-size: 20px;
-        }
-    }
 }
 
 .titlesection {
     font-size: 50px;
-    // text-align: center;
-    // border: 2px solid red;
-    // width: 100vw;
 }

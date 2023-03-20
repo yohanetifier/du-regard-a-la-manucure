@@ -35,11 +35,12 @@ $black: black;
 
 .title {
     cursor: pointer;
-    @include tabletXs {
-        font-size: 25px;
-    }
-    @include mobileL {
+    // border: 2px solid red;
+    @include desktopM {
         font-size: 30px;
+    }
+    @include desktopS {
+        font-size: 25px;
     }
 }
 

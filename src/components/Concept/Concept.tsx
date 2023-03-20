@@ -105,6 +105,7 @@ Props) {
 									duration: 1,
 									staggerChildren: 0.05,
 								}}
+								className={styles.chidlren}
 							>
 								{children}
 							</motion.p>
@@ -122,7 +123,11 @@ Props) {
 								duration: 1,
 							}}
 						>
-							<Button to={to} label={label} width="220px" />
+							<Button
+								to={to}
+								label={label}
+								classnamelink={styles.button}
+							/>
 						</motion.div>
 					</div>
 				</motion.div>

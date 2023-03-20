@@ -1,3 +1,5 @@
+@import "../../styles/utils/breakpoints.scss";
+
 .mainWrapper {
     width: 100vw;
     height: 100vh;
@@ -42,4 +44,16 @@
     height: 90%;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.title {
+    @include tabletXs {
+        font-size: 40px;
+    }
+    @include mobileM {
+        font-size: 35px;
+    }
+    @include mobileS {
+        font-size: 30px;
+    }
 }

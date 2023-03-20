@@ -1,4 +1,5 @@
 @import "../../styles/utils/variables.scss";
+@import "../../styles/utils/breakpoints.scss";
 
 .defaultStyles {
     border: 2px solid white;
@@ -18,5 +19,15 @@
     font-size: $textFontSize;
     &:hover {
         background-color: white;
+    }
+    @include mobileM {
+        width: 150px !important;
+        height: 50px !important;
+        font-size: 13px;
+    }
+    @include mobileS {
+        width: 100px !important;
+        height: 30px !important;
+        font-size: 10px;
     }
 }
