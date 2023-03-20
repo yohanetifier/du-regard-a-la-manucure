@@ -32,7 +32,7 @@ function MentionsLegales({
 					réalisation et de son suivi.
 				</p>
 				<div>
-					<h2>Édition du site</h2>
+					<h2 className={styles.title}>Édition du site</h2>
 					<p>
 						Le présent site, accessible à l'URL
 						{siteUrl}
@@ -44,21 +44,21 @@ function MentionsLegales({
 					</p>
 				</div>
 				<div>
-					<h2>Hébergement</h2>
+					<h2 className={styles.title}>Hébergement</h2>
 					<p></p>
 				</div>
 				<div>
-					<h2>Directeur de publication</h2>
+					<h2 className={styles.title}>Directeur de publication</h2>
 					<p>Le directeur de publication du site est Yohan Etifier</p>
 				</div>
 				<div>
-					<h2>Nous contacter</h2>
+					<h2 className={styles.title}>Nous contacter</h2>
 					<p>Par téléphone: {phoneNumber}</p>
 					<p>Par email: {mail}</p>
 					<p>Par courrier: {courrier}</p>
 				</div>
 				<div>
-					<h2>Données personnelles</h2>
+					<h2 className={styles.title}>Données personnelles</h2>
 					<p>
 						Le traitement de vos données à caractère personnel est
 					</p>

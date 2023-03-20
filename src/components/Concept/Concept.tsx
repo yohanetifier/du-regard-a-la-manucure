@@ -105,6 +105,7 @@ Props) {
 									duration: 1,
 									staggerChildren: 0.05,
 								}}
+								className={styles.chidlren}
 							>
 								{children}
 							</motion.p>

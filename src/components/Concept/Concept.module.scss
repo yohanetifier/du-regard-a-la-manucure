@@ -123,11 +123,18 @@
 
 .exercice {
     overflow: hidden;
-    & > p {
-        line-height: $lineHeight;
-    }
 }
 
 .button {
     width: 200px;
+}
+
+.chidlren {
+    line-height: $lineHeight;
+    @include mobileM {
+        font-size: 13px;
+    }
+    @include mobileS {
+        font-size: 10px;
+    }
 }

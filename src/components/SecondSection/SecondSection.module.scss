@@ -66,6 +66,12 @@
     @include tabletS {
         font-size: 40px;
     }
+    @include tabletXs {
+        font-size: 30px;
+    }
+    @include mobileM {
+        font-size: 35px;
+    }
     @include mobileS {
         font-size: 31px;
     }
