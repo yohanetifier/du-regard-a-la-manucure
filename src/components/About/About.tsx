@@ -3,7 +3,8 @@ import Concept from "../Concept/Concept";
 import img from "../../assets/images/PHOTO-2022-12-31-12-21-07.jpg";
 import img1 from "../../assets/images/PHOTO-2022-12-31-12-41-05.jpg";
 import img2 from "../../assets/images/PHOTO-2022-12-31-12-39-16.jpg";
-import img3 from "../../assets/images/AttesTaTion-MaNuCuRe-RuSse.jpg";
+import img0 from "../../assets/images/AttesTaTion-MaNuCuRe-RuSse.jpg";
+import img3 from "../../assets/images/PHOTO-2022-12-31-12-41-28.jpg";
 import img4 from "../../assets/images/PHOTO-2022-12-31-12-34-35.jpg";
 import img5 from "../../assets/images/PHOTO-2022-12-31-12-47-08.webp";
 import img6 from "../../assets/images/PHOTO-2022-12-31-12-29-08.webp";
@@ -56,8 +57,8 @@ export default function About() {
 
 	const certificate = [
 		{
-			src: img3,
-			alt: img3,
+			src: img0,
+			alt: img0,
 			// className: "firstimg",
 		},
 		{
