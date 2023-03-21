@@ -9,6 +9,7 @@ import img5 from "../../assets/images/PHOTO-2022-12-31-12-47-08.webp";
 import img6 from "../../assets/images/PHOTO-2022-12-31-12-29-08.webp";
 import img7 from "../../assets/images/AttesTaTion-ProTheSisTe-OnGuLaiRe.jpg";
 import img8 from "../../assets/images/Certificat-de-participation.jpg";
+import img9 from "../../assets/images/certifcat4.jpg";
 import Concept2 from "./Concept2/Concept2";
 import Concept3 from "./Concept3/Concept3";
 import Certificate from "./Certficate/Certificate";
@@ -57,28 +58,23 @@ export default function About() {
 		{
 			src: img3,
 			alt: img3,
-			className: "firstimg",
+			// className: "firstimg",
 		},
 		{
 			src: img7,
 			alt: img7,
-			className: "secondimg",
+			// className: "secondimg",
 		},
 		{
 			src: img8,
 			alt: img8,
-			className: "thirdimg",
+			// className: "thirdimg",
 		},
-		// {
-		// 	src: img3,
-		// 	alt: img3,
-		// 	className: "fourthimg",
-		// },
-		// {
-		// 	src: img3,
-		// 	alt: img3,
-		// 	className: "fifthimg",
-		// },
+		{
+			src: img9,
+			alt: img9,
+			// className: "fourthimg",
+		},
 	];
 
 	return (
