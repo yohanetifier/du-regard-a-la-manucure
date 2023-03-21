@@ -85,8 +85,7 @@ export default function About() {
 				alt={img}
 				title="Parlons un peu de nous"
 				children="Du regard à la manucure met tout son savoir faire à votre disposition pour vous offrir un regard de star.
-      De l'épilation des sourcils, au brow lift, en passant par la teinture des cils et les extensions de cil à cil ou volume russe
-      , vivez une véritable expérience sur mesure."
+      De l'épilation des sourcils, au browlift, en passant par la teinture et le rehaussement de vos cils pour une véritable expérience sur mesure."
 				to="/prestations"
 				label="Nos prestations"
 			/>
