@@ -23,6 +23,11 @@
     @include tabletXs {
         font-size: 40px;
     }
+    @include mobileL {
+        // font-size: 40px;
+        position: relative;
+        bottom: 40px;
+    }
     @include mobileM {
         font-size: 30px;
     }

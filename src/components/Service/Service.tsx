@@ -24,11 +24,8 @@ interface Props {
 
 export default function Service({ img }: Props) {
 	const choosenService = useContext(SelectedService);
-	// const [changeService, setChangeService] = useState<string>('');
 	const [image, setImage] = useState<string>("");
 	const { selectedService, setSelectedService } = choosenService;
-	console.log("selectedService", selectedService);
-	console.log("setSelectedService", setSelectedService);
 
 	return (
 		<PageTransition>
@@ -54,9 +51,9 @@ export default function Service({ img }: Props) {
 							className={styles.img}
 						/>
 					</div>
-					<h1 className={styles.layoutitle}>
+					{/* <h1 className={styles.layoutitle}>
 						De la beauté du regard
-					</h1>
+					</h1> */}
 					<div className={styles.wrapperimgtop}>
 						<img
 							src={defaultImgTop}

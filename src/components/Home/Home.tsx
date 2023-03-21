@@ -69,7 +69,7 @@ function Home() {
 						src={imgBelowRight}
 						title="Plus qu'une parenthèse bien être... une mise en beauté unique"
 						hasButton={true}
-						linkButton="https://www.planity.com/du-regard-a-la-manucure-deplacement-a-domicile-95510-aincourt"
+						linkButton="https://fleeky.fr/duregardalamanucure"
 						labelButton="Reservez"
 					/>
 					<Concept
@@ -78,7 +78,7 @@ function Home() {
 						title="Notre Concept"
 						children="Que diriez-vous de sublimer vos ongles et votre regard sans sortir de chez vous? C'est possible avec Du Regard à La Manucure,
                 professionnelle de l'esthétique, prothésiste ongulaire. L'institut Du Regard à la Manucure est basé à Aincourt, dans le Val d'Oise et se
-                déplace dans toute l'Ile de France pour vous mettre en beauté."
+                déplace dans les Yvelines pour vous mettre en beauté."
 						to="/about"
 						label="En savoir plus"
 						// numberOfButton="one"

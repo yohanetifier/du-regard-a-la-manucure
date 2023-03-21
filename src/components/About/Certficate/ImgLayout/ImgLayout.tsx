@@ -10,8 +10,7 @@ interface Props extends Assets {
 }
 
 export default function ImgLayout({ assets, isInView }: Props) {
-	const isTablet = useMediaQuery({ query: "(max-width: 768px)" });
-	console.log("isTablet", isTablet);
+	const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 	const MotionImage = motion(Image);
 	const container = {
 		initial: {
@@ -39,36 +38,16 @@ export default function ImgLayout({ assets, isInView }: Props) {
 	};
 	return (
 		<>
-			{isTablet ? (
-				<motion.div
-					className={styles.slide}
-					variants={container}
-					initial="initial"
-					animate={isInView && "animate"}
-				>
-					<motion.img src={img} alt="" variants={item} />
-					<motion.img src={img} alt="" variants={item} />
-					<motion.img src={img} alt="" variants={item} />
-					<motion.img src={img} alt="" variants={item} />
-					<motion.img src={img} alt="" variants={item} />
-				</motion.div>
-			) : (
-				<motion.div
-					className={styles.imgwrapper}
-					variants={container}
-					initial="initial"
-					animate={isInView && "animate"}
-				>
-					{assets.map(({ src, alt, className }) => (
-						<MotionImage
-							src={src}
-							alt={alt}
-							classNamewrapper={`${styles[className!]}`}
-							variants={item}
-						/>
-					))}
-				</motion.div>
-			)}
+			<motion.div
+				className={styles.slide}
+				variants={container}
+				initial="initial"
+				animate={isInView && "animate"}
+			>
+				{assets.map(({ src, alt, className }) => (
+					<motion.img src={src} alt={alt} variants={item} />
+				))}
+			</motion.div>
 		</>
 	);
 }
