@@ -3,10 +3,12 @@ import Concept from "../Concept/Concept";
 import img from "../../assets/images/PHOTO-2022-12-31-12-21-07.jpg";
 import img1 from "../../assets/images/PHOTO-2022-12-31-12-41-05.jpg";
 import img2 from "../../assets/images/PHOTO-2022-12-31-12-39-16.jpg";
-import img3 from "../../assets/images/PHOTO-2022-12-31-12-41-28.jpg";
+import img3 from "../../assets/images/AttesTaTion-MaNuCuRe-RuSse.jpg";
 import img4 from "../../assets/images/PHOTO-2022-12-31-12-34-35.jpg";
 import img5 from "../../assets/images/PHOTO-2022-12-31-12-47-08.webp";
 import img6 from "../../assets/images/PHOTO-2022-12-31-12-29-08.webp";
+import img7 from "../../assets/images/AttesTaTion-ProTheSisTe-OnGuLaiRe.jpg";
+import img8 from "../../assets/images/Certificat-de-participation.jpg";
 import Concept2 from "./Concept2/Concept2";
 import Concept3 from "./Concept3/Concept3";
 import Certificate from "./Certficate/Certificate";
@@ -58,25 +60,25 @@ export default function About() {
 			className: "firstimg",
 		},
 		{
-			src: img3,
-			alt: img3,
+			src: img7,
+			alt: img7,
 			className: "secondimg",
 		},
 		{
-			src: img3,
-			alt: img3,
+			src: img8,
+			alt: img8,
 			className: "thirdimg",
 		},
-		{
-			src: img3,
-			alt: img3,
-			className: "fourthimg",
-		},
-		{
-			src: img3,
-			alt: img3,
-			className: "fifthimg",
-		},
+		// {
+		// 	src: img3,
+		// 	alt: img3,
+		// 	className: "fourthimg",
+		// },
+		// {
+		// 	src: img3,
+		// 	alt: img3,
+		// 	className: "fifthimg",
+		// },
 	];
 
 	return (
