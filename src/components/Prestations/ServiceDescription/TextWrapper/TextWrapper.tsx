@@ -3,6 +3,7 @@ import styles from "./TextWrapper.module.scss";
 import { Props } from "../../../About/Concept2/DescriptionWrapper/DescriptionWrapper";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 interface Animation extends Props {
 	isReversedRow: boolean;
@@ -17,6 +18,10 @@ export default function TextWrapper({
 }: Animation) {
 	const wrapper = useRef<HTMLDivElement>(null);
 	const isInView = useInView(wrapper, { once: true, amount: 0.5 });
+	// const isSafari =
+	// 	window.navigator.userAgent.includes("Safari") &&
+	// 	!window.navigator.userAgent.includes("Chrome");
+	// const isMobile = useMediaQuery({ query: "(max-width: 500px)" });
 
 	return (
 		<>
