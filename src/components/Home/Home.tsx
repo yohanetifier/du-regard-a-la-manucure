@@ -77,8 +77,8 @@ function Home() {
 						alt={img1}
 						title="Notre Concept"
 						children="Que diriez-vous de sublimer vos ongles et votre regard sans sortir de chez vous? C'est possible avec Du Regard à La Manucure,
-                professionnelle de l'esthétique, prothésiste ongulaire. L'institut Du Regard à la Manucure est basé à Aincourt, dans le Val d'Oise et se
-                déplace dans les Yvelines pour vous mettre en beauté."
+                		professionnelle de l'esthétique, prothésiste ongulaire. L'institut Du Regard à la Manucure basé à Aincourt se déplace dans le Val d'Oise et les
+						 Yvelines pour vous mettre en beauté."
 						to="/about"
 						label="En savoir plus"
 						// numberOfButton="one"
