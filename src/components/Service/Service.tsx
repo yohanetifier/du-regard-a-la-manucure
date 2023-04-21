@@ -77,7 +77,9 @@ export default function Service({ img }: Props) {
 							</h2>
 							<ul>
 								{beautyOfHands.map(({ service, price }) => (
-									<div className={styles.beautywrapper}>
+									<div
+										className={`${styles.beautywrapper} ${styles.changeFont}`}
+									>
 										<li>{service}</li>
 										<span className={styles.bold}>
 											{price}
@@ -91,7 +93,9 @@ export default function Service({ img }: Props) {
 								</h2>
 								<ul>
 									{beautyOfFoot.map(({ service, price }) => (
-										<div className={styles.beautywrapper}>
+										<div
+											className={`${styles.beautywrapper}`}
+										>
 											<li>{service}</li>
 											<span className={styles.bold}>
 												{price}
