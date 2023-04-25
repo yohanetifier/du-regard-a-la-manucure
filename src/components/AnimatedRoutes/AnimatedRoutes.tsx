@@ -10,12 +10,9 @@ import { AnimatePresence } from "framer-motion";
 import Footer from "../Footer/Footer";
 import MentionsLegales from "../MentionsLegales/MentionsLegales";
 
-interface Props {
-	setLastAnimationIsOver(arg: boolean): void;
-}
-
 function AnimatedRoutes() {
 	const location = useLocation();
+	const DNS = window.location.origin.split("//")[1];
 	return (
 		<AnimatePresence>
 			<Routes location={location} key={location.pathname}>
@@ -28,12 +25,10 @@ function AnimatedRoutes() {
 					path="/mentions-legales"
 					element={
 						<MentionsLegales
-							siteUrl="duregardalamanucure.com"
+							siteUrl={DNS}
 							editor="Yohan Etifier"
-							editorAddress="4 rue de la resistance 91270 Vigenxu sur seine"
-							phoneNumber=""
-							mail=""
-							courrier=""
+							phoneNumber="07 63 74 04 71"
+							mail="duregardalamanucure@gmail.com"
 						/>
 					}
 				/>

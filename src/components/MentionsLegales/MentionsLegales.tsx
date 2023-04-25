@@ -7,20 +7,11 @@ import PageTransition from "../PageTransition/PageTransition";
 type Props = {
 	siteUrl: string;
 	editor: string;
-	editorAddress: string;
 	phoneNumber: string;
 	mail: string;
-	courrier: string;
 };
 
-function MentionsLegales({
-	siteUrl,
-	editor,
-	editorAddress,
-	phoneNumber,
-	mail,
-	courrier,
-}: Props) {
+function MentionsLegales({ siteUrl, editor, phoneNumber, mail }: Props) {
 	return (
 		<PageTransition>
 			<SplitContainer img={img} imgAlt={img}>
@@ -34,14 +25,9 @@ function MentionsLegales({
 				<div>
 					<h2 className={styles.title}>Édition du site</h2>
 					<p>
-						Le présent site, accessible à l'URL
-						{siteUrl}
-						duregardalamanucure.com est édité par:
+						Le présent site, accessible à {siteUrl} est édité par:
 					</p>
-					<p>
-						{editor}
-						{editorAddress}
-					</p>
+					<p>{editor}</p>
 				</div>
 				<div>
 					<h2 className={styles.title}>Hébergement</h2>
@@ -49,13 +35,12 @@ function MentionsLegales({
 				</div>
 				<div>
 					<h2 className={styles.title}>Directeur de publication</h2>
-					<p>Le directeur de publication du site est Yohan Etifier</p>
+					<p>Le directeur de publication du site est {editor}</p>
 				</div>
 				<div>
 					<h2 className={styles.title}>Nous contacter</h2>
 					<p>Par téléphone: {phoneNumber}</p>
 					<p>Par email: {mail}</p>
-					<p>Par courrier: {courrier}</p>
 				</div>
 				<div>
 					<h2 className={styles.title}>Données personnelles</h2>
