@@ -29,6 +29,8 @@ function AnimatedRoutes() {
 							editor="Yohan Etifier"
 							phoneNumber="07 63 74 04 71"
 							mail="duregardalamanucure@gmail.com"
+							host="vercel"
+							headOffice="340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis"
 						/>
 					}
 				/>

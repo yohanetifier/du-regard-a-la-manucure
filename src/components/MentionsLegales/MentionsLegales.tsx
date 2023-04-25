@@ -9,18 +9,27 @@ type Props = {
 	editor: string;
 	phoneNumber: string;
 	mail: string;
+	host: string;
+	headOffice: string;
 };
 
-function MentionsLegales({ siteUrl, editor, phoneNumber, mail }: Props) {
+function MentionsLegales({
+	siteUrl,
+	editor,
+	phoneNumber,
+	mail,
+	host,
+	headOffice,
+}: Props) {
 	return (
 		<PageTransition>
 			<SplitContainer img={img} imgAlt={img}>
 				<p>
 					Conformément aux dispositions sur la loi n 2004-575 du 21
 					juin 2004 pour la confiance en l'économie numérique. Il est
-					précisé aux utilisatieurs du site duregardalamanucure.com
-					l'identité des différents intervenants dans le cadre de sa
-					réalisation et de son suivi.
+					précisé aux utilisatieurs du site {siteUrl} l'identité des
+					différents intervenants dans le cadre de sa réalisation et
+					de son suivi.
 				</p>
 				<div>
 					<h2 className={styles.title}>Édition du site</h2>
@@ -28,6 +37,10 @@ function MentionsLegales({ siteUrl, editor, phoneNumber, mail }: Props) {
 						Le présent site, accessible à {siteUrl} est édité par:
 					</p>
 					<p>{editor}</p>
+				</div>
+				<div>
+					<h2>Photographies et representation des produits</h2>
+					<p>Certaines photographies ne sont pas contractuelles</p>
 				</div>
 				<div>
 					<h2 className={styles.title}>Hébergement</h2>
@@ -41,12 +54,6 @@ function MentionsLegales({ siteUrl, editor, phoneNumber, mail }: Props) {
 					<h2 className={styles.title}>Nous contacter</h2>
 					<p>Par téléphone: {phoneNumber}</p>
 					<p>Par email: {mail}</p>
-				</div>
-				<div>
-					<h2 className={styles.title}>Données personnelles</h2>
-					<p>
-						Le traitement de vos données à caractère personnel est
-					</p>
 				</div>
 			</SplitContainer>
 		</PageTransition>
