@@ -1,15 +1,20 @@
 import React from "react";
 
-type Props = {
-	title: string;
+type Description = {
 	content: string;
 };
+type Props = {
+	title: string;
+	text: Description[];
+};
 
-const Article = ({ title, content }: Props) => {
+const Article = ({ title, text }: Props) => {
 	return (
 		<div>
 			<h2>{title}</h2>
-			<p>{content} </p>
+			{text.map(({ content }) => (
+				<p>{content}</p>
+			))}
 		</div>
 	);
 };
