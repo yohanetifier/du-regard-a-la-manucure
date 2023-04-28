@@ -1,13 +1,10 @@
 @use "../../../styles//utils/variables.scss" as var;
 @import "../../../styles/utils/breakpoints.scss";
 
-$black: black;
-
 .mainwrapper {
     display: flex;
     justify-content: center;
     position: relative;
-    // bottom: 40px;
     background-color: var.$color-primary;
 }
 
@@ -58,4 +55,9 @@ $black: black;
 .inactif {
     background-color: pink;
     color: white;
+    transition: all 500ms;
+    &:hover {
+        background-color: white;
+        color: black;
+    }
 }

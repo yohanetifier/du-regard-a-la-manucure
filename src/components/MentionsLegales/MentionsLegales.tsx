@@ -146,7 +146,7 @@ function MentionsLegales({
 			text: [
 				{
 					content:
-						"Pour toute question, information sur les produits présentés sur le site, ou concernant le site lui même, vous pouvez nous contacter par le bias des moyens suivants",
+						"Pour toute question, information sur les produits présentés sur le site, ou concernant le site lui même, vous pouvez nous contacter par le biais des moyens suivants",
 				},
 				{
 					content: `Par téléphone: ${phoneNumber}`,
