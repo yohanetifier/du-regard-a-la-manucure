@@ -84,8 +84,7 @@ const Header = () => {
 		},
 	};
 
-	const { purple } = changeColor;
-	const { black } = changeColor;
+	const { purple, black } = changeColor;
 
 	if (menu) {
 		document.body.style.overflow = "hidden";
