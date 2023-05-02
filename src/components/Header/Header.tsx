@@ -65,7 +65,8 @@ const Header = () => {
 	const { selectedService, setSelectedService } = choosenService;
 	const loader = useContext(Loader);
 	const { isLoading, setIsLoading } = loader;
-	console.log("isLoading", isLoading);
+	const [isScrollingToTheBottom, setIsScrollingToTheBottom] = useState(false);
+	const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
 	const handleClick = () => {
 		setMenu(false);
@@ -92,11 +93,30 @@ const Header = () => {
 		document.body.style.overflow = "visible";
 	}
 
+	// Check if we scroll to the bottom of the page
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentPosition = window.scrollY;
+			if (currentPosition > lastScrollPosition) {
+				console.log("scroll down...");
+				setIsScrollingToTheBottom(true);
+			} else if (currentPosition < lastScrollPosition) {
+				console.log("scroll up...");
+				setIsScrollingToTheBottom(false);
+			}
+			setLastScrollPosition(currentPosition);
+		};
+		window.addEventListener("scroll", handleScroll);
+	}, [lastScrollPosition]);
+
 	return (
 		<PageTransition>
 			<header
 				className={
-					isLoading ? `${styles.inactifHeader}` : `${styles.header}`
+					isLoading || isScrollingToTheBottom
+						? `${styles.inactifHeader}`
+						: `${styles.header}`
 				}
 			>
 				<Link className={styles.logo} to="/">
