@@ -153,10 +153,9 @@
     justify-content: space-between;
     list-style-type: none;
     margin-left: -40px;
-    // font-size: 13.5px;
     font-size: 18px;
     @media screen and (max-width: 540px) {
-        font-size: 13px;
+        font-size: 12px;
     }
     @media screen and (max-width: map-get(var.$breakpoints, "phone-down")) {
         margin-left: 5px;
@@ -167,12 +166,6 @@
         font-size: 11px;
     }
 }
-
-// .changeFont {
-//     @include mobileL {
-//         font-size: 12px;
-//     }
-// }
 
 .bold {
     font-weight: bold;
