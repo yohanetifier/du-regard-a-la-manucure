@@ -99,10 +99,8 @@ const Header = () => {
 		const handleScroll = () => {
 			const currentPosition = window.scrollY;
 			if (currentPosition > lastScrollPosition) {
-				console.log("scroll down...");
 				setIsScrollingToTheBottom(true);
 			} else if (currentPosition < lastScrollPosition) {
-				console.log("scroll up...");
 				setIsScrollingToTheBottom(false);
 			}
 			setLastScrollPosition(currentPosition);
@@ -114,9 +112,7 @@ const Header = () => {
 		<PageTransition>
 			<header
 				className={
-					isLoading || isScrollingToTheBottom
-						? `${styles.inactifHeader}`
-						: `${styles.header}`
+					isLoading ? `${styles.inactifHeader}` : `${styles.header}`
 				}
 			>
 				<Link className={styles.logo} to="/">
